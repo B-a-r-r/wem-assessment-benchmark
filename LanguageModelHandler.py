@@ -1,6 +1,7 @@
 from huggingface_hub import login
 from transformers import AutoTokenizer, AutoModelForCausalLM, LogitsProcessorList, TemperatureLogitsWarper, TopKLogitsWarper, TopPLogitsWarper
 import torch
+from dotenv import dotenv_values
 
 
 class LanguageModelHandler:
@@ -171,7 +172,7 @@ if __name__ == "__main__":
             Response:\n {response}\n
         """)
     
-    auth_token = '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'
+    auth_token = dotenv_values(".env")["HF_AUTH_TOKEN"]
     prompt = "Give me an animal with wings. Return only the name of the animal"
     
     model_name = "mistralai/Mistral-7B-v0.1"
