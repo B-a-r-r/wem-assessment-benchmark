@@ -234,8 +234,16 @@ class LanguageModelHandler:
         
         cuda.empty_cache()
         
+        del self.__model
+        del self.__tokenizer
+        del self.__logits_processor
+        del self.__device
+        del self.__auth_token
         del self
         collect()
+        
+    def __repr__(self) -> str:
+        return f"LanguageModelHandler(model_name={self.model_name}, device={self.__device.type}, offload_dir={self.offload_dir})"
         
 
 if __name__ == "__main__":

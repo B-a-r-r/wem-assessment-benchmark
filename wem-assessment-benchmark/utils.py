@@ -1,4 +1,9 @@
-"""This file contains utility functions."""
+#
+# This file contains utility functions.
+#
+# author:   Clément BARRIERE
+# github:   @B-a-r-r
+#
 
 def get_gpu_local_config() -> dict | None:
     """
@@ -37,3 +42,23 @@ def get_cpu_local_config() -> dict:
     cpu_config["cores"] = cpu_count(logical=False)
     cpu_config["memory"] = int(virtual_memory().total / (1024 ** 3))
     return cpu_config
+
+def count_non_negative_one(lst: list) -> int:
+    """ 
+    Count the number of non-negative one elements in a nested list.
+    
+    Parameters
+    ----------
+    lst : list
+        The input list which may contain nested lists.
+    """
+    count = 0
+    
+    for item in lst:
+        if isinstance(item, list):
+            count += count_non_negative_one(item)
+            
+        elif item != -1:
+            count += 1
+            
+    return count
