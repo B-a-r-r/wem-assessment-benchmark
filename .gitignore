@@ -4,3 +4,7 @@
 
 # Local LLM offloads
 .llm-offloads
+
+# Local cache files
+__pycache__
+
