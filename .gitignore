@@ -2,3 +2,5 @@
 .env
 .env.*
 
+# Local LLM offloads
+.llm-offloads
