@@ -1,0 +1,19 @@
+{
+    "prompts" : {
+        "create" : "Could you create a non-overlapping list of #N# existing animal species? Please separate the names with slashes and present them in a single line without numbering. ## Format name1 / name2 / name3 / ...",
+        "judge" : "Which one is #criteria# '#word1#' or '#word2#'? Answer only with '#word1#' or '#word2#'. ##Format #word1#/#word2#",
+        "mutate": "Please list 10 existing animal species similar to, but slightly or significantly different from, '#word#'. Separate the names with slashes in a single, unnumbered line. ## Format name1 / name2 / name3 / ..."
+    },
+    "simulation" : {
+        "N" : 80,
+        "T" : 300,
+        "W" : 16,
+        "SEED" : 103,
+        "A" : 35,
+        "M" : 1,
+        "MUT" : 0.5,
+        "CRITERIA" : "stronger"
+
+    }
+}
+
