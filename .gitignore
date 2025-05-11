@@ -1,4 +1,7 @@
 # Local environment variables
+.env
+.env.*
+.venv
 */.env
 */.env.*
 */.venv
