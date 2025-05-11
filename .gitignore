@@ -1,10 +1,22 @@
 # Local environment variables
 .env
 .env.*
+.venv
 
-# Local LLM offloads
+# Local LLM files
 .llm-offloads
+.llm-cache
 
 # Local cache files
 __pycache__
 
+# Results files
+*.json
+!config.json
+
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
