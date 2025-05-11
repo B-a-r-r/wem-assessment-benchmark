@@ -3,5 +3,5 @@
 
 python -m venv .venv
 .venv\Scripts\activate
-pip install -r requirements.txt
-pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
+.venv/Scripts/pip.exe install -r requirements.txt
+.venv/Scripts/pip.exe install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
