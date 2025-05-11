@@ -13,7 +13,8 @@
 
 # Results files
 */*.json
-*/!config.json
+!*/config.json
+!*/custom_configs/*
 
 */*.csv
 */*.png
@@ -21,3 +22,5 @@
 */*.jpeg
 */*.gif
 */*.mp4
+
+*/exp
