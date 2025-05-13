@@ -1,5 +1,6 @@
 from sys import argv
 from Simulation import Simulation
+from os import path
 
 #allow to input the config path and the logs path from the command line
 if len(argv) >= 2:
@@ -7,8 +8,8 @@ if len(argv) >= 2:
     logs_path = argv[1]
 
 else:
-    config_path = "config.json"
-    logs_path = "logs.txt"
+    config_path = path.join(path.dirname(__file__), "config.json")
+    logs_path = path.join(path.dirname(__file__), "logs.txt")
 
 #init and run the simulation
 Simulation(

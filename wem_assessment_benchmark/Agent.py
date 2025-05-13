@@ -10,7 +10,7 @@ class Agent:
     """ 
     An agent is an individual in the simulation that has a position (x, y) and carry a word.
     
-    Attributes
+    Objects Attributes
     ----------
     id : int
         The unique identifier of the agent.
@@ -25,7 +25,7 @@ class Agent:
         The word that the agent carries.
         
     Static Attributes
-    ----------------
+    ----------
     dxy : list
         A list of possible movements in the grid.
         
@@ -44,12 +44,7 @@ class Agent:
     W: int = None
     agents_pos: list = None
     
-    id: int
-    x: int
-    y: int
-    word: str
-    
-    def __init__(self, w: str, id: int, W: int =None):
+    def __init__(self, w: str, id: int):
         """ 
         Initializes an agent with a word and a unique identifier.
         
@@ -65,25 +60,17 @@ class Agent:
             The width of the grid in which the agents exist.
             Since W is froze after being set, if it's not None this parameter will be ignored.
         """
-        if Agent.W is None: 
-            if W is None:
-                raise ValueError("Grid's must be known by agents. Please set W at least for the first agent.")
-            else:
-                #the first agent specifies the grid size in which it appears
-                Agent.W = W 
-                #the posotion of the agents is initialized to -1 (no agent)
-                Agent.agents_pos = [[-1 for _ in range(Agent.W)] for _ in range(Agent.W)]
-        
-        #the new agent is randomly placed in the grid
-        self.x = randint(0, Agent.W-1)
-        self.y = randint(0, Agent.W-1)
-        
-        self.word = w
-        self.id = id
+        self._word: str = w
+        self._id: int = id
         
         #the new agent is added to the active agents list
         Agent.active_agents.append(self)
-
+    
+    @W.setter
+    def set_W(W: int) -> None:
+        if (Agent.W is None):
+            Agent.W = W
+    
     @staticmethod
     def _clip(x: int) -> int:
         """
@@ -108,31 +95,35 @@ class Agent:
         else:
             return(x)
     
-    def random_walk_2(self, verbose: bool = False) -> None:
+    def random_walk_2(self, n: int =1, verbose: bool = False) -> None:
         """ 
         Perform a random walk in the grid.
         
         Parameters
         ----------
+        n : int, optional
+            The number of random walk to proceed.
+            Default is 1.
+        
         verbose : bool, optional
             If True, print the updated position of the agent.
         """
-        
-        #Randomly select a movement from the list of possible movements
-        dfxy = choice(Agent.dxy)
-        px = Agent._clip(self.x + dfxy[0])
-        py = Agent._clip(self.y + dfxy[1])
-        
-        #Do not move if the new position is already occupied by another agent
-        if Agent.agents_pos[px][py] == -1:
-            Agent.agents_pos[self.x][self.y] = -1
-            self.x = px
-            self.y = py
-            Agent.agents_pos[px][py] = self
+        for _ in range(n):
+            #Randomly select a movement from the list of possible movements
+            dfxy = choice(Agent.dxy)
+            px = Agent._clip(self.x + dfxy[0])
+            py = Agent._clip(self.y + dfxy[1])
+            
+            #Do not move if the new position is already occupied by another agent
+            if Agent.agents_pos[px][py] == -1:
+                Agent.agents_pos[self.x][self.y] = -1
+                self.x = px
+                self.y = py
+                Agent.agents_pos[px][py] = self
             
         if verbose: print(f"Upated pos: {px},{py}: {Agent.agents_pos[px][py]}, {Agent.agents_pos[px][py].id}")
 
-    def get_neighbors(self, verbose: bool = False) -> list | None:
+    def get_neighbors(self, verbose: bool = False) -> list:
         """ 
         Get the neighboring agents of the current agent.
         
@@ -144,10 +135,7 @@ class Agent:
         Returns
         -------
         list[Agent]
-            A list of neighboring agents.
-            
-        None
-            If there are no neighboring agents.
+            A list of neighboring agents. Empty list if no neighbors are found.
         """
         nlist= []
         
@@ -160,12 +148,8 @@ class Agent:
                 if posagent != -1 and posagent.id != self.id:
                     nlist.append(posagent)
                     
-                    if verbose: print(f"{posagent}:{posagent.id}")
-                    
-        if nlist != []:
-            return(nlist)
-        else:
-            return(None)
+        if verbose: print(f"{self._id} neighbors: {nlist}")            
+        return(nlist)
         
     def compete(self, judge: callable, verbose: bool = False) -> None:
         """ 
@@ -179,15 +163,13 @@ class Agent:
         verbose : bool, optional
             If True, print the competition details.
         """
-        #neighbors= [a for a in agents if a!= self and abs(a.x- self.x)<=1 and abs(a.y- self.y)<=1]
-        
         neighbors = self.get_neighbors()
+        
         #if there are neighbours to compete with
-        if neighbors != None:
-            if verbose: print(f"Compete: {self.id}:{neighbors}")
-            
+        if neighbors != []:
             a = choice(neighbors)
             #competition between same words is not allowed
+            if verbose: print(f"Compete: {self.id}_vs_{a.id}")
             if self.word != a.word:
                 #if the current agent wins the competition 
                 if judge(self.word, a.word) == self.word:
@@ -209,4 +191,8 @@ class Agent:
             for a in Agent.agents_pos:
                 del a
             
+        del self
+        Agent.active_agents = []
+        Agent.agents_pos = []
+        Agent.W = None
         collect()

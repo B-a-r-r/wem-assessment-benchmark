@@ -17,40 +17,31 @@ class LanguageModelHandler:
     """
     A class to handle the loading, configuration and use of a language model from HuggingFace.
     
-    Attributes
+    Objects attributes
     ----------
     model_name : str
         The name of the model to load from HuggingFace.
         
-    __auth_token : str
+    _auth_token : str
         The HuggingFace authentication token.
     
-    __model : AutoModel
-        The language model to load from HuggingFace.
+    _model : AutoModel
+        The model resolved from model_name.
         
-    __tokenizer : AutoTokenizer
-        The tokenizer for the language model, which is the default one for the given model.
+    _tokenizer : AutoTokenizer
+        The tokenizer resolved from model_name.
     
-    __device : torch.device
+    _device : torch.device
         The hardware that should handle the computation (CPU or GPU, default is GPU).
     
-    __logits_processor : LogitsProcessorList
-        A list of orchestration parameters that will be used to process the logits (partly determining/adapting the output).
+    _logits_processor : LogitsProcessorList
+        A list of parameters that will be used to process the logits (partly determining/adapting the output).
         
-    __log_event : callable
-        A function to log events during the model's configuration and usage.
+    _log_event : callable
+        A callable function to log events.
     """
     
-    model_name: str
-    offload_dir: str
-    __auth_token: str
-    __model: AutoModelForCausalLM
-    __tokenizer: AutoTokenizer
-    __device: device
-    __logits_processor: LogitsProcessorList
-    __log_event: callable
-    
-    def __init__(self, model_name: str, auth_token: str, offload_dir: str ="./.llm-offloads", log_event: callable = None) -> None:
+    def __init__(self, model_name: str, auth_token: str =None, offload_dir: str ="./.llm-offloads", log_event: callable = None) -> None:
         """
         Initialize a handler for a given LLM.
         
@@ -59,59 +50,96 @@ class LanguageModelHandler:
         model_name : str
             The name of the model to load from HuggingFace.
             
-        auth_token : str
-            The HuggingFace authentication token.
-        """
-        self.__log_event = log_event if log_event is not None else lambda **kwargs: None
+        auth_token : str, optional
+            The HuggingFace authentication token. If not provided, the environment variable will try to be used.
+            
+        offload_dir : str, optional
+            The directory where the model will be offloaded. Default is "./.llm-offloads".
+            
+        log_event : callable, optional
+            A callable function to log events. If not provided, a no-op function will be used.
+        """        
+        self._log_event: callable = log_event if log_event is not None else lambda **kwargs: print("--- WARNING - No log function set for the LanguageModelHandler. ---")
         
+        self._auth_token: str = None
         connexion_tryer = 0 #Avoid occasionnal crash at launch due to connection issues
-        while connexion_tryer < 3:
+        while self._auth_token is None:
             try:
+                if auth_token is None:
+                    #search for the environment variable file in the project 
+                    try:
+                        #if the app is run from a sub directory of the root directory
+                        auth_token = dotenv_values(path.abspath("../.env"))["HF_AUTH_TOKEN"]
+                    except KeyError:
+                        try:
+                            #if the app is run from the root directory
+                            auth_token = dotenv_values(path.abspath("./.env"))["HF_AUTH_TOKEN"]
+                        except KeyError:
+                            try:
+                                #try desperately to find the file using original name of the project
+                                auth_token = dotenv_values(path.abspath("wem-assessment-benchmark/.env"))["HF_AUTH_TOKEN"]
+                            except Exception as e:
+                                self._log_event(
+                                    event=f"Could not resolve the authentication token: {e}",
+                                    color=""
+                                )
+                                raise e
+                        
                 login(auth_token)
-                self.__auth_token = auth_token
-                connexion_tryer = 3
+                self._auth_token = auth_token
             
             except ConnectionError as e:
-                self.__log_event(event=f"Error during authentication: {e}", source="LanguageModelHandler", indent="\t", color="\033[91m")
-                self.__log_event(event="Retrying...", source="LanguageModelHandler", indent="\t")
+                self._log_event(event=f"Server error during authentication: {e}", source="LanguageModelHandler", indent="\t", type="WARNING")
+                self._log_event(event="Retrying to login...", source="LanguageModelHandler", indent="\t")
                 connexion_tryer += 1
                 continue
             
             except Exception as e:
-                self.__log_event(event=f"Error during authentication: {e}", source="LanguageModelHandler", indent="\t", color="\033[91m")
-                exit(1)
+                self._log_event(event=f"Unexpected error during authentication: {e}", source="LanguageModelHandler", indent="\t", type="FATAL")
+                raise e
+            
+            #avoid infinite loop
+            if connexion_tryer > 3:
+                self._log_event(event="Too many connection attempts. Exiting...", source="LanguageModelHandler", indent="\t", type="FATAL")
+                raise ConnectionError("Too many connection attempts. Exiting...")
         
-        self.model_name = model_name
-        self.offload_dir = path.join(path.dirname(__file__),  offload_dir)
-        self.__model = None
-        self.__device = None
-        self.__logits_processor = None
+        self.model_name: str = model_name
+        self.offload_dir: str = path.join(path.dirname(__file__),  offload_dir)
+        self._model: AutoModelForCausalLM = None
+        self._device: device = None
+        self._logits_processor: LogitsProcessorList = None
         
+        #cache directory for the model
         makedirs(path.join(path.dirname(__file__), ".llm-cache")) if not path.exists(path.join(path.dirname(__file__), ".llm-cache")) else None
     
-        self.__log_event(event=f"Resolving model auto tokenizer from pretrained...", source="LanguageModelHandler", indent="\t")
-        self.__tokenizer = AutoTokenizer.from_pretrained(
+        self._log_event(event=f"Resolving model auto tokenizer from pretrained...", source="LanguageModelHandler")
+        self._tokenizer = AutoTokenizer.from_pretrained(
             pretrained_model_name_or_path=model_name,
             force_download=True,
             trust_remote_code=True,
             use_fast=True,
             cache_dir=path.join(path.dirname(__file__), ".llm-cache")
         )
-        self.__tokenizer.pad_token = self.__tokenizer.eos_token 
+        self._tokenizer.pad_token = self._tokenizer.eos_token 
         
-   
+        self._log_event(event=f"LanguageModelHandler for {self.model_name} initialized. Tokenizer reolved.", source="LanguageModelHandler")
+        
+    @property
     def get_model(self) -> AutoModelForCausalLM:
-        return self.__model
+        return self._model
     
+    @property
     def get_tokenizer(self) -> AutoTokenizer:
-        return self.__tokenizer
+        return self._tokenizer
     
+    @property
     def get_device(self) -> device:
-        return self.__device
+        return self._device
     
+    @property
     def get_logits_processor(self) -> LogitsProcessorList:
-        return self.__logits_processor     
-        
+        return self._logits_processor     
+     
     def configure_model(self, 
         use_gpu: bool =True,
         temperature: float =1.,
@@ -138,50 +166,48 @@ class LanguageModelHandler:
             If True, the model will be offloaded to the local machine's disk.
             This parameter will be ignored if the expected hardware is not available.
         """
-        if self.__model is not None:
-            self.__log_event(event="Model is already configured and freezed.", source="LanguageModelHandler", indent="\t", color="\033[91m")
-            raise RuntimeError(f"Model is already configured and freezed.")
+        #once the model is configured, it cannot be reconfigured
+        if self._model is not None:
+            self._log_event(event="Model is already configured and freezed. Ignoring this call.", source="LanguageModelHandler", indent="\t", type="WARNING")
+            return
         
         #check if gpu is available before setting the device to gpu
-        self.__device = device("cpu" if (not use_gpu or not cuda.is_available()) else "cuda")
-        self.__log_event(event=f"Model will be loaded on {self.__device.type}.", source="LanguageModelHandler", indent="\t")
+        self._device = device("cpu" if (not use_gpu or not cuda.is_available()) else "cuda")
+        self._log_event(event=f"Model will be loaded on {self._device.type}.", source="LanguageModelHandler")
         
-        self.__log_event(event=f"Resolving auto model from pretrained...", source="LanguageModelHandler", indent="\t")
+        self._log_event(event=f"Resolving auto model from pretrained...", source="LanguageModelHandler")
         if ( #the local offload is applyed only if the wanted hardware is available
-            (self.__device.type == "cuda" and local_offload)
+            (self._device.type == "cuda" and local_offload)
             or (not use_gpu and local_offload)
         ):
             with init_empty_weights():
-                self.__model = AutoModelForCausalLM.from_pretrained(
+                self._model = AutoModelForCausalLM.from_pretrained(
                     pretrained_model_name_or_path = self.model_name,
-                    pad_token_id=self.__tokenizer.eos_token_id,
+                    pad_token_id=self._tokenizer.eos_token_id,
                     device_map = "auto",
                     load_in_8bit = quantization == 8,
                     load_in_4bit = quantization == 4,
                     torch_dtype = float32,
                 )
-            self.__model = disk_offload(self.__model, offload_dir=self.offload_dir)
+            self._model = disk_offload(self._model, offload_dir=self.offload_dir)
             
-            self.__log_event(event=f"Model offloaded to {self.offload_dir}.", source="LanguageModelHandler", indent="\t")
+            self._log_event(event=f"Model offloaded to {self.offload_dir}.", source="LanguageModelHandler", indent="\t")
             
         #if the wanted hardware is not available, or the local offload is not wanted, load the model normally
         else:
-            # self.__model = AutoModelForCausalLM.from_config(self.__model_config)
-            self.__model = AutoModelForCausalLM.from_pretrained(
+            self._model = AutoModelForCausalLM.from_pretrained(
                 pretrained_model_name_or_path = self.model_name,
-                #device_map = "auto",
                 load_in_8bit = quantization == 8,
                 load_in_4bit = quantization == 4,
             )
                        
-            self.__log_event(event=f"Model not offloaded.", source="LanguageModelHandler", indent="\t")
+            self._log_event(event=f"Model not offloaded.", source="LanguageModelHandler", indent="\t")
+            self._log_event(event=f"Model initialized.", source="LanguageModelHandler")
             
-        self.__logits_processor = LogitsProcessorList([
+        self._logits_processor = LogitsProcessorList([
             TemperatureLogitsWarper(temperature),
         ])
-        
-        #self.__model.to_empty(device=self.__device)
-        
+
         
     def generate_response(self, 
         prompt: str, 
@@ -196,37 +222,43 @@ class LanguageModelHandler:
         Parameters
         ----------
         prompt : str
-            The input text to generate a response for.
+            The input text to generate a response from.
             
         rep_penalty : float, optionals
             Each repetition of the same token is more or less penalized.
             This could encourage the model to diversify the terms in the output.
             
-        attention_mask : bool, optional
-            If True, the attention mask will be applied to the input text (padding + truncation).
+        min_new_tokens : int, optional
+            This parameter may help to avoid empty responses and force the model to not just repeat the prompt.
+            
+        max_new_tokens : int, optional
+            This parameter may help to avoid too long responses and force the model stay moer or less on the topic.
+            
+        batch_size : int, optional
+            The number of samples to generate in parallel.
             
         Returns
         -------
         str
-            The generated response from the model.
+            The generated (raw) response from the model.
         """
-        if self.__model is None:
-            self.__log_event(
-                event="The model was not configured. Launching with default parameters.",
+        if self._model is None:
+            self._log_event(
+                event="The model was not configured before trying to generate a response. Launching with default parameters.",
                 source="LanguageModelHandler",
                 indent="\t",
-                color="\033[91m",
+                type="WARNING",
             )
             self.configure_model()
 
         generator = pipeline(
             task="text-generation",
             #task="text2text-generation",
-            model=self.__model,
-            tokenizer=self.__tokenizer,
-            device=self.__device,
+            model=self._model,
+            tokenizer=self._tokenizer,
+            device=self._device,
             torch_dtype="auto",
-            logits_processor=self.__logits_processor,
+            logits_processor=self._logits_processor,
         )
         
         outputs = generator(
@@ -238,32 +270,11 @@ class LanguageModelHandler:
             do_sample=True,
             batch_size=batch_size,
             num_return_sequences=1,
-            eos_token_id=self.__tokenizer.eos_token_id,
-            pad_token_id=self.__tokenizer.eos_token_id,
+            eos_token_id=self._tokenizer.eos_token_id,
+            pad_token_id=self._tokenizer.eos_token_id,
         )
         
-        response = outputs[0]["generated_text"].replace(prompt, "")
-
-        
-        # # tokenize the prompt
-        # inputs = self.__tokenizer(
-        #     self.__tokenizer.tokenize(prompt),
-        #     return_tensors="pt",
-        #     padding=attention_mask,
-        #     truncation=attention_mask,
-        #     max_length=2048,
-        # ).to(self.__device)
-
-        # with no_grad():
-        #     # generate response
-        #     outputs = self.__model.generate(
-        #         **inputs,
-        #         repetition_penalty=rep_penalty,
-        #         logits_processor=self.__logits_processor
-        #     )
-
-        # # decode response
-        # response = self.__tokenizer.decode(outputs[0], skip_special_tokens=True).replace(prompt, "")
+        response = outputs[0]["generated_text"].replace(prompt, "") #remove the prompt if the model repeats it
 
         return response
     
@@ -277,15 +288,15 @@ class LanguageModelHandler:
         
         cuda.empty_cache()
         
-        del self.__model
-        del self.__tokenizer
-        del self.__logits_processor
-        del self.__device
+        del self._model
+        del self._tokenizer
+        del self._logits_processor
+        del self._device
         del self
         collect()
     
     def __repr__(self) -> str:
-        return f"LanguageModelHandler(model_name={self.model_name}, device={self.__device.type}, offload_dir={self.offload_dir})"
+        return f"LanguageModelHandler(model_name={self.model_name}, device={self._device.type}, offload_dir={self.offload_dir})"
         
 
 if __name__ == "__main__":
@@ -316,6 +327,7 @@ if __name__ == "__main__":
             .replace("#N#", str(words_list_length)).replace("#Format#", specify_format(words_list_length)).strip()
         
         model_name = "meta-llama/Llama-3.2-3B-Instruct"
+        #model_name = "bartowski/gemma-2-9b-it-GGUF"
         handler = LanguageModelHandler(model_name, auth_token)
         handler.configure_model(use_gpu=True, local_offload=False)
         response = handler.generate_response(

@@ -4,6 +4,8 @@ from gc import collect
 from LanguageModelHandler import LanguageModelHandler
 from sys import exit
 import re
+from json import dump
+from json import loads as encode_dict
 
 #
 # author:       Reiji SUZUKI et al.
@@ -16,7 +18,7 @@ class Judge:
     This class is a judging system powered by a LLM model.
     It is used to compare words according to a given criteria.
     
-    Attributes     
+    Objects attributes     
     ----------
     _model : LanguageModelHandler
         The llm model to be used for judging.
@@ -35,62 +37,97 @@ class Judge:
         A callable function to log events.
     """
     
-    _model: LanguageModelHandler
-    judgments_history: dict
-    criteria: str
-    config: dict
-    _log_event: callable
-    expected_max_tokens_per_word: int
-    
-    
     def __init__(self,
-        model: LanguageModelHandler, 
-        criteria: str, 
-        config_path: str ="config.json",
+        config: dict,
         log_event: callable =None,
-        expected_max_tokens_per_word: int =5
     ):
         """
         Initializes a Judge object.
 
         Parameters
         ----------
-        model : LanguageModelHandler
-            The llm model to be used for judging.
-            
         criteria : str
             The judging criteria.
             
-        config_path : str, optional
-            The path to the config JSON file (default is "config.json").
+        config: dict
+            A dictionary containing the configuration parameters.
             
         log_event : callable, optional
             A callable function to log events (default is None).
         """
+        self._log_event: callable = log_event if log_event is not None else lambda x: print("--- WARNING - No log function set for the Judge. ---")
+        self.judgments_history: dict = {}
         
-        self.judgments_history = {}
-        self.criteria = criteria
-        self.expected_max_tokens_per_word = expected_max_tokens_per_word
-        self._log_event = log_event if log_event is not None else lambda x: None
+        self.config: dict = config
+        self.verify_config()
         
-        with open(config_path, "r") as f:
-            self.config = json.load(f)
-            
-        self._model = model
+        self.criteria: str = self.config["simulation"]["CRITERIA"]
+        
+        self._model: LanguageModelHandler = LanguageModelHandler(
+            model=self.config["model"]["name"],
+            log_event=self._log_event,
+        )
         
         #load the model with the given config
-        try:
-            self._model.configure_model(
-                local_offload= self.config["model"]["local_offload"],
-                quantization= self.config["model"]["quantization"], 
-                temperature= self.config["model"]["temperature"],
-                use_gpu= self.config["model"]["use_gpu"],
-            )
-            
-        except KeyError as e:
-            self._log_event(f"\nMissing key in config: {e}. Please check the config file.", source="Judge", indent="\t", color="\033[91m")
-            exit(1)
+        self._model.configure_model(
+            local_offload= self.config["model"]["local_offload"],
+            quantization= self.config["model"]["quantization"], 
+            temperature= self.config["model"]["temperature"],
+            use_gpu= self.config["model"]["use_gpu"],
+        )
         
+        self._log_event(event=f"Judge '{self.criteria}' loaded.")
+    
+    def verify_config(self):
+        """
+        Verify the config file and check if all the required keys are present.
+        May proceed to some adjustments according to the inputed config.
+        """
+        self._log_event(f"Chcking requirements from config...", "Judge", "\t")
+        
+        try:
+            assert self.config["model"]["name"] is not None, "Missing model name in the 'model' section of the config file."
+            assert self.config["model"]["temperature"] is not None, "Missing temperature parameter in the 'model' section of the config file."
+            
+            assert self.config["prompts"]["judge"] is not None, "The judge prompt template must be set in the 'prompts' section of the config file."
+            assert self.config["prompts"]["judge"].find("#criteria#") != -1, "The judge prompt template must contain #criteria#."
+            assert self.config["prompts"]["judge"].find("#word1#") != -1, "The judge prompt template must contain #word1#."
+            assert self.config["prompts"]["judge"].find("#word2#") != -1, "The judge prompt template must contain #word2#."
+            assert self.config["prompts"]["judge"].find("#format#") != -1, "The judge prompt template must contain #format#."
+            
+            assert self.config["prompts"]["prefix"] is not None, "The prefix prompt template must be set in the 'prompts' section of the config file."
+            assert self.config["prompts"]["prefix"].find("#prompt#") != -1, "The prefix prompt template must contain #prompt#."
+            
+            assert self.config["prompts"]["create"] is not None, "The create prompt template must be set in the 'prompts' section of the config file."
+            assert self.config["prompts"]["create"].find("#A#") != -1, "The create prompt template must contain #A#."
+            assert self.config["prompts"]["create"].find("#format#") != -1, "The create prompt template must contain #format#."
+            
+            assert self.config["prompts"]["mutate"] is not None, "The mutate prompt template must be set in the 'prompts' section of the config file."
+            assert self.config["prompts"]["mutate"].find("#word#") != -1, "The mutate prompt template must contain #word#."
+            assert self.config["prompts"]["mutate"].find("#B#") != -1, "The mutate prompt template must contain #B#."
+            assert self.config["prompts"]["mutate"].find("#format#") != -1, "The mutate prompt template must contain #format#."
+            
+            assert self.config["simulation"]["CRITERIA"] is not None, "The criteria must be set in the 'simulation' section of the config file."
+            assert self.config["simulation"]["N"] is not None, "The N parameter must be set in the 'simulation' section of the config file."
+            assert self.config["simulation"]["B"] is not None, "The B parameter must be set in the 'simulation' section of the config file."
+            assert self.config["simulation"]["WORD_MIN_LENGHT"] is not None, "The WORD_MIN_LENGHT parameter must be set in the 'simulation' section of the config file."
+            assert self.config["simulation"]["WORD_MAX_LENGHT"] is not None, "The WORD_MAX_LENGHT parameter must be set in the 'simulation' section of the config file."
+            
+            assert self.config["workspace"]["exp_dir"] is not None, "The EXP_DIR parameter must be set in the 'workspace' section of the config file."
+
+            if self.config["model"]["quantization"] is None:
+                self.config["model"]["quantization"] = -1
+                
+            if self.config["model"]["local_offload"] is None:
+                self.config["model"]["local_offload"] = False
+                
+            if self.config["model"]["use_gpu"] is None:
+                self.config["model"]["use_gpu"] = False
+            
+        except Exception as e:
+            self._log_event(f"\nFailed to log config: {e}. Please check the config file.", source="Judge", indent="\t", type="FATAL")
+            raise e
+    
     def judge(self, word1: str, word2: str) -> str:
         """
         The model is used to compare two words and return the best according to the given criteria.
@@ -108,27 +145,15 @@ class Judge:
         str
             The word chosen by the model.
         """
-        ##check if the words were already judged
+        #check if the words were already judged, if so return the cause law
         if (word1, word2) in self.judgments_history:
             return self.judgments_history[(word1, word2)]
-        
-        try:
-            #check if the prompt template is well formed
-            assert self.config["prompts"]["judge"].find("#criteria#") != -1, "The prompt template for judging must contain #criteria#."
-            assert self.config["prompts"]["judge"].find("#word1#") != -1, "The prompt template for judging must contain #word1#."
-            assert self.config["prompts"]["judge"].find("#word2#") != -1, "The prompt template for judging must contain #word2#."
-            assert self.config["model"]["max_lenght_output"] is not None, "The max_lenght_output parameter must be set in the config file."
-            assert self.config["prompts"]["prefix"] is not None and self.config["prompts"]["prefix"].find("#prompt#") != -1, "The prefix prompt is set but must contain #prompt#."
-        
-        except Exception as e:
-            self._log_event(f"\nFailed to log config: {e}. Please check the config file.", source="Judge", indent="\t", color="\033[91m")
-            exit(1)
         
         #adapt the prompt template to the criteria and given words
         prompt = self.config["prompts"]["prefix"][:].replace(
             "#prompt#", 
             self.config["prompts"]["judge"][:]
-        ).replace("#criteria#", self.config["simulation"]["CRITERIA"]).replace("#word1#", word1).replace("#word2#", word2)
+        ).replace("#criteria#", self.criteria).replace("#word1#", word1).replace("#word2#", word2)
     
         chosen_one= self.request_intervention(prompt, 1, distinct=True)
         
@@ -147,30 +172,19 @@ class Judge:
         
         Parameters
         ----------
-        n : int
-            The number of words to create.
+        verbose : bool, optional
+            If True, print the words created (default is False).
             
-        word_min_lenght : int
-            The minimum length of the words.
-            
-        word_max_lenght : int
-            The maximum length of the words.
+        Returns
+        -------
+        list
+            A list of n words created by the model.
         """
-        try:
-            #check if the prompt template is well formed
-            assert self.config["prompts"]["create"].find("#N#") != -1, "The prompt template for creating words must contain #N#."
-            assert self.config["model"]["max_lenght_output"] is not None, "The max_lenght_output parameter must be set in the config file."
-            assert self.config["prompts"]["prefix"] is not None and self.config["prompts"]["prefix"].find("#prompt#") != -1, "The prefix prompt is set but must contain #prompt#."
-
-        except Exception as e:
-            self._log_event(f"\nFailed to log config: {e}. Please check the config file.", source="Judge", indent="\t", color="\033[91m")
-            exit(1)
-        
         n = self.config["simulation"]["N"]
         prompt = self.config["prompts"]["prefix"][:].replace(
             "#prompt#", 
             self.config["prompts"]["create"][:]
-        ).replace("#N#", str(n)).replace("#format#", self.forge_response_format(n))
+        ).replace("#A#", str(n)).replace("#format#", self.forge_response_format(n))
              
         words = []
         while len(words) < n:
@@ -183,7 +197,7 @@ class Judge:
             )]
 
             self._log_event(f"Created words: {words}", "Judge", "\t")
-            if len(words) < n: self._log_event(f"Not enough words created, trying again...", "Judge", "\t")
+            if len(words) < n: self._log_event(f"Not enough words created, trying again...", "Judge", "\t", type="WARNING")
             
         if verbose : print(f"Words created: {words}")
         return list(words)
@@ -200,33 +214,20 @@ class Judge:
         word : str
             The word to mutate.
             
-        word_min_lenght : int
-            The minimum length of the mutated words.
+        verbose : bool, optional
+            If True, print the mutated word (default is False).
             
-        word_max_lenght : int
-            The maximum length of the mutated words.
-            
-        n : int, optional
-            The number of words to create, among which the mutation will be chosen.
+        Returns
+        -------
+        str
+            The mutated word.
         """
-        self._log_event(f"Chcking requirements from config...", "Judge", "\t")
-        try:
-            #check if the prompt template is well formed
-            assert self.config["prompts"]["mutate"].find("#word#") != -1, "The prompt template for mutating words must contain #word#."
-            assert self.config["model"]["max_lenght_output"] is not None, "The max_lenght_output parameter must be set in the config file."
-            assert self.config["prompts"]["prefix"] is not None and self.config["prompts"]["prefix"].find("#prompt#") != -1, "The prefix prompt is set but must contain #prompt#."
-        
-        except Exception as e:
-            self._log_event(f"\nFailed to log config in mutation process: {e}. Please check the config file.", source="Judge", indent="\t", color="\033[91m")
-            exit(1)
-        
-        
         n = self.config["simulation"]["B"]
         
         prompt = self.config["prompts"]["prefix"][:].replace(
             "#prompt#", 
             self.config["prompts"]["mutate"][:]
-        ).replace("#N#", str(n)).replace("#word#", word).replace("#format#", self.forge_response_format(n))
+        ).replace("#B#", str(n)).replace("#word#", word).replace("#format#", self.forge_response_format(n))
         
         words= []
         while len(words) < n:
@@ -237,7 +238,7 @@ class Judge:
             )]
             
             self._log_event(f"Mutation list: {words}", "Judge", "\t")
-            if len(words) < n: self._log_event(f"Not enough words created, trying again...", "Judge", "\t")
+            if len(words) < n: self._log_event(f"Not enough words created, trying again...", "Judge", "\t", type="WARNING")
         
         chosen_word= rnd_choice(words)
         
@@ -247,21 +248,69 @@ class Judge:
     def request_intervention(self,
         prompt: str,
         n: int,
-        distinct: bool =False
+        distinct: bool =False,
+        verbose: bool =False
     ) -> str:
+        """ 
+        Request an intervention from the model.
+        
+        Parameters
+        ----------
+        prompt : str
+            The prompt to send to the model.
+            
+        n : int
+            The number of words to generate.
+            
+        distinct : bool, optional
+            If True, the formatted response will be cleared of duplicates (default is False).
+            
+        verbose : bool, optional
+            If True, print the raw and formatted response (default is False).
+            
+        Returns
+        -------
+        str
+            The formatted version of theresponse from the model.
+        """
+        self._log_event(f"Requesting intervention...", "Judge", "\t")
+        
         response = self._model.generate_response(
             prompt, 
             min_new_tokens=n, 
-            max_new_tokens=self.expected_max_tokens_per_word*n,
+            max_new_tokens=self.config["model"]["max_tokens_per_word"]*n,
             rep_penalty=self.config["model"]["rep_penalty"],
         )
-        # print(f"Raw response: {response}")
-        # print(f"Formatted response: {Judge.format_response(response, n, distinct)}")
         
-        return Judge.format_response(response, n, distinct)
+        f_response = Judge.format_response(response, n, distinct)
+        
+        if verbose:
+            print(f"Raw response: {response}")
+            print(f"Formatted response: {f_response}")
+        
+        return f_response
     
     @staticmethod
     def format_response(response: str, n: int, distinct: bool) -> list:
+        """ 
+        Format the response from the model.
+        
+        Parameters
+        ----------
+        response : str
+            The raw response from the model.
+            
+        n : int
+            The number of words expected.
+            
+        distinct : bool
+            If True, the formatted response will be cleared of duplicates.
+            
+        Returns
+        -------
+        list
+            The formatted response as a list of words.
+        """
         #avoid useless special characters in the response
         res = response.lower().replace(".","").replace("*"," ").replace("_"," ") \
             .replace("-"," ").replace("+"," ").replace("#","").replace("!","") \
@@ -292,14 +341,43 @@ class Judge:
         return res[:n]
     
     @staticmethod
-    def forge_response_format(n: int) -> str:
+    def forge_response_format(n: int, choices: list =None) -> str:
+        """
+        Forge the response format to add to a prompt.
+        
+        Parameters
+        ----------
+        n : int
+            The number of words expected.
+            
+        choices : list, optional
+            A list of specific choices to specify in the format (default is None).
+            
+        Returns
+        -------
+        str
+            The response format as a string.
+        """
         res = ""
-        for i in range(1, n+1):
-            if i > 1:
-                res += ""
-            res += f"name{i}"
-            if i < n:
-                res += "/"
+        #if only one word is expeced, as when judging
+        if n == 1:
+            res += f"Answer only with "
+            #if specific choices are given
+            if choices is not None:
+                for i in len(choices):
+                    res += f"{choices[i]}"
+                    if i < len(choices)-1:
+                        res += " or "
+            else:
+                res += "one word"
+        #if multiple words are expected, as when creating or mutating
+        else:
+            for i in range(1, n+1):
+                if i > 1:
+                    res += ""
+                res += f"name{i}"
+                if i < n:
+                    res += "/"
         return res 
     
     def clear(self):
@@ -314,3 +392,19 @@ class Judge:
         
         collect()
         
+    def log_case_law(self, log_label: str =""):
+        """
+        Log the judgments history to a file.
+        
+        Parameters
+        ----------
+        log_label : str, optional
+            The label to add to the file name (default is "").
+        """
+        with open(f"{self.config["workspace"]["exp_dir"]}/judgments_history_{log_label}.json", "w", encoding="utf-8") as tmp:
+            dump(encode_dict(self.judgments_history), tmp, indent=2)
+        
+        self._log_event(f"Judgments history saved in {tmp.name}", "Judge")
+        
+    def __repr__(self):
+        return f"Judge({self.criteria}) using {self._model.model_name}."
