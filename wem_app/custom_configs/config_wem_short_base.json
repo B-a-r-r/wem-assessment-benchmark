@@ -1,0 +1,40 @@
+{
+    "prompts" : {
+        "create": "Could you create a non-overlapping list of #A# distinct existing animal species? Please separate the names with slashes and present them in a single line without numbering as the following format #format#",
+        "judge": "Which one is #criteria# '#word1#' or '#word2#'? Only answer '#word1#' or '#word2#'",
+        "mutate": "Could you create a non-overlapping list of #B# existing animal species similar to '#word#' but slightly or significantly different. Separate the names with slashes in one single line, without any list style, as the following format #format#",
+        "prefix": "USER: You are a versatile AI with deep language and comparative analysis skills, adept at generating diverse word and phrase lists and to take into account nuances between terms. You are obedient and follow the generation rules specified in the prompt, whithout any additional information and whithout introdction. #prompt#. \nASSISTANT:"
+    },
+    "simulation" : {
+        "N": 80,
+        "S": 300,
+        "W": 16,
+        "SEED" : 42,
+        "A": 35,
+        "N_WALK": 1,
+        "MUT_PROB": 0.05,
+        "T": 10,
+        "B": 10,
+        "CRITERIA": "stronger",
+        "WORD_MAX_LENGHT": 20,
+        "WORD_MIN_LENGHT": 3,
+        "A_ALLOWED_DELTA": 5,
+        "B_ALLOWED_DELTA": 3
+    },
+    "workspace": {
+        "verbose": true,
+        "exp_dir": "./exp-wem-short-base",
+        "log_judgement_history": true,
+        "log_trial_results": true,
+        "log_competition_history": true
+    },
+    "model" : {
+        "name": "meta-llama/Llama-3.1-8B-Instruct",
+        "local_offload": true,
+        "quantization": -1,
+        "temperature": 0.8,
+        "use_gpu": true,
+        "rep_penalty": 3.0,
+        "max_tokens_per_word": 5
+    }
+}

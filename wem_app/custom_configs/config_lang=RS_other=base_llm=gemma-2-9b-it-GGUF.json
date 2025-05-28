@@ -1,0 +1,41 @@
+{
+    "prompts" : {
+        "create": "Вы можете создать неповторяющийся #A# список существующих видов животных? Пожалуйста, разделите имена косой чертой и представьте в одной строке, не нумеруя. В следующем формате #format#",
+        "judge": "Какой #criteria#: «#word1#» или «#word2#»? Ответьте только «#word1#» или «#word2#»",
+        "mutate": "Пожалуйста, перечислите #B# видов существующих животных, похожих на «#word#», но с небольшими или значительными отличиями. Разделите названия косой чертой и представьте в одной строке, не нумеруя. В следующем формате #format#",
+        "prefix": "Пользователь: Вы — многофункциональный ИИ с глубокими навыками языкового и сравнительного анализа, умеющий генерировать разнообразные списки слов и фраз, выделяя тонкие различия между терминами. #prompt# \nАссистент:"
+    },
+    "simulation" : {
+        "N": 80,
+        "S": 300,
+        "W": 16,
+        "SEED" : 42,
+        "A": 35,
+        "N_WALK": 1,
+        "MUT_RATE": 0.05,
+        "T": 10,
+        "B": 10,
+        "CRITERIA": "сильнее",
+        "WORD_MAX_LENGHT": 20,
+        "WORD_MIN_LENGHT": 3,
+        "A_ALLOWED_DELTA": 5,
+        "B_ALLOWED_DELTA": 3
+    },
+    "workspace": {
+        "verbose": true,
+        "exp_dir": "./exp-default-config",
+        "log_judgement_history": true,
+        "log_trial_results": true,
+        "log_competition_history": true
+    },
+    "model" : {
+        "name": "bartowski/gemma-2-9b-it-GGUF",
+        "local_offload": false,
+        "quantization": -1,
+        "temperature": 0.8,
+        "use_gpu": true,
+        "rep_penalty": 3.0,
+        "max_tokens_per_word": 5
+    }
+}
+

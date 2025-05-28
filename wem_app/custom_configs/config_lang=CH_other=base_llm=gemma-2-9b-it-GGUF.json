@@ -1,0 +1,41 @@
+{
+    "prompts" : {
+        "create": "您能否创建一个严格由#A#种现存动物物种组成的列表？请用斜杠分隔名称，并将它们呈现在一行上，不加编号。格式如下#format#",
+        "judge": "谁#criteria# #word1#”还是“#word2#”？请仅用“#word1#”或“#word2#”回答。只能用#word1#或#word2#回答",
+        "mutate": "请列举#B#种与“#word#”相似但存在细微或显著差异的现存动物物种。请用斜杠分隔名称，并将它们呈现在一行上，不加编号。格式如下#format#",
+        "prefix": "用户：您是一个多功能的人工智能，具备深厚的语言分析和比较技能，能够生成各种词语和表达列表，并识别术语之间的细微差异。#prompt#\n助手："
+    },
+    "simulation" : {
+        "N": 80,
+        "S": 300,
+        "W": 16,
+        "SEED" : 42,
+        "A": 35,
+        "N_WALK": 1,
+        "MUT_RATE": 0.05,
+        "T": 10,
+        "B": 10,
+        "CRITERIA": "更强",
+        "WORD_MAX_LENGHT": 20,
+        "WORD_MIN_LENGHT": 3,
+        "A_ALLOWED_DELTA": 5,
+        "B_ALLOWED_DELTA": 3
+    },
+    "workspace": {
+        "verbose": true,
+        "exp_dir": "./exp-default-config",
+        "log_judgement_history": true,
+        "log_trial_results": true,
+        "log_competition_history": true
+    },
+    "model" : {
+        "name": "bartowski/gemma-2-9b-it-GGUF",
+        "local_offload": false,
+        "quantization": -1,
+        "temperature": 0.8,
+        "use_gpu": true,
+        "rep_penalty": 3.0,
+        "max_tokens_per_word": 5
+    }
+}
+
