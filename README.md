@@ -21,7 +21,7 @@ Evolutionary Ecology of Words is a simulation model developed by Dr. Reiji SUZUK
 ## Config file
 The simulation is conigured through a **JSON config file**. It includes all the parameters for the **simulation**, but also the **LLM** parameters and the **workspace** variables.
 The config file is stuctured as follows:
-```json
+```
 {
     "prompts": {
         "create": "...",    #The prompt used to create the initial words list
