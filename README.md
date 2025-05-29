@@ -99,7 +99,7 @@ All the data from the simulation is stored in the experiment directory specified
     ```json
     {
         "gen": {
-            "(id1, id2)": winner_id | null 
+            "(id1, id2)": "winner_id | null"
         }
     }
     ```
@@ -110,7 +110,7 @@ All the data from the simulation is stored in the experiment directory specified
     ```json
     {
         "gen": {
-            "(word1, word2)": winner_word
+            "(word1, word2)": "winner_word"
         }
     }
     ```
@@ -121,14 +121,14 @@ All the data from the simulation is stored in the experiment directory specified
     {
         "gen": {
             "source_word": {
-                mutated_word: [
+                "mutated_word": [
                     [
-                        mutation_possibilities...
+                        "mutation_possibilities..."
                     ],
                     [
-                        mutation_possibilities...
+                        "mutation_possibilities..."
                     ],
-                ]
+                ],
             }
         }
     }
