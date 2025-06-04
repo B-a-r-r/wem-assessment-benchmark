@@ -7,16 +7,16 @@ from Agent import Agent
 from Judge import Judge
 from io import TextIOWrapper
 from gc import collect
-from datetime import datetime
 from json import dump
 from timeit import default_timer as timer
+from WemActor import WemActor
 
 #
 # author:       Reiji SUZUKI et al.
 # refactor:     Clément BARRIERE
 #
 
-class Simulation:
+class Simulation(WemActor):
     """ 
     A class to run a Ecology of Words simulation.
     
@@ -49,6 +49,9 @@ class Simulation:
         {generation: {source word: [new word, [mutations]]}}
     average_step_duration: float
         The average duration of a step in the simulation.
+    simul_advance: list[tuple[int, int, int, int, str]]
+        The list of tuples containing the simulation progress.
+        Each tuple contains (generation, agent id, x position, y position, word).
     """
     
     def __init__(self, 
@@ -67,7 +70,7 @@ class Simulation:
         """
         self.config_path: str = path.abspath(config_path)
         print(f"Config path: {self.config_path}")
-        self.logs_path: str = "logs.txt" if enable_logs else None
+        super().__init__(logs_path=path.join(path.abspath(self.simul_config["workspace"]["exp_dir"]), "logs.txt") if enable_logs else None)
         
         self.judge: Judge = None
         self.emerged_words: list = []
@@ -77,7 +80,6 @@ class Simulation:
         self.simul_advance: list[tuple[int, int, int, int, str]] = []
         self.average_step_duration: float = 0.0
         
-        self._logs_file: TextIOWrapper = None
         self._trial_res_logs: TextIOWrapper | None = None
         self._trial_competition_history_logs: TextIOWrapper | None = None
         self._trial_mutation_history_logs: TextIOWrapper | None = None
@@ -89,11 +91,11 @@ class Simulation:
         #set up the experience output directory
         if not path.exists(path.abspath(self.simul_config["workspace"]["exp_dir"])):
             makedirs(path.abspath(self.simul_config["workspace"]["exp_dir"]))
-        self.log_event(event=f"Experience output directory found/created: {self.simul_config["workspace"]["exp_dir"]}.")
+        self._log_event(event=f"Experience output directory found/created: {self.simul_config["workspace"]["exp_dir"]}.")
             
         self.run()
         
-    def step(self, s: int) -> None:
+    def _step(self, s: int) -> None:
         """
         Performs a step in the simulation.
 
@@ -102,9 +104,9 @@ class Simulation:
         s : int
             The current step of the simulation.
         """
-        self.log_event(event=f"Step {s} started.", indent="\t")
+        self._log_event(event=f"Step {s} started.", indent="\t")
         
-        self.log_event(event="Starting random walks phase.", indent="\t", underline=True)
+        self._log_event(event="Starting random walks phase.", indent="\t", underline=True)
         shuffle(Agent.active_agents) #improve globality
         for a in Agent.active_agents:
             a.random_walk_2(
@@ -112,14 +114,14 @@ class Simulation:
                 verbose=self.simul_config["workspace"]["verbose"]
             )
         
-        self.log_event(event="Starting competition phase.", indent="\t", underline=True)
+        self._log_event(event="Starting competition phase.", indent="\t", underline=True)
         self.competition_history[s] = {}
         shuffle(Agent.active_agents)
         for a in Agent.active_agents:
             res = a.compete(judge=self.judge.judge, gen=s, verbose=self.simul_config["workspace"]["verbose"])
             self.competition_history[s][(res[0][0].id if res[0][0] is not None else None, res[0][1].id if res[0][1] is not None else None)] = res[1].id if res[1] is not None else None
         
-        self.log_event(event="Starting mutation phase.", indent="\t", underline=True)
+        self._log_event(event="Starting mutation phase.", indent="\t", underline=True)
         self.mutation_history[s] = {}
         shuffle(Agent.active_agents)
         for a in Agent.active_agents:
@@ -132,14 +134,14 @@ class Simulation:
                 if not self.mutation_history[s].keys().__contains__(a.word):
                     self.mutation_history[s][a.word] = {}
                 if not self.mutation_history[s][a.word].keys().__contains__(mutation[0]):
-                    self.mutation_history[s][a.word].update({mutation[0]: [mutation[1]]})
+                    self.mutation_history[s][a.word]._update({mutation[0]: [mutation[1]]})
                 else:
                     self.mutation_history[s][a.word][mutation[0]].extend(mutation[1])
                 a.word = mutation[0]
                 
-        self.log_event(f"Step {s} completed.")
+        self._log_event(f"Step {s} completed.")
         
-    def update(self, s: int, t: int) -> None:
+    def _update(self, s: int, t: int) -> None:
         """
         Updates the frequency dictionary and logs the results of the current step.
                 
@@ -181,9 +183,9 @@ class Simulation:
         if self.simul_config["workspace"]["log_competition_history"]:
             self.log_competition_history(t=t)
         
-        self.log_event(event=f"Current population ({len(Agent.active_agents)}): {current_words}.")
-        self.log_event(event=f"Current number of words: {len(current_unique_words)}.")
-        self.log_event(event=f"Current emergence rate: {len(self.emerged_words)}.", underline= True)
+        self._log_event(event=f"Current population ({len(Agent.active_agents)}): {current_words}.")
+        self._log_event(event=f"Current number of words: {len(current_unique_words)}.")
+        self._log_event(event=f"Current emergence rate: {len(self.emerged_words)}.", underline= True)
 
     @staticmethod
     def set_seed(SEED: int) -> None:
@@ -206,15 +208,14 @@ class Simulation:
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark=False
 
-    def clear(self) -> None:
+    def _clear(self) -> None:
         """
         Cleans up the simulation by closing the log files and force freeing memory.
         """
         del self
         collect()
         
-        
-    def clean_after_trial(self) -> None:
+    def _clean_after_trial(self) -> None:
         """
         Closes the opened files and frees memory.
         """
@@ -237,58 +238,8 @@ class Simulation:
         self.frequency = {}
         self.emerged_words = []
         
-        self.judge.clear()
-        Agent.clear()
-        
-    def log_event(self, 
-        event: str, 
-        source: str =None, 
-        indent: str ="", 
-        underline: bool =False,
-        type: str =None,
-    ) -> None:
-        """
-        Logs an event to the log file with some 
-        additional information.
-
-        Parameters
-        ----------
-        event : str
-            The event to log.
-            
-        source : str, optional
-            The source file of the event.
-            
-        indent : str, optional
-            The indentation to use for the log message. 
-            Use "/t" for each indentation level (relpace the "/" with a backslash).
-            
-        underline : bool, optional
-            Whether to underline the log message or not.
-            
-        type : str, optional
-            Specific type of the event (FATAL, WARNING, etc...)
-        """
-        if self._logs_file is None:
-            #if the logs path is not set
-            if self.logs_path is None:
-                print("--- WARNING - Logs disabled for the simulation. No information will be logged. ---")
-                return
-            
-            #create and/or open the log file
-            self._logs_file = open(
-                path.join(path.abspath(self.simul_config["workspace"]["exp_dir"]), self.logs_path),
-                "w+",
-                encoding="utf-8"
-            )
-            #if the file is not empty, overwrite the content
-            if self._logs_file.readlines() != []:
-                self._logs_file.write("\n")
-            
-            self.log_event(event="Log file initialized.", underline= True)
-        
-        self._logs_file.writelines(f"{indent}{datetime.now().hour}:{datetime.now().minute}:{datetime.now().second}{f" - {type}" if type is not None else ""}{f" - from {source}" if source is not None else ""} - {event}\n{indent}{"------------\n" if underline else ""}")
-        self._logs_file.flush()
+        self.judge._clear()
+        Agent._clear()
     
     def _init_population(self, initial_word_list: list) -> None:
         """ 
@@ -319,7 +270,7 @@ class Simulation:
             assert len(Agent.active_agents) == self.simul_config["simulation"]["N"], f"Wrong number of agents created: should be {len(Agent.active_agents)} but got {self.simul_config["simulation"]["N"]}."
             
         except Exception as e:
-            self.log_event(
+            self._log_event(
                 event=f"Error creating agents: {e}",
                 source="Simulation",
                 type="FATAL"
@@ -330,20 +281,20 @@ class Simulation:
             Agent.set_agents_pos(agents_count= self.simul_config["simulation"]["N"])
             
         except Exception as e:
-            self.log_event(
+            self._log_event(
                 event=f"Error setting agents positions: {e}",
                 source="Simulation",
                 type="FATAL"
             )
             raise e
         
-        self.log_event(f"Agents created and dispatched.")
+        self._log_event(f"Agents created and dispatched.")
     
     def run(self) -> None:
         """Initializes the simulation and lauches it."""
         #for T trials
         for current_trial in range(0, self.simul_config["simulation"]["T"]):
-            self.log_event(event=f"Trial {current_trial} started.", underline= True)
+            self._log_event(event=f"Trial {current_trial} started.", underline= True)
             
             self.judge = Judge(
                 config= self.simul_config,
@@ -351,31 +302,31 @@ class Simulation:
             )
             
             self.set_seed(self.simul_config["simulation"]["SEED"] + current_trial)
-            self.log_event(event=f"Seed set to {self.simul_config["simulation"]["SEED"] + current_trial}.")
+            self._log_event(event=f"Seed set to {self.simul_config["simulation"]["SEED"] + current_trial}.")
 
             #initialize the base word list for the base population
             words = self.judge.create_word_list(
                 verbose= self.simul_config["workspace"]["verbose"],
             )
-            self.log_event(event=f"Initial words list created: {words}.")
+            self._log_event(event=f"Initial words list created: {words}.")
         
             self._init_population(words)
             
             #initialize the frequency dict 
             for w in words:
                 self.frequency[w]= [len([i for i in words if i==w])]
-            self.log_event(f"Frequency dict initialized.")
+            self._log_event(f"Frequency dict initialized.")
 
             self._run_trial(current_trial)
             
-            self.clean_after_trial()
-            self.log_event(f"Trial {current_trial} data cleaned.")
+            self._clean_after_trial()
+            self._log_event(f"Trial {current_trial} data cleaned.")
         
         self.average_step_duration /= self.simul_config["simulation"]["S"]*self.simul_config["simulation"]["T"]
-        self.log_event(f"Average step duration: {round(self.average_step_duration, 2)} seconds.")
-        self.log_event(f"Simulation reached the end. Bravo!")
+        self._log_event(f"Average step duration: {round(self.average_step_duration, 2)} seconds.")
+        self._log_event(f"Simulation reached the end. Bravo!")
         print(f"---Simulation reached the end.---")
-        self.clear()
+        self._clear()
             
     def _run_trial(self, t: int) -> None:
         """
@@ -386,14 +337,14 @@ class Simulation:
         t : int
             The current trial number.
         """
-        self.log_event(f"Starting main loop for trial {t}.")
+        self._log_event(f"Starting main loop for trial {t}.")
         
         #for S steps
         for i in range(self.simul_config["simulation"]["S"]):
             step_start_time = timer()
             
-            self.step(i)
-            self.update(i, t)
+            self._step(i)
+            self._update(i, t)
             
             step_end_time = timer()
             self.average_step_duration += step_end_time - step_start_time
@@ -404,12 +355,12 @@ class Simulation:
         
         Parameters
         ----------
-        log_label : str, optional
-            The label to add to the file name (default is "").
+        t : int
+            The current trial number.
         """
         if self._trial_competition_history_logs is None:
             self._trial_competition_history_logs = open(f"{path.abspath(self.simul_config["workspace"]["exp_dir"])}/competition_history_{t}.json", "w", encoding="utf-8")
-            self.log_event(f"Competition history file created.", "Simulation")
+            self._log_event(f"Competition history file created.", "Simulation")
         
         self._trial_competition_history_logs.seek(0)
         self._trial_competition_history_logs.truncate()
@@ -419,7 +370,7 @@ class Simulation:
             } for gen, competitions in self.competition_history.items()
         }, self._trial_competition_history_logs, indent=2)
         
-        self.log_event(f"Competition history logs updated.", "Simulation")
+        self._log_event(f"Competition history logs updated.", "Simulation")
         self._trial_competition_history_logs.flush()
         
     def log_trial_results(self, t: int) -> None:
@@ -428,14 +379,12 @@ class Simulation:
         
         Parameters
         ----------
-        trial : int
+        t : int
             The current trial number.
-        gen : int
-            The current generation number.
         """
         if self._trial_res_logs is None:
             self._trial_res_logs = open(path.join(path.abspath(self.simul_config["workspace"]["exp_dir"]), f"results_{t}.csv"), "w+", encoding="utf-8")
-            self.log_event(f"Results file created.", "Simulation")
+            self._log_event(f"Results file created.", "Simulation")
         
         self._trial_res_logs.seek(0)
         self._trial_res_logs.truncate()
@@ -444,7 +393,7 @@ class Simulation:
         for line in self.simul_advance:
             self._trial_res_logs.write(f"{line[0]},{line[1]},{line[2]},{line[3]},{line[4]}\n")
                 
-        self.log_event(f"Results logs updated.", "Simulation")
+        self._log_event(f"Results logs updated.", "Simulation")
         self._trial_res_logs.flush()
         
     def log_mutation_history(self, t: int) -> None:
@@ -453,12 +402,12 @@ class Simulation:
         
         Parameters
         ----------
-        log_label : str, optional
-            The label to add to the file name (default is "").
+        t : int
+            The current trial number.
         """
         if self._trial_mutation_history_logs is None:
             self._trial_mutation_history_logs = open(f"{path.abspath(self.simul_config["workspace"]["exp_dir"])}/mutation_history_{t}.json", "w", encoding="utf-8")
-            self.log_event(f"Mutation history file created.", "Simulation")
+            self._log_event(f"Mutation history file created.", "Simulation")
         
         self._trial_mutation_history_logs.seek(0)
         self._trial_mutation_history_logs.truncate()
@@ -468,7 +417,7 @@ class Simulation:
             } for gen, mutations in self.mutation_history.items()
         }, self._trial_mutation_history_logs, indent=2)
         
-        self.log_event(f"Mutation history logs updated.", "Simulation")
+        self._log_event(f"Mutation history logs updated.", "Simulation")
         self._trial_mutation_history_logs.flush()
             
     def verify_config(self) -> None:
@@ -490,7 +439,7 @@ class Simulation:
             assert self.simul_config["simulation"]["N"] >= self.simul_config["simulation"]["A"], "N must be greater than or equal to A."
             
             if self.simul_config["simulation"]["N_WALK"] <= 0:
-                self.log_event(
+                self._log_event(
                     event=f"N_WALK is set to {self.simul_config["simulation"]["N_WALK"]} in the config file, which means the agents will not move.",
                     source="Simulation",
                     type="WARNING",

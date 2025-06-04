@@ -1,0 +1,2380 @@
+{
+  "0": {
+    "('numbat', 'penguin')": "numbat",
+    "('penguin', 'numbat')": "numbat",
+    "('numbat', 'capybara')": "capybara",
+    "('capybara', 'numbat')": "capybara",
+    "('kangaroo', 'shoebill stork')": "kangaroo",
+    "('shoebill stork', 'kangaroo')": "kangaroo",
+    "('tapirus', \"steller's sea eagle\")": "tapirus",
+    "(\"steller's sea eagle\", 'tapirus')": "tapirus",
+    "('capybara', 'okapi')": "capybara",
+    "('okapi', 'capybara')": "capybara",
+    "('dolphin', 'snow leopard')": "dolphin",
+    "('snow leopard', 'dolphin')": "dolphin",
+    "('uakari', 'vulture')": "vulture",
+    "('vulture', 'uakari')": "vulture",
+    "('dolphin', 'baboon')": "dolphin",
+    "('baboon', 'dolphin')": "dolphin",
+    "('armadillo', 'gazelle')": "armadillo",
+    "('gazelle', 'armadillo')": "armadillo",
+    "('okapi', 'uakari')": "okapi",
+    "('uakari', 'okapi')": "okapi",
+    "('hippopotamus', 'giraffe')": "hippopotamus",
+    "('giraffe', 'hippopotamus')": "hippopotamus",
+    "('tapirus', 'hippopotamus')": "hippopotamus",
+    "('hippopotamus', 'tapirus')": "hippopotamus",
+    "('rhinoceros', 'aardvark')": "rhinoceros",
+    "('aardvark', 'rhinoceros')": "rhinoceros",
+    "('numbat', 'dolphin')": "numbat",
+    "('dolphin', 'numbat')": "numbat",
+    "('capybara', 'tarsier')": "capybara",
+    "('tarsier', 'capybara')": "capybara",
+    "('hippopotamus', 'hedgehog')": "hippopotamus",
+    "('hedgehog', 'hippopotamus')": "hippopotamus",
+    "('tarsier', 'okapi')": "tarsier",
+    "('okapi', 'tarsier')": "tarsier",
+    "('aardvark', 'capybara')": "capybara",
+    "('capybara', 'aardvark')": "capybara",
+    "('hippopotamus', 'gazelle')": "hippopotamus",
+    "('gazelle', 'hippopotamus')": "hippopotamus",
+    "('tapirus', 'dk dik disk')": "tapirus",
+    "('dk dik disk', 'tapirus')": "tapirus",
+    "('uakari', 'capybara')": "capybara",
+    "('capybara', 'uakari')": "capybara",
+    "('okapi', 'shoebill stork')": "okapi",
+    "('shoebill stork', 'okapi')": "okapi",
+    "('giraffe', 'okapi')": "giraffe",
+    "('okapi', 'giraffe')": "giraffe",
+    "('rhinoceros', 'salamander')": "rhinoceros",
+    "('salamander', 'rhinoceros')": "rhinoceros",
+    "('common marmoset', 'okapi')": "okapi",
+    "('okapi', 'common marmoset')": "okapi",
+    "('fossa', 'okapi')": "fossa",
+    "('okapi', 'fossa')": "fossa",
+    "('rhinoceros', 'gazelle')": "rhinoceros",
+    "('gazelle', 'rhinoceros')": "rhinoceros",
+    "('giraffe', 'salamander')": "giraffe",
+    "('salamander', 'giraffe')": "giraffe",
+    "('aardvark', 'numbat')": "numbat",
+    "('numbat', 'aardvark')": "numbat"
+  },
+  "1": {
+    "('hippopotamus', 'anteater')": "hippopotamus",
+    "('anteater', 'hippopotamus')": "hippopotamus",
+    "('mongoose', 'jaguarundi')": "mongoose",
+    "('jaguarundi', 'mongoose')": "mongoose",
+    "('rhebok', 'capybara')": "capybara",
+    "('capybara', 'rhebok')": "capybara",
+    "('hippopotamus', 'guenons')": "hippopotamus",
+    "('guenons', 'hippopotamus')": "hippopotamus",
+    "('rhinoceros', 'hedgehogs')": "rhinoceros",
+    "('hedgehogs', 'rhinoceros')": "rhinoceros",
+    "('giraffe', 'ostrich')": "giraffe",
+    "('ostrich', 'giraffe')": "giraffe",
+    "('fossa', 'hippopotamus')": "fossa",
+    "('hippopotamus', 'fossa')": "fossa",
+    "('ostrich', 'tapirus')": "ostrich",
+    "('tapirus', 'ostrich')": "ostrich",
+    "('hippopotamus', 'dolphin')": "hippopotamus",
+    "('dolphin', 'hippopotamus')": "hippopotamus",
+    "('giraffe', 'sitatunga')": "giraffe",
+    "('sitatunga', 'giraffe')": "giraffe",
+    "('malayan sunbear', 'tapirus')": "tapirus",
+    "('tapirus', 'malayan sunbear')": "tapirus",
+    "('giraffe', 'vulture')": "giraffe",
+    "('vulture', 'giraffe')": "giraffe",
+    "('capybara', 'red panda')": "capybara",
+    "('red panda', 'capybara')": "capybara",
+    "('capybara', 'armadillo')": "capybara",
+    "('armadillo', 'capybara')": "capybara",
+    "('kangaroo', 'rhebok')": "kangaroo",
+    "('rhebok', 'kangaroo')": "kangaroo",
+    "('capybara', 'gazelle')": "capybara",
+    "('gazelle', 'capybara')": "capybara",
+    "('capybara', 'kangaroo')": "capybara",
+    "('kangaroo', 'capybara')": "capybara",
+    "('hippopotamus', 'mongoose')": "hippopotamus",
+    "('mongoose', 'hippopotamus')": "hippopotamus",
+    "('tapirus', 'pacarana')": "tapirus",
+    "('pacarana', 'tapirus')": "tapirus",
+    "('rhinoceros', 'okapi')": "rhinoceros",
+    "('okapi', 'rhinoceros')": "rhinoceros",
+    "('hippopotamus', 'dk dik disk')": "hippopotamus",
+    "('dk dik disk', 'hippopotamus')": "hippopotamus",
+    "('uakari', 'giraffe')": "giraffe",
+    "('giraffe', 'uakari')": "giraffe",
+    "('common marmoset', 'capybara')": "capybara",
+    "('capybara', 'common marmoset')": "capybara",
+    "('fossa', 'giraffe')": "fossa",
+    "('giraffe', 'fossa')": "fossa",
+    "('numbat', 'hippopotamus')": "hippopotamus",
+    "('hippopotamus', 'numbat')": "hippopotamus"
+  },
+  "2": {
+    "('giraffe', 'baiji')": "giraffe",
+    "('baiji', 'giraffe')": "giraffe",
+    "('giraffe', 'jaguarundi')": "giraffe",
+    "('jaguarundi', 'giraffe')": "giraffe",
+    "('tapirus', 'capybara')": "capybara",
+    "('capybara', 'tapirus')": "capybara",
+    "('vulture', 'hippopotamus')": "vulture",
+    "('hippopotamus', 'vulture')": "vulture",
+    "('rhinoceros', 'fossa')": "rhinoceros",
+    "('fossa', 'rhinoceros')": "rhinoceros",
+    "('iguana', 'hippopotamus')": "hippopotamus",
+    "('hippopotamus', 'iguana')": "hippopotamus",
+    "('capybara', 'iguana')": "capybara",
+    "('iguana', 'capybara')": "capybara",
+    "('goliath heron', 'numbat')": "numbat",
+    "('numbat', 'goliath heron')": "numbat",
+    "('capybara', \"steller's sea eagle\")": "capybara",
+    "(\"steller's sea eagle\", 'capybara')": "capybara",
+    "('hippopotamus', 'meerkats')": "hippopotamus",
+    "('meerkats', 'hippopotamus')": "hippopotamus",
+    "('rhinoceros', 'hippopotamus')": "rhinoceros",
+    "('hippopotamus', 'rhinoceros')": "rhinoceros",
+    "('hippopotamus', 'okapi')": "okapi",
+    "('okapi', 'hippopotamus')": "okapi",
+    "('rhinoceros', 'uakari')": "rhinoceros",
+    "('uakari', 'rhinoceros')": "rhinoceros",
+    "('hippopotamus', 'capybara')": "hippopotamus",
+    "('capybara', 'hippopotamus')": "hippopotamus",
+    "('giraffe', 'rhinoceros')": "giraffe",
+    "('rhinoceros', 'giraffe')": "giraffe",
+    "('elk', 'rhinoceros')": "rhinoceros",
+    "('rhinoceros', 'elk')": "rhinoceros",
+    "('dolphin', 'rhinoceros')": "rhinoceros",
+    "('rhinoceros', 'dolphin')": "rhinoceros",
+    "('rhinoceros', 'capybara')": "rhinoceros",
+    "('capybara', 'rhinoceros')": "rhinoceros"
+  },
+  "3": {
+    "('armadillo', 'vulture')": "armadillo",
+    "('vulture', 'armadillo')": "armadillo",
+    "('capybara', 'tasmanian devil')": "capybara",
+    "('tasmanian devil', 'capybara')": "capybara",
+    "('capybara', 'springhare')": "capybara",
+    "('springhare', 'capybara')": "capybara",
+    "('rhinoceros', 'tapirus')": "rhinoceros",
+    "('tapirus', 'rhinoceros')": "rhinoceros",
+    "('rhinoceros', 'zebra')": "rhinoceros",
+    "('zebra', 'rhinoceros')": "rhinoceros",
+    "('tapirus', 'axolotl')": "tapirus",
+    "('axolotl', 'tapirus')": "tapirus",
+    "('ostrich', 'capybara')": "ostrich",
+    "('capybara', 'ostrich')": "ostrich",
+    "('echidna', 'fossa')": "fossa",
+    "('fossa', 'echidna')": "fossa"
+  },
+  "4": {
+    "('elk', 'hippopotamus')": "elk",
+    "('hippopotamus', 'elk')": "elk",
+    "('capybara', 'snow leopard')": "capybara",
+    "('snow leopard', 'capybara')": "capybara",
+    "('giraffe', 'capybara')": "giraffe",
+    "('capybara', 'giraffe')": "giraffe",
+    "('dolphin', 'giraffe')": "giraffe",
+    "('giraffe', 'dolphin')": "giraffe",
+    "('rhinoceros', 'addax')": "rhinoceros",
+    "('addax', 'rhinoceros')": "rhinoceros",
+    "('capybara', 'fossa')": "capybara",
+    "('fossa', 'capybara')": "capybara",
+    "('iguana', 'tarsier')": "tarsier",
+    "('tarsier', 'iguana')": "tarsier",
+    "('tapirus', 'siren')": "tapirus",
+    "('siren', 'tapirus')": "tapirus",
+    "('tapirus', 'tarsier')": "tapirus",
+    "('tarsier', 'tapirus')": "tapirus",
+    "('giraffe', 'echidna')": "giraffe",
+    "('echidna', 'giraffe')": "giraffe"
+  },
+  "5": {
+    "('armadillo', 'pangolin')": "armadillo",
+    "('pangolin', 'armadillo')": "armadillo",
+    "('armadillo', 'lava lizard')": "armadillo",
+    "('lava lizard', 'armadillo')": "armadillo",
+    "('rhinoceros', 'vulture')": "rhinoceros",
+    "('vulture', 'rhinoceros')": "rhinoceros",
+    "('marabou', 'ostrich')": "ostrich",
+    "('ostrich', 'marabou')": "ostrich"
+  },
+  "6": {
+    "('ostrich', 'rhinoceros')": "ostrich",
+    "('rhinoceros', 'ostrich')": "ostrich",
+    "('tapirus', 'armadillo')": "armadillo",
+    "('armadillo', 'tapirus')": "armadillo"
+  },
+  "7": {
+    "('ostrich', 'marsh harrier')": "ostrich",
+    "('marsh harrier', 'ostrich')": "ostrich",
+    "('warthog', 'rhinoceros')": "rhinoceros",
+    "('rhinoceros', 'warthog')": "rhinoceros",
+    "('rhinoceros', 'red panda')": "rhinoceros",
+    "('red panda', 'rhinoceros')": "rhinoceros",
+    "('bairds peccary', 'vulture')": "vulture",
+    "('vulture', 'bairds peccary')": "vulture"
+  },
+  "8": {
+    "('numbat', 'giraffe')": "giraffe",
+    "('giraffe', 'numbat')": "giraffe",
+    "('giraffe', 'takin')": "giraffe",
+    "('takin', 'giraffe')": "giraffe",
+    "('rhinoceros', 'sable antelope')": "rhinoceros",
+    "('sable antelope', 'rhinoceros')": "rhinoceros",
+    "('giraffe', 'armadillo')": "giraffe",
+    "('armadillo', 'giraffe')": "giraffe"
+  },
+  "9": {
+    "('giraffe', 'bruce\u2019s zebras')": "giraffe",
+    "('bruce\u2019s zebras', 'giraffe')": "giraffe",
+    "('giraffe', 'sheep')": "giraffe",
+    "('sheep', 'giraffe')": "giraffe",
+    "('giraffe', 'warthog')": "giraffe",
+    "('warthog', 'giraffe')": "giraffe",
+    "('vulture', 'tapirus')": "vulture",
+    "('tapirus', 'vulture')": "vulture",
+    "('giraffe', 'asian rhino')": "giraffe",
+    "('asian rhino', 'giraffe')": "giraffe",
+    "('sable antelope', 'giraffe')": "giraffe",
+    "('giraffe', 'sable antelope')": "giraffe",
+    "('tarantula hawk wasp', 'giraffe')": "giraffe",
+    "('giraffe', 'tarantula hawk wasp')": "giraffe"
+  },
+  "10": {
+    "('giraffe', 'cassowary')": "giraffe",
+    "('cassowary', 'giraffe')": "giraffe",
+    "('rhinoceros', 'armadillo')": "rhinoceros",
+    "('armadillo', 'rhinoceros')": "rhinoceros"
+  },
+  "11": {
+    "('giraffe', 'bison')": "giraffe",
+    "('bison', 'giraffe')": "giraffe",
+    "('giraffe', 'zebra')": "giraffe",
+    "('zebra', 'giraffe')": "giraffe",
+    "('giraffe', 'pangolin')": "giraffe",
+    "('pangolin', 'giraffe')": "giraffe",
+    "('bush duiker', 'giraffe')": "giraffe",
+    "('giraffe', 'bush duiker')": "giraffe",
+    "('rhinoceros', 'spotted hyena')": "rhinoceros",
+    "('spotted hyena', 'rhinoceros')": "rhinoceros",
+    "('giraffe', 'chamois')": "giraffe",
+    "('chamois', 'giraffe')": "giraffe",
+    "('giraffe', 'microcebus myoxinus')": "giraffe",
+    "('microcebus myoxinus', 'giraffe')": "giraffe"
+  },
+  "12": {
+    "('rhinoceros', 'capibara')": "rhinoceros",
+    "('capibara', 'rhinoceros')": "rhinoceros",
+    "('giraffe', 'shoebill stork')": "giraffe",
+    "('shoebill stork', 'giraffe')": "giraffe"
+  },
+  "13": {
+    "('moose', 'giraffe')": "giraffe",
+    "('giraffe', 'moose')": "giraffe",
+    "('eland', 'giraffe')": "eland",
+    "('giraffe', 'eland')": "eland",
+    "('giraffe', 'pronghorn')": "giraffe",
+    "('pronghorn', 'giraffe')": "giraffe"
+  },
+  "15": {
+    "('giraffe', 'tapirus terrestris')": "giraffe",
+    "('tapirus terrestris', 'giraffe')": "giraffe",
+    "('bongo', 'eland')": "bongo",
+    "('eland', 'bongo')": "bongo",
+    "('giraffe', 'bongo')": "giraffe",
+    "('bongo', 'giraffe')": "giraffe"
+  },
+  "16": {
+    "('steenbock', 'giraffe')": "giraffe",
+    "('giraffe', 'steenbock')": "giraffe",
+    "('giraffe', 'african elephant')": "giraffe",
+    "('african elephant', 'giraffe')": "giraffe"
+  },
+  "17": {
+    "('giraffe', 'dik dikk')": "giraffe",
+    "('dik dikk', 'giraffe')": "giraffe",
+    "('eland', 'sitatunga')": "eland",
+    "('sitatunga', 'eland')": "eland"
+  },
+  "18": {
+    "('deer mouse', 'giraffe')": "giraffe",
+    "('giraffe', 'deer mouse')": "giraffe"
+  },
+  "19": {
+    "('giraffe', 'wildebeest')": "giraffe",
+    "('wildebeest', 'giraffe')": "giraffe"
+  },
+  "20": {
+    "('oribi', 'eland')": "eland",
+    "('eland', 'oribi')": "eland",
+    "('okapi', 'eland')": "okapi",
+    "('eland', 'okapi')": "okapi",
+    "('eland', 'nyala')": "eland",
+    "('nyala', 'eland')": "eland",
+    "('giraffe', 'impala')": "giraffe",
+    "('impala', 'giraffe')": "giraffe",
+    "('nubian ibex', 'eland')": "eland",
+    "('eland', 'nubian ibex')": "eland"
+  },
+  "21": {
+    "('springbok', 'eland')": "eland",
+    "('eland', 'springbok')": "eland",
+    "('alpaca', 'eland')": "alpaca",
+    "('eland', 'alpaca')": "alpaca"
+  },
+  "22": {
+    "('topi', 'giraffe')": "giraffe",
+    "('giraffe', 'topi')": "giraffe",
+    "('giraffe', 'nubian ibex')": "giraffe",
+    "('nubian ibex', 'giraffe')": "giraffe",
+    "('eland', 'tsessebee')": "eland",
+    "('tsessebee', 'eland')": "eland",
+    "('eland', 'topi')": "eland",
+    "('topi', 'eland')": "eland",
+    "('chital', 'pyrenean desman')": "chital",
+    "('pyrenean desman', 'chital')": "chital",
+    "('impala', 'eland')": "eland",
+    "('eland', 'impala')": "eland",
+    "('eland', 'bles buck')": "eland",
+    "('bles buck', 'eland')": "eland"
+  },
+  "23": {
+    "('eland', 'antelope')": "antelope",
+    "('antelope', 'eland')": "antelope",
+    "('alpaca', 'giraffe')": "giraffe",
+    "('giraffe', 'alpaca')": "giraffe",
+    "('gazelle', 'eland')": "eland",
+    "('eland', 'gazelle')": "eland"
+  },
+  "24": {
+    "('eland', 'kudu')": "eland",
+    "('kudu', 'eland')": "eland"
+  },
+  "25": {
+    "('eland', 'civet like shrew')": "eland",
+    "('civet like shrew', 'eland')": "eland",
+    "('eland', \"pere david's deer\")": "eland",
+    "(\"pere david's deer\", 'eland')": "eland",
+    "('giraffe', 'chital')": "giraffe",
+    "('chital', 'giraffe')": "giraffe",
+    "('eland', 'nyalas')": "eland",
+    "('nyalas', 'eland')": "eland"
+  },
+  "26": {
+    "('giraffe', 'deer')": "giraffe",
+    "('deer', 'giraffe')": "giraffe",
+    "('reedbuck', 'eland')": "reedbuck",
+    "('eland', 'reedbuck')": "reedbuck",
+    "('blesmol', 'giraffe')": "giraffe",
+    "('giraffe', 'blesmol')": "giraffe"
+  },
+  "27": {
+    "('dama gazella', 'giraffe')": "giraffe",
+    "('giraffe', 'dama gazella')": "giraffe",
+    "('kouprey', 'antelope')": "antelope",
+    "('antelope', 'kouprey')": "antelope",
+    "('eland', 'waterbuck')": "eland",
+    "('waterbuck', 'eland')": "eland",
+    "('alpaca', 'dama gazella')": "alpaca",
+    "('dama gazella', 'alpaca')": "alpaca",
+    "('eland', 'bushbuck')": "eland",
+    "('bushbuck', 'eland')": "eland"
+  },
+  "28": {
+    "('alpaca', 'dik dikkor')": "alpaca",
+    "('dik dikkor', 'alpaca')": "alpaca",
+    "('eland', 'kouprey')": "eland",
+    "('kouprey', 'eland')": "eland"
+  },
+  "29": {
+    "('antelope', 'sitatunga')": "antelope",
+    "('sitatunga', 'antelope')": "antelope",
+    "('klipspringer', 'giraffe')": "giraffe",
+    "('giraffe', 'klipspringer')": "giraffe",
+    "('antelope', 'impala')": "impala",
+    "('impala', 'antelope')": "impala",
+    "('giraffe', 'reedbuck')": "giraffe",
+    "('reedbuck', 'giraffe')": "giraffe"
+  },
+  "30": {
+    "('antelope', 'klipspringer')": "antelope",
+    "('klipspringer', 'antelope')": "antelope",
+    "('alpaca', 'impala')": "impala",
+    "('impala', 'alpaca')": "impala",
+    "('eland', \"thomson's gazelles\")": "eland",
+    "(\"thomson's gazelles\", 'eland')": "eland",
+    "('vicu\u00f1a', 'alpaca')": "alpaca",
+    "('alpaca', 'vicu\u00f1a')": "alpaca",
+    "('oribi', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'oribi')": "reedbuck",
+    "('mountain reedbok', 'eland')": "eland",
+    "('eland', 'mountain reedbok')": "eland",
+    "('water buck', 'antelope')": "antelope",
+    "('antelope', 'water buck')": "antelope"
+  },
+  "31": {
+    "('eland', 'wildebeest')": "eland",
+    "('wildebeest', 'eland')": "eland",
+    "('serval', 'alpaca')": "alpaca",
+    "('alpaca', 'serval')": "alpaca",
+    "('tsessebe', 'antelope')": "antelope",
+    "('antelope', 'tsessebe')": "antelope",
+    "('antelope', 'alpaca')": "antelope",
+    "('alpaca', 'antelope')": "antelope"
+  },
+  "32": {
+    "('springbok', 'antelope')": "antelope",
+    "('antelope', 'springbok')": "antelope",
+    "('blesbok', 'impala')": "impala",
+    "('impala', 'blesbok')": "impala",
+    "('mountain nyala', 'giraffe')": "giraffe",
+    "('giraffe', 'mountain nyala')": "giraffe",
+    "('takin', 'alpaca')": "alpaca",
+    "('alpaca', 'takin')": "alpaca",
+    "('alpaca', 'gazelle')": "alpaca",
+    "('gazelle', 'alpaca')": "alpaca",
+    "('oribi', 'antelope')": "antelope",
+    "('antelope', 'oribi')": "antelope",
+    "('reedbuck', 'antelope')": "reedbuck",
+    "('antelope', 'reedbuck')": "reedbuck"
+  },
+  "33": {
+    "('giraffe', 'antelope')": "giraffe",
+    "('antelope', 'giraffe')": "giraffe"
+  },
+  "34": {
+    "('reedbuck', 'alpaca')": "reedbuck",
+    "('alpaca', 'reedbuck')": "reedbuck",
+    "('springhare', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'springhare')": "reedbuck"
+  },
+  "35": {
+    "('reedbuck', 'lesser panda')": "reedbuck",
+    "('lesser panda', 'reedbuck')": "reedbuck"
+  },
+  "36": {
+    "('reedbuck', 'takin')": "takin",
+    "('takin', 'reedbuck')": "takin",
+    "('jakals', 'antelope')": "antelope",
+    "('antelope', 'jakals')": "antelope",
+    "('reedbuck', 'sitatunga')": "reedbuck",
+    "('sitatunga', 'reedbuck')": "reedbuck",
+    "('antelope', 'pronghorn')": "pronghorn",
+    "('pronghorn', 'antelope')": "pronghorn",
+    "('springhare', 'giraffe')": "giraffe",
+    "('giraffe', 'springhare')": "giraffe",
+    "('giraffe', 'hartebeest')": "giraffe",
+    "('hartebeest', 'giraffe')": "giraffe"
+  },
+  "37": {
+    "('reedbuck', 'moose')": "reedbuck",
+    "('moose', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'gazelle')": "reedbuck",
+    "('gazelle', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'mountain goat')": "reedbuck",
+    "('mountain goat', 'reedbuck')": "reedbuck"
+  },
+  "38": {
+    "('reedbuck', 'tsessebe')": "reedbuck",
+    "('tsessebe', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'impala')": "reedbuck",
+    "('impala', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'oryx')": "reedbuck",
+    "('oryx', 'reedbuck')": "reedbuck",
+    "('giraffe', 'water buffalo')": "giraffe",
+    "('water buffalo', 'giraffe')": "giraffe",
+    "('giraffe', 'mountain goat')": "giraffe",
+    "('mountain goat', 'giraffe')": "giraffe",
+    "('reedbuck', 'duikers')": "reedbuck",
+    "('duikers', 'reedbuck')": "reedbuck"
+  },
+  "39": {
+    "('reedbuck', 'kudus')": "reedbuck",
+    "('kudus', 'reedbuck')": "reedbuck",
+    "('bush duiker', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'bush duiker')": "reedbuck",
+    "('jakals', 'giraffe')": "giraffe",
+    "('giraffe', 'jakals')": "giraffe",
+    "('reedbuck', 'dik diek')": "reedbuck",
+    "('dik diek', 'reedbuck')": "reedbuck"
+  },
+  "40": {
+    "('gazelle', 'giraffe')": "giraffe",
+    "('giraffe', 'gazelle')": "giraffe",
+    "('reedbuck', 'topi')": "reedbuck",
+    "('topi', 'reedbuck')": "reedbuck"
+  },
+  "41": {
+    "('klipsprong', 'giraffe')": "giraffe",
+    "('giraffe', 'klipsprong')": "giraffe",
+    "('lion', 'giraffe')": "lion",
+    "('giraffe', 'lion')": "lion",
+    "('giraffe', 'ibex')": "giraffe",
+    "('ibex', 'giraffe')": "giraffe",
+    "('jakals', 'reedbuck')": "reedbuck",
+    "('reedbuck', 'jakals')": "reedbuck",
+    "('dwarf antelope', 'giraffe')": "giraffe",
+    "('giraffe', 'dwarf antelope')": "giraffe",
+    "('blesbok', 'giraffe')": "giraffe",
+    "('giraffe', 'blesbok')": "giraffe"
+  },
+  "42": {
+    "('giraffe', 'waterbucks')": "giraffe",
+    "('waterbucks', 'giraffe')": "giraffe",
+    "('kudu', 'giraffe')": "giraffe",
+    "('giraffe', 'kudu')": "giraffe",
+    "('tahr', 'giraffe')": "giraffe",
+    "('giraffe', 'tahr')": "giraffe"
+  },
+  "43": {
+    "('eland', 'dwarf antelope')": "eland",
+    "('dwarf antelope', 'eland')": "eland",
+    "('tsessebe', 'giraffe')": "giraffe",
+    "('giraffe', 'tsessebe')": "giraffe",
+    "('eland', 'mountain reedbuk')": "eland",
+    "('mountain reedbuk', 'eland')": "eland"
+  },
+  "44": {
+    "('giraffe', 'goral')": "giraffe",
+    "('goral', 'giraffe')": "giraffe",
+    "('eland', 'lion')": "lion",
+    "('lion', 'eland')": "lion",
+    "('lion', 'reedbuck')": "lion",
+    "('reedbuck', 'lion')": "lion"
+  },
+  "46": {
+    "('sheep moose', 'eland')": "eland",
+    "('eland', 'sheep moose')": "eland"
+  },
+  "47": {
+    "('tsesseb', 'giraffe')": "giraffe",
+    "('giraffe', 'tsesseb')": "giraffe",
+    "('lion', 'okapi')": "lion",
+    "('okapi', 'lion')": "lion",
+    "('okapi', 'greater kudu')": "okapi",
+    "('greater kudu', 'okapi')": "okapi",
+    "('eland', 'tsesseb')": "eland",
+    "('tsesseb', 'eland')": "eland",
+    "('serval', 'eland')": "serval",
+    "('eland', 'serval')": "serval"
+  },
+  "48": {
+    "('lion', 'sable antelope')": "lion",
+    "('sable antelope', 'lion')": "lion",
+    "('lion', 'serval')": "lion",
+    "('serval', 'lion')": "lion",
+    "('giraffe', 'elk')": "giraffe",
+    "('elk', 'giraffe')": "giraffe",
+    "('fossa', 'lion')": "lion",
+    "('lion', 'fossa')": "lion"
+  },
+  "49": {
+    "('giraffe', 'red deer')": "giraffe",
+    "('red deer', 'giraffe')": "giraffe",
+    "('giraffe', 'leopard')": "giraffe",
+    "('leopard', 'giraffe')": "giraffe",
+    "('lion', 'cheetah')": "lion",
+    "('cheetah', 'lion')": "lion",
+    "('sheep moose', 'lion')": "lion",
+    "('lion', 'sheep moose')": "lion"
+  },
+  "50": {
+    "('giraffe', 'pronghorn antelope')": "giraffe",
+    "('pronghorn antelope', 'giraffe')": "giraffe",
+    "('lion', 'european lynx')": "lion",
+    "('european lynx', 'lion')": "lion",
+    "('cougar', 'lion')": "lion",
+    "('lion', 'cougar')": "lion",
+    "('tiger', 'lion')": "tiger",
+    "('lion', 'tiger')": "tiger",
+    "('giraffe', 'puma')": "giraffe",
+    "('puma', 'giraffe')": "giraffe",
+    "('lion', 'jaguar')": "lion",
+    "('jaguar', 'lion')": "lion",
+    "('lion', 'gazelle')": "lion",
+    "('gazelle', 'lion')": "lion",
+    "('lion', 'leopard')": "lion",
+    "('leopard', 'lion')": "lion",
+    "('giraffe', 'sheep moose')": "giraffe",
+    "('sheep moose', 'giraffe')": "giraffe"
+  },
+  "51": {
+    "('lion', 'asian golden tiger')": "lion",
+    "('asian golden tiger', 'lion')": "lion",
+    "('tiger', 'giraffe')": "tiger",
+    "('giraffe', 'tiger')": "tiger",
+    "('lion', 'pantherinae genus')": "lion",
+    "('pantherinae genus', 'lion')": "lion"
+  },
+  "52": {
+    "('lion', 'wild boer goat')": "lion",
+    "('wild boer goat', 'lion')": "lion",
+    "('nilgai', 'lion')": "lion",
+    "('lion', 'nilgai')": "lion",
+    "('lion', \"pallas's cat\")": "lion",
+    "(\"pallas's cat\", 'lion')": "lion"
+  },
+  "53": {
+    "('lion', 'selenaion pardalis')": "lion",
+    "('selenaion pardalis', 'lion')": "lion",
+    "('dhole', 'lion')": "lion",
+    "('lion', 'dhole')": "lion"
+  },
+  "54": {
+    "('lion', 'bengal tiger')": "lion",
+    "('bengal tiger', 'lion')": "lion",
+    "('serval', 'tiger')": "tiger",
+    "('tiger', 'serval')": "tiger",
+    "('tiger', 'cougar')": "tiger",
+    "('cougar', 'tiger')": "tiger"
+  },
+  "55": {
+    "('wildcat', 'tiger')": "tiger",
+    "('tiger', 'wildcat')": "tiger",
+    "('puma', 'lion')": "puma",
+    "('lion', 'puma')": "puma"
+  },
+  "56": {
+    "('leopard', 'tiger')": "tiger",
+    "('tiger', 'leopard')": "tiger",
+    "('eagle', 'tiger')": "eagle",
+    "('tiger', 'eagle')": "eagle",
+    "('puma', 'tiger')": "tiger",
+    "('tiger', 'puma')": "tiger",
+    "('mongoose', 'tiger')": "mongoose",
+    "('tiger', 'mongoose')": "mongoose"
+  },
+  "57": {
+    "('eagle', 'lion')": "eagle",
+    "('lion', 'eagle')": "eagle",
+    "('lion', 'lynx pardinensis')": "lion",
+    "('lynx pardinensis', 'lion')": "lion",
+    "('mongoose', 'lion')": "mongoose",
+    "('lion', 'mongoose')": "mongoose",
+    "('tiger', 'eastern cougar')": "tiger",
+    "('eastern cougar', 'tiger')": "tiger",
+    "('lion', 'golden eagle')": "lion",
+    "('golden eagle', 'lion')": "lion"
+  },
+  "58": {
+    "('lynx', 'tiger')": "lynx",
+    "('tiger', 'lynx')": "lynx",
+    "('pangolin', 'tiger')": "tiger",
+    "('tiger', 'pangolin')": "tiger"
+  },
+  "59": {
+    "('cheetah', 'tiger')": "tiger",
+    "('tiger', 'cheetah')": "tiger",
+    "('snow leopard', 'tiger')": "tiger",
+    "('tiger', 'snow leopard')": "tiger",
+    "('cheetah', 'lynx')": "cheetah",
+    "('lynx', 'cheetah')": "cheetah",
+    "('eagle', 'puma')": "eagle",
+    "('puma', 'eagle')": "eagle",
+    "('eagle', 'broad winged harrier')": "eagle",
+    "('broad winged harrier', 'eagle')": "eagle",
+    "('mongoose', 'cheetah')": "mongoose",
+    "('cheetah', 'mongoose')": "mongoose",
+    "('pangolin', 'mongoose')": "pangolin",
+    "('mongoose', 'pangolin')": "pangolin"
+  },
+  "60": {
+    "('asian golden cat', 'eagle')": "eagle",
+    "('eagle', 'asian golden cat')": "eagle",
+    "('tiger', 'meerkat')": "tiger",
+    "('meerkat', 'tiger')": "tiger"
+  },
+  "61": {
+    "(\"pallas's cat\", 'puma')": "puma",
+    "('puma', \"pallas's cat\")": "puma",
+    "('eagle', 'falcon')": "eagle",
+    "('falcon', 'eagle')": "eagle",
+    "('tiger', \"pallas's cat\")": "tiger",
+    "(\"pallas's cat\", 'tiger')": "tiger",
+    "('eagle', 'harrier')": "eagle",
+    "('harrier', 'eagle')": "eagle"
+  },
+  "62": {
+    "('oceanic cat', 'tiger')": "tiger",
+    "('tiger', 'oceanic cat')": "tiger",
+    "('tiger', 'owl')": "tiger",
+    "('owl', 'tiger')": "tiger",
+    "('termite mound skink', 'tiger')": "tiger",
+    "('tiger', 'termite mound skink')": "tiger",
+    "('eagle', 'mongoose')": "eagle",
+    "('mongoose', 'eagle')": "eagle",
+    "('mongoose lemur', 'mongoose')": "mongoose",
+    "('mongoose', 'mongoose lemur')": "mongoose"
+  },
+  "63": {
+    "('termite mound skink', 'mongoose')": "mongoose",
+    "('mongoose', 'termite mound skink')": "mongoose",
+    "('eagle', 'lanner falcom')": "eagle",
+    "('lanner falcom', 'eagle')": "eagle",
+    "('eagle', 'coati')": "eagle",
+    "('coati', 'eagle')": "eagle",
+    "('oceanic cat', 'mongoose')": "mongoose",
+    "('mongoose', 'oceanic cat')": "mongoose",
+    "('aye aye', 'mongoose')": "mongoose",
+    "('mongoose', 'aye aye')": "mongoose"
+  },
+  "64": {
+    "('eagle', 'gyrfalcon')": "eagle",
+    "('gyrfalcon', 'eagle')": "eagle",
+    "('eagle', 'shrike')": "eagle",
+    "('shrike', 'eagle')": "eagle",
+    "('goshawk', 'eagle')": "eagle",
+    "('eagle', 'goshawk')": "eagle",
+    "('civet cat', 'mongoose')": "mongoose",
+    "('mongoose', 'civet cat')": "mongoose"
+  },
+  "65": {
+    "('mongoose', 'vixen')": "mongoose",
+    "('vixen', 'mongoose')": "mongoose",
+    "('mongoose', 'narwhal')": "mongoose",
+    "('narwhal', 'mongoose')": "mongoose",
+    "('fallow doe', 'lion')": "lion",
+    "('lion', 'fallow doe')": "lion",
+    "('mongoose', 'fallow doe')": "mongoose",
+    "('fallow doe', 'mongoose')": "mongoose",
+    "('ground squirrel', 'mongoose')": "mongoose",
+    "('mongoose', 'ground squirrel')": "mongoose",
+    "('skunk', 'eagle')": "eagle",
+    "('eagle', 'skunk')": "eagle"
+  },
+  "66": {
+    "('saker falcon', 'eagle')": "eagle",
+    "('eagle', 'saker falcon')": "eagle",
+    "('serval', 'mongoose')": "mongoose",
+    "('mongoose', 'serval')": "mongoose",
+    "('eagle', 'falco pelegrinoides')": "eagle",
+    "('falco pelegrinoides', 'eagle')": "eagle",
+    "('suricate', 'eagle')": "eagle",
+    "('eagle', 'suricate')": "eagle",
+    "('mongoose', 'osprey')": "mongoose",
+    "('osprey', 'mongoose')": "mongoose"
+  },
+  "67": {
+    "('eagle', 'lanner falcoln')": "eagle",
+    "('lanner falcoln', 'eagle')": "eagle",
+    "('suricate', 'mongoose')": "mongoose",
+    "('mongoose', 'suricate')": "mongoose",
+    "('eagle', 'turkey vultures')": "eagle",
+    "('turkey vultures', 'eagle')": "eagle",
+    "('falco peregrinus', 'eagle')": "eagle",
+    "('eagle', 'falco peregrinus')": "eagle"
+  },
+  "68": {
+    "('mongoose', 'bald eagle')": "mongoose",
+    "('bald eagle', 'mongoose')": "mongoose",
+    "(\"pallas's cats\", 'eagle')": "eagle",
+    "('eagle', \"pallas's cats\")": "eagle",
+    "('saker falcons', 'eagle')": "eagle",
+    "('eagle', 'saker falcons')": "eagle",
+    "('owl', 'mongoose')": "owl",
+    "('mongoose', 'owl')": "owl"
+  },
+  "69": {
+    "('eagle', 'buzzard')": "eagle",
+    "('buzzard', 'eagle')": "eagle",
+    "('turaco', 'owl')": "owl",
+    "('owl', 'turaco')": "owl",
+    "('eagle', 'turaco')": "eagle",
+    "('turaco', 'eagle')": "eagle",
+    "('goshawkeaglet', 'eagle')": "eagle",
+    "('eagle', 'goshawkeaglet')": "eagle"
+  },
+  "70": {
+    "('eagle', 'owl')": "eagle",
+    "('owl', 'eagle')": "eagle",
+    "('eagle', 'hawk')": "eagle",
+    "('hawk', 'eagle')": "eagle"
+  },
+  "71": {
+    "('tern', 'eagle')": "eagle",
+    "('eagle', 'tern')": "eagle",
+    "('peregrine', 'eagle')": "peregrine",
+    "('eagle', 'peregrine')": "peregrine",
+    "('mongoose', 'peregrine falco')": "mongoose",
+    "('peregrine falco', 'mongoose')": "mongoose",
+    "('mongoose', 'falcon')": "mongoose",
+    "('falcon', 'mongoose')": "mongoose"
+  },
+  "72": {
+    "('kestrel', 'mongoose')": "mongoose",
+    "('mongoose', 'kestrel')": "mongoose",
+    "('swan', 'eagle')": "eagle",
+    "('eagle', 'swan')": "eagle",
+    "('eagle', 'kestrel')": "eagle",
+    "('kestrel', 'eagle')": "eagle"
+  },
+  "73": {
+    "('eagle', 'sparrowhawk')": "eagle",
+    "('sparrowhawk', 'eagle')": "eagle",
+    "('montagu\u2019s harrier', 'eagle')": "eagle",
+    "('eagle', 'montagu\u2019s harrier')": "eagle",
+    "('eagle', 'eurasian hobby')": "eagle",
+    "('eurasian hobby', 'eagle')": "eagle"
+  },
+  "75": {
+    "('eagle', 'aplomado falcao')": "eagle",
+    "('aplomado falcao', 'eagle')": "eagle",
+    "('eagle', 'collared pratincole')": "eagle",
+    "('collared pratincole', 'eagle')": "eagle"
+  },
+  "76": {
+    "('eagle', 'parrot')": "eagle",
+    "('parrot', 'eagle')": "eagle"
+  },
+  "78": {
+    "('peregrine', 'golden eagle')": "peregrine",
+    "('golden eagle', 'peregrine')": "peregrine"
+  },
+  "79": {
+    "('wedge taled eagles', 'eagle')": "eagle",
+    "('eagle', 'wedge taled eagles')": "eagle"
+  },
+  "80": {
+    "('himal', 'peregrine')": "peregrine",
+    "('peregrine', 'himal')": "peregrine",
+    "('hawk', 'peregrine')": "peregrine",
+    "('peregrine', 'hawk')": "peregrine",
+    "('siberian crane', 'peregrine')": "peregrine",
+    "('peregrine', 'siberian crane')": "peregrine",
+    "('wryneck', 'eagle')": "eagle",
+    "('eagle', 'wryneck')": "eagle"
+  },
+  "82": {
+    "('peregrine', 'wryneck')": "peregrine",
+    "('wryneck', 'peregrine')": "peregrine",
+    "('falcon', 'sparrowhawk')": "falcon",
+    "('sparrowhawk', 'falcon')": "falcon",
+    "('peregrine', 'falcon')": "peregrine",
+    "('falcon', 'peregrine')": "peregrine",
+    "('peregrine', 'tawny pipit')": "peregrine",
+    "('tawny pipit', 'peregrine')": "peregrine",
+    "('peregrine', 'eurasian sparrowhawk')": "peregrine",
+    "('eurasian sparrowhawk', 'peregrine')": "peregrine",
+    "('aplomado falco', 'falcon')": "falcon",
+    "('falcon', 'aplomado falco')": "falcon"
+  },
+  "83": {
+    "('peregrine', 'saker hawk')": "peregrine",
+    "('saker hawk', 'peregrine')": "peregrine",
+    "('peregrine', 'aplomado falco')": "peregrine",
+    "('aplomado falco', 'peregrine')": "peregrine"
+  },
+  "85": {
+    "('martial eagelet', 'peregrine')": "peregrine",
+    "('peregrine', 'martial eagelet')": "peregrine"
+  },
+  "86": {
+    "(\"bonelli's eagle\", 'peregrine')": "peregrine",
+    "('peregrine', \"bonelli's eagle\")": "peregrine",
+    "('peregrine', 'lanner')": "peregrine",
+    "('lanner', 'peregrine')": "peregrine"
+  },
+  "87": {
+    "('broad wing hawk', 'peregrine')": "peregrine",
+    "('peregrine', 'broad wing hawk')": "peregrine",
+    "('sykes war', 'peregrine')": "peregrine",
+    "('peregrine', 'sykes war')": "peregrine",
+    "('peregrine falcons', 'peregrine')": "peregrine",
+    "('peregrine', 'peregrine falcons')": "peregrine",
+    "('peregrine', 'tawny owlet')": "peregrine",
+    "('tawny owlet', 'peregrine')": "peregrine"
+  },
+  "88": {
+    "('peregrine', 'gyrfalcon')": "peregrine",
+    "('gyrfalcon', 'peregrine')": "peregrine",
+    "('aplomado hawk', 'peregrine')": "peregrine",
+    "('peregrine', 'aplomado hawk')": "peregrine"
+  },
+  "89": {
+    "('barbary falcon', 'peregrine')": "peregrine",
+    "('peregrine', 'barbary falcon')": "peregrine"
+  },
+  "90": {
+    "('peregrine', 'saker')": "peregrine",
+    "('saker', 'peregrine')": "peregrine",
+    "('peregrine', 'western marsh harier')": "peregrine",
+    "('western marsh harier', 'peregrine')": "peregrine"
+  },
+  "91": {
+    "('peregrine', 'african fish eagles')": "peregrine",
+    "('african fish eagles', 'peregrine')": "peregrine",
+    "('peregrine', 'osprey')": "peregrine",
+    "('osprey', 'peregrine')": "peregrine",
+    "('peregrine', 'broad winged hawk')": "peregrine",
+    "('broad winged hawk', 'peregrine')": "peregrine"
+  },
+  "92": {
+    "('peregrine', 'tawny eagle')": "peregrine",
+    "('tawny eagle', 'peregrine')": "peregrine",
+    "('peregrine', \"montagu's harrier\")": "peregrine",
+    "(\"montagu's harrier\", 'peregrine')": "peregrine",
+    "('peregrine', 'tytonidae')": "peregrine",
+    "('tytonidae', 'peregrine')": "peregrine",
+    "('peregrine', 'aplomado falcon')": "peregrine",
+    "('aplomado falcon', 'peregrine')": "peregrine"
+  },
+  "93": {
+    "('peregrine', 'montagu\u2019s harrier')": "peregrine",
+    "('montagu\u2019s harrier', 'peregrine')": "peregrine"
+  },
+  "94": {
+    "('peregrine', 'silverbird')": "peregrine",
+    "('silverbird', 'peregrine')": "peregrine",
+    "('peregrine', 'saker falcon')": "peregrine",
+    "('saker falcon', 'peregrine')": "peregrine"
+  },
+  "95": {
+    "('eurasian eagle owl', 'peregrine')": "peregrine",
+    "('peregrine', 'eurasian eagle owl')": "peregrine",
+    "('peregrine', 'montane vulture')": "peregrine",
+    "('montane vulture', 'peregrine')": "peregrine",
+    "('eurasian hobby', 'peregrine')": "peregrine",
+    "('peregrine', 'eurasian hobby')": "peregrine"
+  },
+  "97": {
+    "('peregrine', 'tawny owl')": "peregrine",
+    "('tawny owl', 'peregrine')": "peregrine",
+    "('seal', 'peregrine')": "seal",
+    "('peregrine', 'seal')": "seal"
+  },
+  "98": {
+    "('peregrine', 'buzzard')": "peregrine",
+    "('buzzard', 'peregrine')": "peregrine",
+    "('himalayan monal', 'peregrine')": "peregrine",
+    "('peregrine', 'himalayan monal')": "peregrine",
+    "('lesser sp', 'peregrine')": "peregrine",
+    "('peregrine', 'lesser sp')": "peregrine",
+    "('peregrine', 'western marsh hare')": "peregrine",
+    "('western marsh hare', 'peregrine')": "peregrine"
+  },
+  "99": {
+    "('peregrine', 'merlin')": "peregrine",
+    "('merlin', 'peregrine')": "peregrine"
+  },
+  "100": {
+    "('peregrine', \"hawai'i goose\")": "peregrine",
+    "(\"hawai'i goose\", 'peregrine')": "peregrine",
+    "('tengmalm\u2019s owl', 'seal')": "seal",
+    "('seal', 'tengmalm\u2019s owl')": "seal"
+  },
+  "101": {
+    "('seal', 'fennec fox')": "seal",
+    "('fennec fox', 'seal')": "seal",
+    "(\"harris's hawk\", 'peregrine')": "peregrine",
+    "('peregrine', \"harris's hawk\")": "peregrine"
+  },
+  "102": {
+    "('tytonal owl', 'peregrine')": "peregrine",
+    "('peregrine', 'tytonal owl')": "peregrine",
+    "('peregrine', 'eurasian kestrel')": "peregrine",
+    "('eurasian kestrel', 'peregrine')": "peregrine"
+  },
+  "104": {
+    "('peregrine', 'hume')": "peregrine",
+    "('hume', 'peregrine')": "peregrine",
+    "(\"pallas's fish eagle\", 'saker')": "saker",
+    "('saker', \"pallas's fish eagle\")": "saker"
+  },
+  "105": {
+    "('seal', 'broad winged hawk')": "seal",
+    "('broad winged hawk', 'seal')": "seal",
+    "('peregrine', 'african fish eagle')": "peregrine",
+    "('african fish eagle', 'peregrine')": "peregrine",
+    "('lanner falcon', 'peregrine')": "peregrine",
+    "('peregrine', 'lanner falcon')": "peregrine"
+  },
+  "106": {
+    "('peregrine', 'oystercatcher')": "peregrine",
+    "('oystercatcher', 'peregrine')": "peregrine",
+    "('seal', 'falcon')": "falcon",
+    "('falcon', 'seal')": "falcon",
+    "('seal', 'shikra')": "seal",
+    "('shikra', 'seal')": "seal"
+  },
+  "108": {
+    "('harrier', 'peregrine')": "peregrine",
+    "('peregrine', 'harrier')": "peregrine",
+    "('aplomado', 'seal')": "aplomado",
+    "('seal', 'aplomado')": "aplomado",
+    "('seal', 'sea lion')": "seal",
+    "('sea lion', 'seal')": "seal"
+  },
+  "109": {
+    "('peregrine', 'white tailed hawk')": "peregrine",
+    "('white tailed hawk', 'peregrine')": "peregrine",
+    "('aplomado', 'peregrine')": "peregrine",
+    "('peregrine', 'aplomado')": "peregrine",
+    "('seal', 'greater spotted')": "seal",
+    "('greater spotted', 'seal')": "seal"
+  },
+  "110": {
+    "('falcon', 'saker falco')": "falcon",
+    "('saker falco', 'falcon')": "falcon",
+    "('peregrine', 'walrus')": "peregrine",
+    "('walrus', 'peregrine')": "peregrine",
+    "('fossa', 'seal')": "fossa",
+    "('seal', 'fossa')": "fossa",
+    "('seal', 'white tailed hawk')": "seal",
+    "('white tailed hawk', 'seal')": "seal"
+  },
+  "111": {
+    "('falcon', 'eurasian sparrowhawk')": "falcon",
+    "('eurasian sparrowhawk', 'falcon')": "falcon"
+  },
+  "112": {
+    "('seal', 'goshawks')": "seal",
+    "('goshawks', 'seal')": "seal"
+  },
+  "113": {
+    "('barn owls', 'falcon')": "falcon",
+    "('falcon', 'barn owls')": "falcon",
+    "('peregrine', 'wyandotte falcons')": "peregrine",
+    "('wyandotte falcons', 'peregrine')": "peregrine",
+    "('fossa', 'pallid harriers')": "fossa",
+    "('pallid harriers', 'fossa')": "fossa",
+    "('peregrine', 'lutrinae')": "peregrine",
+    "('lutrinae', 'peregrine')": "peregrine",
+    "('falcon', 'harp seal')": "falcon",
+    "('harp seal', 'falcon')": "falcon",
+    "('bottlenose dolphin', 'seal')": "seal",
+    "('seal', 'bottlenose dolphin')": "seal",
+    "('fossa', 'falcon')": "fossa",
+    "('falcon', 'fossa')": "fossa",
+    "('nubra urial', 'fossa')": "fossa",
+    "('fossa', 'nubra urial')": "fossa"
+  },
+  "114": {
+    "('fossa', 'tengmalm owl')": "fossa",
+    "('tengmalm owl', 'fossa')": "fossa",
+    "('peregrine', 'fossa')": "peregrine",
+    "('fossa', 'peregrine')": "peregrine"
+  },
+  "115": {
+    "('peregrine', 'sharptaildrake')": "peregrine",
+    "('sharptaildrake', 'peregrine')": "peregrine",
+    "('falcon', 'wood ducks')": "falcon",
+    "('wood ducks', 'falcon')": "falcon",
+    "('seal', 'african fish eagle')": "seal",
+    "('african fish eagle', 'seal')": "seal",
+    "('golden eagle', 'seal')": "seal",
+    "('seal', 'golden eagle')": "seal",
+    "('bonelli\u2019s eaglet', 'peregrine')": "peregrine",
+    "('peregrine', 'bonelli\u2019s eaglet')": "peregrine"
+  },
+  "116": {
+    "('fossa', 'broad winged hawk')": "fossa",
+    "('broad winged hawk', 'fossa')": "fossa",
+    "('seal', 'ottter')": "seal",
+    "('ottter', 'seal')": "seal",
+    "('newt', 'seal')": "seal",
+    "('seal', 'newt')": "seal"
+  },
+  "118": {
+    "('marsh sandpiper', 'fossa')": "fossa",
+    "('fossa', 'marsh sandpiper')": "fossa",
+    "('tawny frogmouth', 'seal')": "seal",
+    "('seal', 'tawny frogmouth')": "seal",
+    "('dugong', 'tawny frogmouth')": "dugong",
+    "('tawny frogmouth', 'dugong')": "dugong",
+    "('lesser spotted kiwi', 'seal')": "seal",
+    "('seal', 'lesser spotted kiwi')": "seal"
+  },
+  "119": {
+    "('dugong', \"pallas's fish eagle\")": "dugong",
+    "(\"pallas's fish eagle\", 'dugong')": "dugong",
+    "('golden eagle', 'fossa')": "fossa",
+    "('fossa', 'golden eagle')": "fossa",
+    "('fossa', 'prairie chicken')": "fossa",
+    "('prairie chicken', 'fossa')": "fossa",
+    "('falcon', 'bald eagles')": "falcon",
+    "('bald eagles', 'falcon')": "falcon",
+    "('peregrine', 'dugong')": "peregrine",
+    "('dugong', 'peregrine')": "peregrine",
+    "(\"harris's hawk\", 'falcon')": "falcon",
+    "('falcon', \"harris's hawk\")": "falcon"
+  },
+  "120": {
+    "('stink badger', 'fossa')": "fossa",
+    "('fossa', 'stink badger')": "fossa",
+    "('harp seals', 'seal')": "seal",
+    "('seal', 'harp seals')": "seal",
+    "('seal', 'dugong')": "seal",
+    "('dugong', 'seal')": "seal"
+  },
+  "121": {
+    "('seal', 'walrus')": "seal",
+    "('walrus', 'seal')": "seal",
+    "('wedge tailed eagles', 'fossa')": "fossa",
+    "('fossa', 'wedge tailed eagles')": "fossa",
+    "('seal', 'african wild dog')": "seal",
+    "('african wild dog', 'seal')": "seal",
+    "('eurasian', 'seal')": "seal",
+    "('seal', 'eurasian')": "seal"
+  },
+  "122": {
+    "('peregrine', 'stink badger')": "peregrine",
+    "('stink badger', 'peregrine')": "peregrine",
+    "('belugas', 'seal')": "seal",
+    "('seal', 'belugas')": "seal"
+  },
+  "123": {
+    "('mongoose', 'seal')": "mongoose",
+    "('seal', 'mongoose')": "mongoose",
+    "('falcon', 'pinniped')": "falcon",
+    "('pinniped', 'falcon')": "falcon",
+    "('eurasian kestrel', 'seal')": "seal",
+    "('seal', 'eurasian kestrel')": "seal",
+    "('manatee', 'seal')": "seal",
+    "('seal', 'manatee')": "seal"
+  },
+  "124": {
+    "('mongoose', 'peregrine')": "mongoose",
+    "('peregrine', 'mongoose')": "mongoose",
+    "('mongoose', 'fossa')": "mongoose",
+    "('fossa', 'mongoose')": "mongoose",
+    "('greater shearwater', 'seal')": "seal",
+    "('seal', 'greater shearwater')": "seal",
+    "(\"tengmalm's owl\", 'peregrine')": "peregrine",
+    "('peregrine', \"tengmalm's owl\")": "peregrine",
+    "('fossa', 'northern goshawk')": "fossa",
+    "('northern goshawk', 'fossa')": "fossa"
+  },
+  "125": {
+    "('belugas', 'falcon')": "belugas",
+    "('falcon', 'belugas')": "belugas",
+    "('serval', 'fossa')": "fossa",
+    "('fossa', 'serval')": "fossa"
+  },
+  "127": {
+    "('falcon', 'peregrine falcon')": "falcon",
+    "('peregrine falcon', 'falcon')": "falcon",
+    "('fossa', 'caribou')": "fossa",
+    "('caribou', 'fossa')": "fossa",
+    "('seal', 'wedge tail eagles')": "seal",
+    "('wedge tail eagles', 'seal')": "seal"
+  },
+  "128": {
+    "('fossa', 'pinniped')": "fossa",
+    "('pinniped', 'fossa')": "fossa",
+    "('mongoose', 'ferret')": "mongoose",
+    "('ferret', 'mongoose')": "mongoose",
+    "('eurasian hoopoe', 'mongoose')": "mongoose",
+    "('mongoose', 'eurasian hoopoe')": "mongoose"
+  },
+  "129": {
+    "('prairie falcon', 'mongoose')": "mongoose",
+    "('mongoose', 'prairie falcon')": "mongoose",
+    "('falcon', 'ethiopian wolf')": "falcon",
+    "('ethiopian wolf', 'falcon')": "falcon"
+  },
+  "130": {
+    "(\"harris's hawk\", 'mongoose')": "mongoose",
+    "('mongoose', \"harris's hawk\")": "mongoose",
+    "('mongoose', 'stink badgers')": "mongoose",
+    "('stink badgers', 'mongoose')": "mongoose"
+  },
+  "131": {
+    "('mongoose', 'otter')": "mongoose",
+    "('otter', 'mongoose')": "mongoose",
+    "('solitary dugong', 'fossa')": "fossa",
+    "('fossa', 'solitary dugong')": "fossa",
+    "('mongoose', 'red kite')": "mongoose",
+    "('red kite', 'mongoose')": "mongoose",
+    "('harrier hawk', 'mongoose')": "mongoose",
+    "('mongoose', 'harrier hawk')": "mongoose",
+    "('fur seal', 'mongoose')": "mongoose",
+    "('mongoose', 'fur seal')": "mongoose"
+  },
+  "132": {
+    "('mongoose', 'hedgehog')": "mongoose",
+    "('hedgehog', 'mongoose')": "mongoose",
+    "('mongoose', 'lanner falcon')": "mongoose",
+    "('lanner falcon', 'mongoose')": "mongoose",
+    "('mongoose', 'badger')": "mongoose",
+    "('badger', 'mongoose')": "mongoose",
+    "('mongoose', 'sperm whale')": "mongoose",
+    "('sperm whale', 'mongoose')": "mongoose",
+    "('tasmanian devil', 'mongoose')": "mongoose",
+    "('mongoose', 'tasmanian devil')": "mongoose",
+    "('mongoose', 'lesser spotted eagle')": "mongoose",
+    "('lesser spotted eagle', 'mongoose')": "mongoose",
+    "('mongoose', 'african fish eagle')": "mongoose",
+    "('african fish eagle', 'mongoose')": "mongoose",
+    "('sand cat', 'mongoose')": "mongoose",
+    "('mongoose', 'sand cat')": "mongoose",
+    "('mongoose', 'raccoon')": "mongoose",
+    "('raccoon', 'mongoose')": "mongoose",
+    "('ferulagris weasel', 'mongoose')": "mongoose",
+    "('mongoose', 'ferulagris weasel')": "mongoose"
+  },
+  "133": {
+    "('mongoose', \"taylor's marmot\")": "mongoose",
+    "(\"taylor's marmot\", 'mongoose')": "mongoose",
+    "('mongoose', 'marsh hawks')": "mongoose",
+    "('marsh hawks', 'mongoose')": "mongoose",
+    "('mongoose', 'meerkat')": "mongoose",
+    "('meerkat', 'mongoose')": "mongoose",
+    "('mongoose', 'eurasian polecat')": "mongoose",
+    "('eurasian polecat', 'mongoose')": "mongoose"
+  },
+  "134": {
+    "('mongoose', 'ring necked parakeet')": "mongoose",
+    "('ring necked parakeet', 'mongoose')": "mongoose",
+    "('vervet monkey', 'mongoose')": "mongoose",
+    "('mongoose', 'vervet monkey')": "mongoose"
+  },
+  "135": {
+    "('ringtail lemur', 'mongoose')": "mongoose",
+    "('mongoose', 'ringtail lemur')": "mongoose"
+  },
+  "137": {
+    "('wombat', 'mongoose')": "mongoose",
+    "('mongoose', 'wombat')": "mongoose",
+    "('large indian civet', 'mongoose')": "mongoose",
+    "('mongoose', 'large indian civet')": "mongoose"
+  },
+  "138": {
+    "('mongoose like tenrec', 'mongoose')": "mongoose",
+    "('mongoose', 'mongoose like tenrec')": "mongoose",
+    "('stoic hare', 'mongoose')": "mongoose",
+    "('mongoose', 'stoic hare')": "mongoose",
+    "('dog faced water dog', 'mongoose')": "mongoose",
+    "('mongoose', 'dog faced water dog')": "mongoose"
+  },
+  "139": {
+    "('mongoose', 'lesser panda')": "mongoose",
+    "('lesser panda', 'mongoose')": "mongoose"
+  },
+  "140": {
+    "('mongoose', 'fennec fox')": "mongoose",
+    "('fennec fox', 'mongoose')": "mongoose",
+    "('mongoose', 'fox')": "mongoose",
+    "('fox', 'mongoose')": "mongoose"
+  },
+  "141": {
+    "('mongoose', 'stink badger')": "mongoose",
+    "('stink badger', 'mongoose')": "mongoose",
+    "('mongoose', 'opossum')": "mongoose",
+    "('opossum', 'mongoose')": "mongoose",
+    "('molehound', 'mongoose')": "mongoose",
+    "('mongoose', 'molehound')": "mongoose"
+  },
+  "142": {
+    "('termite mound ant', 'mongoose')": "mongoose",
+    "('mongoose', 'termite mound ant')": "mongoose"
+  },
+  "143": {
+    "('mongoose', 'solifugae')": "mongoose",
+    "('solifugae', 'mongoose')": "mongoose",
+    "('feral cat', 'mongoose')": "mongoose",
+    "('mongoose', 'feral cat')": "mongoose",
+    "('mongoose', 'lynx')": "mongoose",
+    "('lynx', 'mongoose')": "mongoose"
+  },
+  "144": {
+    "('mongoose', \"pallas's cat\")": "mongoose",
+    "(\"pallas's cat\", 'mongoose')": "mongoose",
+    "('african porcupine', 'mongoose')": "mongoose",
+    "('mongoose', 'african porcupine')": "mongoose",
+    "('tarantulas', 'mongoose')": "mongoose",
+    "('mongoose', 'tarantulas')": "mongoose",
+    "('mongoose', 'african wild dog')": "mongoose",
+    "('african wild dog', 'mongoose')": "mongoose"
+  },
+  "145": {
+    "('mongoose', 'skunk')": "mongoose",
+    "('skunk', 'mongoose')": "mongoose",
+    "('anteater', 'mongoose')": "mongoose",
+    "('mongoose', 'anteater')": "mongoose",
+    "('mongoose', 'dugong')": "mongoose",
+    "('dugong', 'mongoose')": "mongoose",
+    "('tarsier', 'mongoose')": "mongoose",
+    "('mongoose', 'tarsier')": "mongoose",
+    "('pangolin', 'civet cat')": "pangolin",
+    "('civet cat', 'pangolin')": "pangolin"
+  },
+  "146": {
+    "('dormouse', 'mongoose')": "mongoose",
+    "('mongoose', 'dormouse')": "mongoose",
+    "('savanna mole', 'pangolin')": "pangolin",
+    "('pangolin', 'savanna mole')": "pangolin",
+    "('numbat', 'mongoose')": "mongoose",
+    "('mongoose', 'numbat')": "mongoose",
+    "('pangolin', 'hedgehog')": "pangolin",
+    "('hedgehog', 'pangolin')": "pangolin",
+    "('pangolin', 'numbat')": "pangolin",
+    "('numbat', 'pangolin')": "pangolin",
+    "('pangolin', 'aardvark')": "pangolin",
+    "('aardvark', 'pangolin')": "pangolin"
+  },
+  "147": {
+    "('pangolin', 'babirusa')": "pangolin",
+    "('babirusa', 'pangolin')": "pangolin",
+    "('pangolin', 'dugong')": "pangolin",
+    "('dugong', 'pangolin')": "pangolin"
+  },
+  "148": {
+    "('pangolin', 'scaly anteater')": "pangolin",
+    "('scaly anteater', 'pangolin')": "pangolin",
+    "('pangolin', 'dormouse')": "pangolin",
+    "('dormouse', 'pangolin')": "pangolin",
+    "('pangolin', 'hairy nosed otter')": "pangolin",
+    "('hairy nosed otter', 'pangolin')": "pangolin",
+    "('pangolin', 'anteater')": "pangolin",
+    "('anteater', 'pangolin')": "pangolin",
+    "('termite eating ant', 'pangolin')": "pangolin",
+    "('pangolin', 'termite eating ant')": "pangolin"
+  },
+  "149": {
+    "('termite eating ant', 'mongoose')": "mongoose",
+    "('mongoose', 'termite eating ant')": "mongoose",
+    "('serval cat', 'mongoose')": "mongoose",
+    "('mongoose', 'serval cat')": "mongoose"
+  },
+  "151": {
+    "('pangolin', 'tenrec')": "pangolin",
+    "('tenrec', 'pangolin')": "pangolin",
+    "('pangolin', 'lesser hedgehog')": "pangolin",
+    "('lesser hedgehog', 'pangolin')": "pangolin"
+  },
+  "152": {
+    "('pangolin', 'tapir')": "tapir",
+    "('tapir', 'pangolin')": "tapir",
+    "('mongoose', 'wildcat')": "mongoose",
+    "('wildcat', 'mongoose')": "mongoose",
+    "('solifuge', 'pangolin')": "pangolin",
+    "('pangolin', 'solifuge')": "pangolin",
+    "('pangolin', 'solifugid')": "pangolin",
+    "('solifugid', 'pangolin')": "pangolin"
+  },
+  "153": {
+    "('armadillo', 'mongoose')": "mongoose",
+    "('mongoose', 'armadillo')": "mongoose",
+    "('giant otter shrew', 'pangolin')": "pangolin",
+    "('pangolin', 'giant otter shrew')": "pangolin",
+    "('pangolin', 'mole rat')": "pangolin",
+    "('mole rat', 'pangolin')": "pangolin",
+    "('armadillo', 'tibetan antelope')": "armadillo",
+    "('tibetan antelope', 'armadillo')": "armadillo",
+    "('pangolin', 'mole')": "pangolin",
+    "('mole', 'pangolin')": "pangolin",
+    "('armadillo', 'tapir')": "armadillo",
+    "('tapir', 'armadillo')": "armadillo"
+  },
+  "154": {
+    "('pitchi hog', 'pangolin')": "pangolin",
+    "('pangolin', 'pitchi hog')": "pangolin",
+    "('tortoise', 'pangolin')": "tortoise",
+    "('pangolin', 'tortoise')": "tortoise",
+    "('tortoise beetle', 'pangolin')": "pangolin",
+    "('pangolin', 'tortoise beetle')": "pangolin",
+    "('meerkat', 'armadillo')": "armadillo",
+    "('armadillo', 'meerkat')": "armadillo"
+  },
+  "155": {
+    "('aardvark', 'tortoise')": "tortoise",
+    "('tortoise', 'aardvark')": "tortoise",
+    "('pangolin', 'flying lemur')": "pangolin",
+    "('flying lemur', 'pangolin')": "pangolin"
+  },
+  "156": {
+    "('dassie rat', 'pangolin')": "pangolin",
+    "('pangolin', 'dassie rat')": "pangolin"
+  },
+  "157": {
+    "('armadillo', 'african porcupine')": "armadillo",
+    "('african porcupine', 'armadillo')": "armadillo",
+    "('tortoise beetle', 'mongoose')": "mongoose",
+    "('mongoose', 'tortoise beetle')": "mongoose",
+    "('tortoise', 'armadillo')": "armadillo",
+    "('armadillo', 'tortoise')": "armadillo"
+  },
+  "158": {
+    "('tortoise', 'pangarapua')": "tortoise",
+    "('pangarapua', 'tortoise')": "tortoise",
+    "('pangolin', 'eastern hare wallaby')": "pangolin",
+    "('eastern hare wallaby', 'pangolin')": "pangolin",
+    "('pangolin', 'pouched mouse')": "pangolin",
+    "('pouched mouse', 'pangolin')": "pangolin",
+    "('pangolin', 'wallaby')": "pangolin",
+    "('wallaby', 'pangolin')": "pangolin"
+  },
+  "159": {
+    "('dog', 'pangolin')": "dog",
+    "('pangolin', 'dog')": "dog",
+    "('eastern hedgehog', 'aardvark')": "aardvark",
+    "('aardvark', 'eastern hedgehog')": "aardvark",
+    "('armadillo', 'eastern mole rat')": "armadillo",
+    "('eastern mole rat', 'armadillo')": "armadillo",
+    "('dog', 'mongoose')": "mongoose",
+    "('mongoose', 'dog')": "mongoose",
+    "('mole', 'armadillo')": "armadillo",
+    "('armadillo', 'mole')": "armadillo",
+    "('armadillo', 'dog')": "dog",
+    "('dog', 'armadillo')": "dog"
+  },
+  "160": {
+    "('hippopotamus', 'tortoise')": "hippopotamus",
+    "('tortoise', 'hippopotamus')": "hippopotamus",
+    "('armadillo', 'solifugid')": "armadillo",
+    "('solifugid', 'armadillo')": "armadillo",
+    "('meerkat', 'dog')": "dog",
+    "('dog', 'meerkat')": "dog",
+    "('african porcupine', 'pangolin')": "pangolin",
+    "('pangolin', 'african porcupine')": "pangolin"
+  },
+  "161": {
+    "('armadillo', 'aardvark')": "armadillo",
+    "('aardvark', 'armadillo')": "armadillo",
+    "('armadillo', 'numbat')": "armadillo",
+    "('numbat', 'armadillo')": "armadillo",
+    "('pangolin', 'hippopotamus')": "pangolin",
+    "('hippopotamus', 'pangolin')": "pangolin",
+    "('armadillo', 'platypus')": "armadillo",
+    "('platypus', 'armadillo')": "armadillo"
+  },
+  "162": {
+    "('scorpion', 'armadillo')": "scorpion",
+    "('armadillo', 'scorpion')": "scorpion",
+    "('hedgehog', 'armadillo')": "armadillo",
+    "('armadillo', 'hedgehog')": "armadillo"
+  },
+  "163": {
+    "('armadillo', 'hippopotamus')": "armadillo",
+    "('hippopotamus', 'armadillo')": "armadillo",
+    "('mole rat', 'armadillo')": "armadillo",
+    "('armadillo', 'mole rat')": "armadillo",
+    "('armadillo', 'tarantula')": "armadillo",
+    "('tarantula', 'armadillo')": "armadillo",
+    "('scorpion', 'hedgehog')": "scorpion",
+    "('hedgehog', 'scorpion')": "scorpion"
+  },
+  "166": {
+    "('armadillo', 'numbata')": "armadillo",
+    "('numbata', 'armadillo')": "armadillo",
+    "('scorpion', 'mongoose')": "scorpion",
+    "('mongoose', 'scorpion')": "scorpion",
+    "('pangolin', 'sloth')": "pangolin",
+    "('sloth', 'pangolin')": "pangolin"
+  },
+  "167": {
+    "('golden cat', 'mongoose')": "mongoose",
+    "('mongoose', 'golden cat')": "mongoose",
+    "('tayra', 'armadillo')": "tayra",
+    "('armadillo', 'tayra')": "tayra"
+  },
+  "168": {
+    "('scorpion', 'tayra')": "scorpion",
+    "('tayra', 'scorpion')": "scorpion",
+    "('quokka', 'scorpion')": "scorpion",
+    "('scorpion', 'quokka')": "scorpion",
+    "('scorpion', 'shield bug')": "scorpion",
+    "('shield bug', 'scorpion')": "scorpion",
+    "('lacewing', 'armadillo')": "armadillo",
+    "('armadillo', 'lacewing')": "armadillo",
+    "('anteater', 'armadillo')": "armadillo",
+    "('armadillo', 'anteater')": "armadillo"
+  },
+  "169": {
+    "('scorpion', 'lizard gecko')": "scorpion",
+    "('lizard gecko', 'scorpion')": "scorpion",
+    "('scorpion', 'trapdoor spider')": "scorpion",
+    "('trapdoor spider', 'scorpion')": "scorpion"
+  },
+  "170": {
+    "('tayra', 'pocket gopher')": "tayra",
+    "('pocket gopher', 'tayra')": "tayra",
+    "('tayra', 'mongoose')": "mongoose",
+    "('mongoose', 'tayra')": "mongoose",
+    "('huntsman', 'scorpion')": "huntsman",
+    "('scorpion', 'huntsman')": "huntsman",
+    "('pseudoscorpion', 'armadillo')": "armadillo",
+    "('armadillo', 'pseudoscorpion')": "armadillo",
+    "('scorpion', 'pseudoscorpion')": "scorpion",
+    "('pseudoscorpion', 'scorpion')": "scorpion",
+    "('tenrec', 'armadillo')": "armadillo",
+    "('armadillo', 'tenrec')": "armadillo"
+  },
+  "171": {
+    "('armadillo', 'mountain nyala')": "armadillo",
+    "('mountain nyala', 'armadillo')": "armadillo",
+    "('bee', 'scorpion')": "scorpion",
+    "('scorpion', 'bee')": "scorpion",
+    "('wasp', 'scorpion')": "scorpion",
+    "('scorpion', 'wasp')": "scorpion"
+  },
+  "172": {
+    "('wasp', 'walking stick insect')": "wasp",
+    "('walking stick insect', 'wasp')": "wasp",
+    "('tenrec', 'scorpion')": "scorpion",
+    "('scorpion', 'tenrec')": "scorpion",
+    "('scorpion', 'mole shrew')": "scorpion",
+    "('mole shrew', 'scorpion')": "scorpion",
+    "('scorpion', 'tarantula')": "scorpion",
+    "('tarantula', 'scorpion')": "scorpion"
+  },
+  "173": {
+    "('carusia', 'wasp')": "wasp",
+    "('wasp', 'carusia')": "wasp",
+    "('scorpion', 'harvestman')": "scorpion",
+    "('harvestman', 'scorpion')": "scorpion",
+    "('scorpion', 'carusia')": "scorpion",
+    "('carusia', 'scorpion')": "scorpion",
+    "('scorpion', 'pill bug')": "scorpion",
+    "('pill bug', 'scorpion')": "scorpion",
+    "('tapir', 'scorpion')": "scorpion",
+    "('scorpion', 'tapir')": "scorpion",
+    "('wolf spider', 'scorpion')": "scorpion",
+    "('scorpion', 'wolf spider')": "scorpion"
+  },
+  "174": {
+    "('burrowing cockroach', 'scorpion')": "scorpion",
+    "('scorpion', 'burrowing cockroach')": "scorpion",
+    "('scorpion', 'crab spider')": "scorpion",
+    "('crab spider', 'scorpion')": "scorpion",
+    "('scorpion', 'velvet worm')": "scorpion",
+    "('velvet worm', 'scorpion')": "scorpion",
+    "('giant centipede', 'scorpion')": "scorpion",
+    "('scorpion', 'giant centipede')": "scorpion"
+  },
+  "175": {
+    "('scorpion', 'mantis')": "scorpion",
+    "('mantis', 'scorpion')": "scorpion",
+    "('scorpion', 'mudskipper')": "scorpion",
+    "('mudskipper', 'scorpion')": "scorpion"
+  },
+  "176": {
+    "('scorpion', 'hairy fungus beetle')": "scorpion",
+    "('hairy fungus beetle', 'scorpion')": "scorpion",
+    "('dhole', 'scorpion')": "scorpion",
+    "('scorpion', 'dhole')": "scorpion",
+    "('scorpion', 'black widow spider')": "scorpion",
+    "('black widow spider', 'scorpion')": "scorpion",
+    "('huntsman', 'tiger')": "tiger",
+    "('tiger', 'huntsman')": "tiger",
+    "('scorpion', 'gila monster')": "scorpion",
+    "('gila monster', 'scorpion')": "scorpion",
+    "('camel spider', 'scorpion')": "scorpion",
+    "('scorpion', 'camel spider')": "scorpion",
+    "('daddy long legs', 'scorpion')": "scorpion",
+    "('scorpion', 'daddy long legs')": "scorpion",
+    "('tiger', 'tarantula')": "tiger",
+    "('tarantula', 'tiger')": "tiger",
+    "('viper', 'dhole')": "viper",
+    "('dhole', 'viper')": "viper",
+    "('tiger', 'scorpion')": "scorpion",
+    "('scorpion', 'tiger')": "scorpion"
+  },
+  "177": {
+    "('scorpion', 'horned lizard')": "scorpion",
+    "('horned lizard', 'scorpion')": "scorpion",
+    "('scorpion', 'hornet')": "scorpion",
+    "('hornet', 'scorpion')": "scorpion",
+    "('scorpion', 'cobra')": "scorpion",
+    "('cobra', 'scorpion')": "scorpion",
+    "('scorpion', 'caracal')": "scorpion",
+    "('caracal', 'scorpion')": "scorpion"
+  },
+  "178": {
+    "('huntsman', 'lynx')": "lynx",
+    "('lynx', 'huntsman')": "lynx",
+    "('armadillo', 'huntsman')": "armadillo",
+    "('huntsman', 'armadillo')": "armadillo",
+    "('iguana', 'scorpion')": "scorpion",
+    "('scorpion', 'iguana')": "scorpion",
+    "('scorpion', 'solifugid')": "scorpion",
+    "('solifugid', 'scorpion')": "scorpion",
+    "('centipede', 'scorpion')": "centipede",
+    "('scorpion', 'centipede')": "centipede"
+  },
+  "179": {
+    "('lynx', 'viper')": "lynx",
+    "('viper', 'lynx')": "lynx",
+    "('tarantula hawk wasp', 'lynx')": "lynx",
+    "('lynx', 'tarantula hawk wasp')": "lynx",
+    "('eastern coral snake', 'scorpion')": "scorpion",
+    "('scorpion', 'eastern coral snake')": "scorpion",
+    "('scorpion', 'lampyridae firefly')": "scorpion",
+    "('lampyridae firefly', 'scorpion')": "scorpion",
+    "('huntsman', 'centipede')": "huntsman",
+    "('centipede', 'huntsman')": "huntsman",
+    "('banded palm civet', 'scorpion')": "scorpion",
+    "('scorpion', 'banded palm civet')": "scorpion"
+  },
+  "180": {
+    "('six legged centipede', 'scorpion')": "scorpion",
+    "('scorpion', 'six legged centipede')": "scorpion",
+    "('tityobucco pruinosa', 'scorpion')": "scorpion",
+    "('scorpion', 'tityobucco pruinosa')": "scorpion",
+    "('tiger', 'capuchin wolf')": "tiger",
+    "('capuchin wolf', 'tiger')": "tiger",
+    "('scorpion', 'lynx')": "lynx",
+    "('lynx', 'scorpion')": "lynx"
+  },
+  "181": {
+    "(\"pallas's cats\", 'lynx')": "lynx",
+    "('lynx', \"pallas's cats\")": "lynx",
+    "('scorpion', \"pallas's cats\")": "scorpion",
+    "(\"pallas's cats\", 'scorpion')": "scorpion"
+  },
+  "182": {
+    "('horned viper', 'scorpion')": "scorpion",
+    "('scorpion', 'horned viper')": "scorpion"
+  },
+  "183": {
+    "('lynx', 'greater bilby')": "lynx",
+    "('greater bilby', 'lynx')": "lynx",
+    "('puma', 'huntsman')": "puma",
+    "('huntsman', 'puma')": "puma",
+    "('scorpion', 'puma')": "scorpion",
+    "('puma', 'scorpion')": "scorpion",
+    "('lynx', 'armadillo')": "lynx",
+    "('armadillo', 'lynx')": "lynx"
+  },
+  "185": {
+    "('centipede', 'serval')": "centipede",
+    "('serval', 'centipede')": "centipede"
+  },
+  "186": {
+    "('lynx', 'snow leopard')": "lynx",
+    "('snow leopard', 'lynx')": "lynx",
+    "('centipede', 'eastern coral snake')": "centipede",
+    "('eastern coral snake', 'centipede')": "centipede"
+  },
+  "187": {
+    "('african wild dog', 'lynx')": "lynx",
+    "('lynx', 'african wild dog')": "lynx",
+    "('lion', 'lynx')": "lion",
+    "('lynx', 'lion')": "lion"
+  },
+  "188": {
+    "('lynx', 'clouded lemur')": "lynx",
+    "('clouded lemur', 'lynx')": "lynx",
+    "('tarantula', 'centipede')": "centipede",
+    "('centipede', 'tarantula')": "centipede",
+    "('lynx', 'puma')": "puma",
+    "('puma', 'lynx')": "puma"
+  },
+  "189": {
+    "('lynx', 'giant centipede')": "lynx",
+    "('giant centipede', 'lynx')": "lynx",
+    "('centipede', 'isopoda')": "centipede",
+    "('isopoda', 'centipede')": "centipede",
+    "('northern raccoon dog', 'lynx')": "lynx",
+    "('lynx', 'northern raccoon dog')": "lynx",
+    "('asian giant hornet', 'lynx')": "lynx",
+    "('lynx', 'asian giant hornet')": "lynx",
+    "('lynx', 'centipede')": "lynx",
+    "('centipede', 'lynx')": "lynx"
+  },
+  "190": {
+    "('lynx', 'bengali fox')": "lynx",
+    "('bengali fox', 'lynx')": "lynx",
+    "('lion', 'centipede')": "lion",
+    "('centipede', 'lion')": "lion",
+    "('lynx', 'tibeten blue bears')": "lynx",
+    "('tibeten blue bears', 'lynx')": "lynx",
+    "('lion', 'huntsman')": "lion",
+    "('huntsman', 'lion')": "lion",
+    "('large spotted genet', 'lynx')": "lynx",
+    "('lynx', 'large spotted genet')": "lynx"
+  },
+  "191": {
+    "('lynx', 'hissing cockroach')": "lynx",
+    "('hissing cockroach', 'lynx')": "lynx"
+  },
+  "192": {
+    "('lynx', 'caracal')": "lynx",
+    "('caracal', 'lynx')": "lynx"
+  },
+  "193": {
+    "('lynx', 'fleas')": "lynx",
+    "('fleas', 'lynx')": "lynx"
+  },
+  "194": {
+    "('jaguar', 'puma')": "jaguar",
+    "('puma', 'jaguar')": "jaguar",
+    "('puma', 'mountain lion')": "puma",
+    "('mountain lion', 'puma')": "puma",
+    "('cheetah', 'russian wild ass')": "cheetah",
+    "('russian wild ass', 'cheetah')": "cheetah",
+    "('russian wildcat', 'jaguar')": "jaguar",
+    "('jaguar', 'russian wildcat')": "jaguar"
+  },
+  "195": {
+    "('puma', 'cheetah')": "cheetah",
+    "('cheetah', 'puma')": "cheetah",
+    "('cheetah', 'russian wildcat')": "cheetah",
+    "('russian wildcat', 'cheetah')": "cheetah",
+    "('junglecats', 'cheetah')": "cheetah",
+    "('cheetah', 'junglecats')": "cheetah",
+    "('european wildcat', 'lynx')": "lynx",
+    "('lynx', 'european wildcat')": "lynx",
+    "('eastern cougar', 'puma')": "puma",
+    "('puma', 'eastern cougar')": "puma",
+    "('jaguarundi', 'puma')": "puma",
+    "('puma', 'jaguarundi')": "puma"
+  },
+  "196": {
+    "(\"pallas's cat\", 'lynx')": "lynx",
+    "('lynx', \"pallas's cat\")": "lynx",
+    "('jaguar', 'wildcat')": "jaguar",
+    "('wildcat', 'jaguar')": "jaguar",
+    "('lion', 'siberian tiger')": "lion",
+    "('siberian tiger', 'lion')": "lion",
+    "('junglecats', 'lynx')": "lynx",
+    "('lynx', 'junglecats')": "lynx",
+    "('lynx', 'wolf')": "lynx",
+    "('wolf', 'lynx')": "lynx",
+    "('african wildcat', 'jaguar')": "jaguar",
+    "('jaguar', 'african wildcat')": "jaguar"
+  },
+  "197": {
+    "('cougar', 'puma')": "cougar",
+    "('puma', 'cougar')": "cougar",
+    "('arctic fox', 'lion')": "lion",
+    "('lion', 'arctic fox')": "lion",
+    "('binturong', 'puma')": "puma",
+    "('puma', 'binturong')": "puma"
+  },
+  "198": {
+    "('lynx', 'russian wildcats')": "lynx",
+    "('russian wildcats', 'lynx')": "lynx",
+    "('cougar', 'lynx')": "cougar",
+    "('lynx', 'cougar')": "cougar",
+    "('mountain lions', 'jaguar')": "jaguar",
+    "('jaguar', 'mountain lions')": "jaguar",
+    "('leopardus geoffroyii', 'puma')": "puma",
+    "('puma', 'leopardus geoffroyii')": "puma",
+    "('lion', 'asian golden cat')": "lion",
+    "('asian golden cat', 'lion')": "lion"
+  },
+  "199": {
+    "('serval', 'siberian tiger')": "serval",
+    "('siberian tiger', 'serval')": "serval",
+    "('asian golden cat', 'lynx')": "lynx",
+    "('lynx', 'asian golden cat')": "lynx",
+    "('serval', 'cougar')": "cougar",
+    "('cougar', 'serval')": "cougar"
+  },
+  "200": {
+    "('asian golden cat', 'cheetah')": "cheetah",
+    "('cheetah', 'asian golden cat')": "cheetah",
+    "('puma', \"pallas's leaf monkey\")": "puma",
+    "(\"pallas's leaf monkey\", 'puma')": "puma",
+    "('puma', 'tiger tabby')": "puma",
+    "('tiger tabby', 'puma')": "puma",
+    "('serval', 'cheetah')": "cheetah",
+    "('cheetah', 'serval')": "cheetah",
+    "('cheetah', \"pallas's cats\")": "cheetah",
+    "(\"pallas's cats\", 'cheetah')": "cheetah",
+    "('catamount', 'puma')": "puma",
+    "('puma', 'catamount')": "puma"
+  },
+  "201": {
+    "('puma', 'arctic fox')": "puma",
+    "('arctic fox', 'puma')": "puma",
+    "('cheetah', 'cougar')": "cheetah",
+    "('cougar', 'cheetah')": "cheetah",
+    "('jaguar', 'cougar')": "cougar",
+    "('cougar', 'jaguar')": "cougar",
+    "('serval', 'eastern lynx')": "serval",
+    "('eastern lynx', 'serval')": "serval",
+    "('jaguar', 'cheetah')": "cheetah",
+    "('cheetah', 'jaguar')": "cheetah",
+    "('catamount', 'cougar')": "cougar",
+    "('cougar', 'catamount')": "cougar",
+    "('jaguar', 'tiger')": "tiger",
+    "('tiger', 'jaguar')": "tiger"
+  },
+  "202": {
+    "('jaguar', 'leopard')": "jaguar",
+    "('leopard', 'jaguar')": "jaguar",
+    "('serval', 'malayan tiger')": "serval",
+    "('malayan tiger', 'serval')": "serval",
+    "('serval', 'lynx')": "lynx",
+    "('lynx', 'serval')": "lynx",
+    "('tiger', 'lioness')": "tiger",
+    "('lioness', 'tiger')": "tiger",
+    "('leopard', 'cougar')": "cougar",
+    "('cougar', 'leopard')": "cougar",
+    "('serval', 'puma')": "puma",
+    "('puma', 'serval')": "puma",
+    "('european wildcat', 'cheetah')": "cheetah",
+    "('cheetah', 'european wildcat')": "cheetah"
+  },
+  "203": {
+    "('cougar', 'xenopus')": "cougar",
+    "('xenopus', 'cougar')": "cougar"
+  },
+  "204": {
+    "('tiger', 'asian golden cat')": "tiger",
+    "('asian golden cat', 'tiger')": "tiger",
+    "('javan tigers', 'cougar')": "cougar",
+    "('cougar', 'javan tigers')": "cougar",
+    "('eurasian lynxes', 'tiger')": "tiger",
+    "('tiger', 'eurasian lynxes')": "tiger"
+  },
+  "205": {
+    "('cougar', 'european wildcat')": "cougar",
+    "('european wildcat', 'cougar')": "cougar"
+  },
+  "206": {
+    "('tiger', 'japanese serwal')": "tiger",
+    "('japanese serwal', 'tiger')": "tiger",
+    "('leopard', 'cheetah')": "cheetah",
+    "('cheetah', 'leopard')": "cheetah"
+  },
+  "207": {
+    "('civet', 'jaguar')": "jaguar",
+    "('jaguar', 'civet')": "jaguar"
+  },
+  "210": {
+    "('tiger', 'african golden cat')": "tiger",
+    "('african golden cat', 'tiger')": "tiger",
+    "('tiger', 'bengal fox')": "tiger",
+    "('bengal fox', 'tiger')": "tiger"
+  },
+  "211": {
+    "('ringtail', 'tiger')": "tiger",
+    "('tiger', 'ringtail')": "tiger",
+    "('tiger', 'siberian tiger')": "tiger",
+    "('siberian tiger', 'tiger')": "tiger",
+    "('tiger', 'ocelot')": "tiger",
+    "('ocelot', 'tiger')": "tiger",
+    "('cougar', 'mongoose')": "cougar",
+    "('mongoose', 'cougar')": "cougar"
+  },
+  "212": {
+    "('aardvark', 'tiger')": "tiger",
+    "('tiger', 'aardvark')": "tiger",
+    "('tiger', 'caracal')": "tiger",
+    "('caracal', 'tiger')": "tiger",
+    "('panthera leo', 'tiger')": "tiger",
+    "('tiger', 'panthera leo')": "tiger"
+  },
+  "214": {
+    "('tiger', 'puma concolor')": "tiger",
+    "('puma concolor', 'tiger')": "tiger"
+  },
+  "218": {
+    "('mountain lion', 'tiger')": "tiger",
+    "('tiger', 'mountain lion')": "tiger"
+  },
+  "219": {
+    "('tiger', 'jaguarundi')": "tiger",
+    "('jaguarundi', 'tiger')": "tiger",
+    "('tiger', 'tarpan')": "tiger",
+    "('tarpan', 'tiger')": "tiger"
+  },
+  "220": {
+    "('tiger', 'wild dog')": "tiger",
+    "('wild dog', 'tiger')": "tiger",
+    "('tiger', 'wolverine')": "tiger",
+    "('wolverine', 'tiger')": "tiger"
+  },
+  "222": {
+    "('asian goldencat', 'tiger')": "tiger",
+    "('tiger', 'asian goldencat')": "tiger"
+  },
+  "223": {
+    "('servaline genet', 'tiger')": "tiger",
+    "('tiger', 'servaline genet')": "tiger"
+  },
+  "224": {
+    "('tiger', 'tibet blue sheep')": "tiger",
+    "('tibet blue sheep', 'tiger')": "tiger"
+  },
+  "225": {
+    "('lynx pardinensis', 'tiger')": "tiger",
+    "('tiger', 'lynx pardinensis')": "tiger"
+  },
+  "227": {
+    "('gepardus pard', 'tiger')": "tiger",
+    "('tiger', 'gepardus pard')": "tiger",
+    "('dhole', 'tiger')": "tiger",
+    "('tiger', 'dhole')": "tiger",
+    "('tiger', 'panther chameleon')": "tiger",
+    "('panther chameleon', 'tiger')": "tiger"
+  },
+  "229": {
+    "('clouded lemur', 'tiger')": "tiger",
+    "('tiger', 'clouded lemur')": "tiger"
+  },
+  "230": {
+    "('lynx', 'jaguar')": "lynx",
+    "('jaguar', 'lynx')": "lynx",
+    "('tiger', 'slow loris')": "tiger",
+    "('slow loris', 'tiger')": "tiger",
+    "('coati', 'tiger')": "tiger",
+    "('tiger', 'coati')": "tiger",
+    "(\"pallas's cats\", 'tiger')": "tiger",
+    "('tiger', \"pallas's cats\")": "tiger",
+    "('coyote', 'jaguar')": "coyote",
+    "('jaguar', 'coyote')": "coyote"
+  },
+  "231": {
+    "('tiger', 'coyote')": "tiger",
+    "('coyote', 'tiger')": "tiger"
+  },
+  "233": {
+    "('sunda cloud leopard', 'lynx')": "lynx",
+    "('lynx', 'sunda cloud leopard')": "lynx",
+    "('coyote', 'lynx')": "lynx",
+    "('lynx', 'coyote')": "lynx",
+    "('lynx', 'bengals tiger')": "lynx",
+    "('bengals tiger', 'lynx')": "lynx",
+    "('caracal', 'puma')": "puma",
+    "('puma', 'caracal')": "puma"
+  },
+  "234": {
+    "('lynx', 'eurasian lynxes')": "lynx",
+    "('eurasian lynxes', 'lynx')": "lynx",
+    "('lynx', 'jaguarundi')": "lynx",
+    "('jaguarundi', 'lynx')": "lynx",
+    "('arctic fox', 'lynx')": "lynx",
+    "('lynx', 'arctic fox')": "lynx"
+  },
+  "235": {
+    "('lynx', 'leopard')": "lynx",
+    "('leopard', 'lynx')": "lynx",
+    "('eagle owl', 'puma')": "puma",
+    "('puma', 'eagle owl')": "puma",
+    "('puma', 'siberia tigers')": "puma",
+    "('siberia tigers', 'puma')": "puma"
+  },
+  "236": {
+    "('puma', \"pallas's cats\")": "puma",
+    "(\"pallas's cats\", 'puma')": "puma",
+    "('tiger', 'mountain lions')": "tiger",
+    "('mountain lions', 'tiger')": "tiger",
+    "('lynx', 'black foot ferret')": "lynx",
+    "('black foot ferret', 'lynx')": "lynx"
+  },
+  "237": {
+    "('puma', 'leopard')": "leopard",
+    "('leopard', 'puma')": "leopard",
+    "('asian golden tiger', 'puma')": "puma",
+    "('puma', 'asian golden tiger')": "puma",
+    "('mountain lion', 'cheetah')": "cheetah",
+    "('cheetah', 'mountain lion')": "cheetah",
+    "('golden cat', 'lynx')": "lynx",
+    "('lynx', 'golden cat')": "lynx"
+  },
+  "238": {
+    "('golden cat', 'cheetah')": "cheetah",
+    "('cheetah', 'golden cat')": "cheetah",
+    "('cheetah', 'asian leopard')": "cheetah",
+    "('asian leopard', 'cheetah')": "cheetah"
+  },
+  "239": {
+    "('cheetah', 'caracal')": "cheetah",
+    "('caracal', 'cheetah')": "cheetah"
+  },
+  "243": {
+    "('cheetah', 'grey wolf')": "cheetah",
+    "('grey wolf', 'cheetah')": "cheetah"
+  },
+  "244": {
+    "('cheetah', 'iberom')": "cheetah",
+    "('iberom', 'cheetah')": "cheetah",
+    "('mongoose', 'jaguar')": "mongoose",
+    "('jaguar', 'mongoose')": "mongoose"
+  },
+  "245": {
+    "('cheetah', 'lynx canadensis')": "cheetah",
+    "('lynx canadensis', 'cheetah')": "cheetah",
+    "('cheetah', 'coati')": "cheetah",
+    "('coati', 'cheetah')": "cheetah",
+    "('jaguarundi', 'cheetah')": "cheetah",
+    "('cheetah', 'jaguarundi')": "cheetah"
+  },
+  "246": {
+    "('dhole', 'puma')": "puma",
+    "('puma', 'dhole')": "puma",
+    "('raccoon dog', 'cheetah')": "cheetah",
+    "('cheetah', 'raccoon dog')": "cheetah"
+  },
+  "248": {
+    "('mongoose', 'puma')": "mongoose",
+    "('puma', 'mongoose')": "mongoose"
+  },
+  "249": {
+    "('mongoose', 'mountain lion')": "mongoose",
+    "('mountain lion', 'mongoose')": "mongoose",
+    "('panthera leo persica', 'tiger')": "tiger",
+    "('tiger', 'panthera leo persica')": "tiger"
+  },
+  "250": {
+    "('mongoose', 'wolverine')": "mongoose",
+    "('wolverine', 'mongoose')": "mongoose",
+    "('gazelle', 'cheetah')": "cheetah",
+    "('cheetah', 'gazelle')": "cheetah"
+  },
+  "251": {
+    "('tayra', 'tiger')": "tiger",
+    "('tiger', 'tayra')": "tiger"
+  },
+  "252": {
+    "('tiger', 'dik dikkir')": "tiger",
+    "('dik dikkir', 'tiger')": "tiger",
+    "('tiger', 'badger')": "tiger",
+    "('badger', 'tiger')": "tiger",
+    "('mongoose', 'bengal tiger')": "mongoose",
+    "('bengal tiger', 'mongoose')": "mongoose",
+    "('termite', 'tiger')": "tiger",
+    "('tiger', 'termite')": "tiger"
+  },
+  "253": {
+    "('mole', 'mongoose')": "mongoose",
+    "('mongoose', 'mole')": "mongoose",
+    "('mongoose', 'termite')": "mongoose",
+    "('termite', 'mongoose')": "mongoose",
+    "('wolf', 'mongoose')": "mongoose",
+    "('mongoose', 'wolf')": "mongoose"
+  },
+  "254": {
+    "('mongoose', 'caracal')": "mongoose",
+    "('caracal', 'mongoose')": "mongoose",
+    "('wolf', 'tiger')": "wolf",
+    "('tiger', 'wolf')": "wolf",
+    "('mongoose', 'groundhog')": "mongoose",
+    "('groundhog', 'mongoose')": "mongoose",
+    "('civet', 'mongoose')": "mongoose",
+    "('mongoose', 'civet')": "mongoose"
+  },
+  "255": {
+    "('mongoose', 'ringtail')": "mongoose",
+    "('ringtail', 'mongoose')": "mongoose"
+  },
+  "257": {
+    "('mongoose', 'asian golden cat')": "mongoose",
+    "('asian golden cat', 'mongoose')": "mongoose",
+    "('woodchuck', 'mongoose')": "mongoose",
+    "('mongoose', 'woodchuck')": "mongoose",
+    "('ocelot', 'mongoose')": "mongoose",
+    "('mongoose', 'ocelot')": "mongoose",
+    "('tiger', 'ferret')": "tiger",
+    "('ferret', 'tiger')": "tiger",
+    "('lesser hedgehog', 'mongoose')": "mongoose",
+    "('mongoose', 'lesser hedgehog')": "mongoose"
+  },
+  "258": {
+    "(\"tengmalm's owl\", 'mongoose')": "mongoose",
+    "('mongoose', \"tengmalm's owl\")": "mongoose"
+  },
+  "259": {
+    "('genet', 'mongoose')": "mongoose",
+    "('mongoose', 'genet')": "mongoose"
+  },
+  "260": {
+    "('tiger', 'skunk')": "skunk",
+    "('skunk', 'tiger')": "skunk"
+  },
+  "261": {
+    "('mongoose', 'dwarf crocodile')": "mongoose",
+    "('dwarf crocodile', 'mongoose')": "mongoose"
+  },
+  "262": {
+    "('african wildcat', 'mongoose')": "mongoose",
+    "('mongoose', 'african wildcat')": "mongoose",
+    "('ringtail possum', 'mongoose')": "mongoose",
+    "('mongoose', 'ringtail possum')": "mongoose",
+    "('mongoose', 'eurasian badgershrew')": "mongoose",
+    "('eurasian badgershrew', 'mongoose')": "mongoose",
+    "('otterhound', 'mongoose')": "mongoose",
+    "('mongoose', 'otterhound')": "mongoose"
+  },
+  "263": {
+    "('snake skink', 'mongoose')": "mongoose",
+    "('mongoose', 'snake skink')": "mongoose",
+    "('mongoose', 'tibettan blue bear')": "mongoose",
+    "('tibettan blue bear', 'mongoose')": "mongoose"
+  },
+  "267": {
+    "('sand viper', 'mongoose')": "mongoose",
+    "('mongoose', 'sand viper')": "mongoose"
+  },
+  "268": {
+    "('mongoose', 'lesser bushbaby')": "mongoose",
+    "('lesser bushbaby', 'mongoose')": "mongoose"
+  },
+  "269": {
+    "('malayan civett', 'mongoose')": "mongoose",
+    "('mongoose', 'malayan civett')": "mongoose"
+  },
+  "270": {
+    "('bushbaby', 'mongoose')": "mongoose",
+    "('mongoose', 'bushbaby')": "mongoose",
+    "('solendon', 'mongoose')": "mongoose",
+    "('mongoose', 'solendon')": "mongoose"
+  },
+  "272": {
+    "('ocelot', 'shrew')": "ocelot",
+    "('shrew', 'ocelot')": "ocelot",
+    "('mongoose', 'tapir')": "mongoose",
+    "('tapir', 'mongoose')": "mongoose"
+  },
+  "273": {
+    "('aardvark like tenrec', 'skunk')": "skunk",
+    "('skunk', 'aardvark like tenrec')": "skunk",
+    "('rusty spotted cat', 'mongoose')": "mongoose",
+    "('mongoose', 'rusty spotted cat')": "mongoose",
+    "('pangolin', 'bushbaby')": "pangolin",
+    "('bushbaby', 'pangolin')": "pangolin",
+    "('african civet', 'mongoose')": "mongoose",
+    "('mongoose', 'african civet')": "mongoose"
+  },
+  "274": {
+    "('pangolin', 'wombat')": "pangolin",
+    "('wombat', 'pangolin')": "pangolin",
+    "('armadillo', 'cassowary')": "armadillo",
+    "('cassowary', 'armadillo')": "armadillo",
+    "('african civet', 'pangolin')": "pangolin",
+    "('pangolin', 'african civet')": "pangolin",
+    "('pangolin', 'ringtail possum')": "pangolin",
+    "('ringtail possum', 'pangolin')": "pangolin"
+  },
+  "275": {
+    "('pangolin', 'skunk')": "pangolin",
+    "('skunk', 'pangolin')": "pangolin",
+    "('fossa', 'genet')": "fossa",
+    "('genet', 'fossa')": "fossa",
+    "('ocelot', 'pangolin')": "ocelot",
+    "('pangolin', 'ocelot')": "ocelot"
+  },
+  "276": {
+    "('skunk', 'fossa')": "skunk",
+    "('fossa', 'skunk')": "skunk",
+    "('pangolin', 'fossa')": "fossa",
+    "('fossa', 'pangolin')": "fossa",
+    "('ocelot', 'binturong')": "ocelot",
+    "('binturong', 'ocelot')": "ocelot",
+    "('pangolin', 'ringtail lemur')": "pangolin",
+    "('ringtail lemur', 'pangolin')": "pangolin"
+  },
+  "277": {
+    "('solitary lemur', 'pangolin')": "pangolin",
+    "('pangolin', 'solitary lemur')": "pangolin",
+    "('pangolin', 'bilby')": "pangolin",
+    "('bilby', 'pangolin')": "pangolin",
+    "('pangolin', 'platypus')": "pangolin",
+    "('platypus', 'pangolin')": "pangolin"
+  },
+  "278": {
+    "('ocelot', 'fossa')": "fossa",
+    "('fossa', 'ocelot')": "fossa"
+  },
+  "279": {
+    "('pangolin', 'serval')": "serval",
+    "('serval', 'pangolin')": "serval",
+    "('armadillo', 'bilby')": "armadillo",
+    "('bilby', 'armadillo')": "armadillo",
+    "('armadillo', 'ocelot')": "armadillo",
+    "('ocelot', 'armadillo')": "armadillo",
+    "('ground panguru', 'armadillo')": "armadillo",
+    "('armadillo', 'ground panguru')": "armadillo"
+  },
+  "280": {
+    "('serval', 'armadillo')": "serval",
+    "('armadillo', 'serval')": "serval",
+    "('fossa', 'wombat')": "fossa",
+    "('wombat', 'fossa')": "fossa",
+    "('fossa', 'armadillo')": "fossa",
+    "('armadillo', 'fossa')": "fossa",
+    "('termite mound ant', 'pangolin')": "pangolin",
+    "('pangolin', 'termite mound ant')": "pangolin"
+  },
+  "281": {
+    "('armadillo', 'ground pangquin')": "armadillo",
+    "('ground pangquin', 'armadillo')": "armadillo"
+  },
+  "282": {
+    "('fossa', 'hedgepig')": "fossa",
+    "('hedgepig', 'fossa')": "fossa",
+    "('fossa', 'egyptian mongoose')": "fossa",
+    "('egyptian mongoose', 'fossa')": "fossa",
+    "('eastern hedgehog', 'pangolin')": "pangolin",
+    "('pangolin', 'eastern hedgehog')": "pangolin",
+    "('termite mound ant', 'armadillo')": "armadillo",
+    "('armadillo', 'termite mound ant')": "armadillo",
+    "('ringtail', 'fossa')": "fossa",
+    "('fossa', 'ringtail')": "fossa"
+  },
+  "283": {
+    "('armadillo', 'dugong')": "armadillo",
+    "('dugong', 'armadillo')": "armadillo",
+    "('armadillo', 'african wild dog')": "armadillo",
+    "('african wild dog', 'armadillo')": "armadillo",
+    "('pangolin', 'ringtail')": "pangolin",
+    "('ringtail', 'pangolin')": "pangolin"
+  },
+  "284": {
+    "('termite mound ant', 'scorpion')": "scorpion",
+    "('scorpion', 'termite mound ant')": "scorpion",
+    "('ferret', 'scorpion')": "scorpion",
+    "('scorpion', 'ferret')": "scorpion",
+    "('mandrill', 'armadillo')": "mandrill",
+    "('armadillo', 'mandrill')": "mandrill",
+    "('pangolin', 'scorpion')": "scorpion",
+    "('scorpion', 'pangolin')": "scorpion",
+    "('bat eared fox', 'fossa')": "fossa",
+    "('fossa', 'bat eared fox')": "fossa"
+  },
+  "285": {
+    "('fossa', 'greater bulldog bats')": "fossa",
+    "('greater bulldog bats', 'fossa')": "fossa",
+    "('fossa', 'mandrill')": "fossa",
+    "('mandrill', 'fossa')": "fossa",
+    "(\"pallas's cats\", 'fossa')": "fossa",
+    "('fossa', \"pallas's cats\")": "fossa",
+    "('serval', \"pallas's cats\")": "serval",
+    "(\"pallas's cats\", 'serval')": "serval"
+  },
+  "286": {
+    "('african wildcat', 'armadillo')": "armadillo",
+    "('armadillo', 'african wildcat')": "armadillo",
+    "('bushbaby', 'fossa')": "fossa",
+    "('fossa', 'bushbaby')": "fossa",
+    "('scorpion', 'fossa')": "scorpion",
+    "('fossa', 'scorpion')": "scorpion"
+  },
+  "287": {
+    "('bengali fox', 'fossa')": "fossa",
+    "('fossa', 'bengali fox')": "fossa",
+    "('african wildcat', 'serval')": "serval",
+    "('serval', 'african wildcat')": "serval",
+    "('serval', 'warthog')": "serval",
+    "('warthog', 'serval')": "serval"
+  },
+  "288": {
+    "('lycaon pictus', 'fossa')": "fossa",
+    "('fossa', 'lycaon pictus')": "fossa"
+  },
+  "289": {
+    "('fossa', 'lynx canadensis')": "fossa",
+    "('lynx canadensis', 'fossa')": "fossa",
+    "('fossa', 'babirusa')": "fossa",
+    "('babirusa', 'fossa')": "fossa",
+    "('scorpion', 'fangtooth')": "scorpion",
+    "('fangtooth', 'scorpion')": "scorpion"
+  },
+  "290": {
+    "('scorpion', 'bengali fox')": "scorpion",
+    "('bengali fox', 'scorpion')": "scorpion",
+    "('serval', 'scorpion')": "serval",
+    "('scorpion', 'serval')": "serval",
+    "('fossa', 'african wild dog')": "fossa",
+    "('african wild dog', 'fossa')": "fossa",
+    "('wolf snake', 'fossa')": "fossa",
+    "('fossa', 'wolf snake')": "fossa",
+    "('scorpion', 'wolf snake')": "scorpion",
+    "('wolf snake', 'scorpion')": "scorpion",
+    "('fossa', 'dik dikk babbler')": "fossa",
+    "('dik dikk babbler', 'fossa')": "fossa"
+  },
+  "291": {
+    "('eurasian lynx', 'fossa')": "fossa",
+    "('fossa', 'eurasian lynx')": "fossa",
+    "('eurasia lynx', 'scorpion')": "scorpion",
+    "('scorpion', 'eurasia lynx')": "scorpion",
+    "('pseudalopex fulvus', 'scorpion')": "scorpion",
+    "('scorpion', 'pseudalopex fulvus')": "scorpion"
+  },
+  "292": {
+    "('solifuges', 'scorpion')": "scorpion",
+    "('scorpion', 'solifuges')": "scorpion",
+    "('scorpion', 'aardvark')": "scorpion",
+    "('aardvark', 'scorpion')": "scorpion",
+    "('scorpion', 'dik dikk dassie')": "scorpion",
+    "('dik dikk dassie', 'scorpion')": "scorpion",
+    "('pseudalopex fulvus', 'fossa')": "fossa",
+    "('fossa', 'pseudalopex fulvus')": "fossa",
+    "('scorpion', 'wild boar')": "scorpion",
+    "('wild boar', 'scorpion')": "scorpion",
+    "('nuban civet', 'fossa')": "fossa",
+    "('fossa', 'nuban civet')": "fossa",
+    "('fossa', 'large eared mouse')": "fossa",
+    "('large eared mouse', 'fossa')": "fossa",
+    "('fossa', 'red wolf')": "fossa",
+    "('red wolf', 'fossa')": "fossa",
+    "('marbled pole cat', 'scorpion')": "scorpion",
+    "('scorpion', 'marbled pole cat')": "scorpion"
+  },
+  "293": {
+    "('dhole', 'fossa')": "fossa",
+    "('fossa', 'dhole')": "fossa",
+    "('scorpion', 'nuban civet')": "scorpion",
+    "('nuban civet', 'scorpion')": "scorpion",
+    "('eurasia polecat', 'mongoose')": "mongoose",
+    "('mongoose', 'eurasia polecat')": "mongoose"
+  },
+  "294": {
+    "('ghost shrimp', 'scorpion')": "scorpion",
+    "('scorpion', 'ghost shrimp')": "scorpion",
+    "('serval', 'ghost shrimp')": "serval",
+    "('ghost shrimp', 'serval')": "serval"
+  },
+  "295": {
+    "('scorpion', 'bullsnake')": "bullsnake",
+    "('bullsnake', 'scorpion')": "bullsnake",
+    "('serval', 'bullsnake')": "bullsnake",
+    "('bullsnake', 'serval')": "bullsnake",
+    "('mongoose', 'black widow')": "mongoose",
+    "('black widow', 'mongoose')": "mongoose",
+    "('scorpion', 'cheetah')": "cheetah",
+    "('cheetah', 'scorpion')": "cheetah",
+    "('scorpion', 'eurasian lynx')": "scorpion",
+    "('eurasian lynx', 'scorpion')": "scorpion",
+    "('eurasia polecat', 'serval')": "serval",
+    "('serval', 'eurasia polecat')": "serval"
+  },
+  "296": {
+    "('mongoose', 'bullsnake')": "mongoose",
+    "('bullsnake', 'mongoose')": "mongoose",
+    "('serval', 'burrowing cockroach')": "serval",
+    "('burrowing cockroach', 'serval')": "serval",
+    "('musteloitulus minori', 'serval')": "serval",
+    "('serval', 'musteloitulus minori')": "serval"
+  },
+  "297": {
+    "('nubian sand cat', 'scorpion')": "scorpion",
+    "('scorpion', 'nubian sand cat')": "scorpion",
+    "('civet', 'scorpion')": "scorpion",
+    "('scorpion', 'civet')": "scorpion",
+    "('serval', 'solifugae')": "serval",
+    "('solifugae', 'serval')": "serval",
+    "('leopard', 'serval')": "leopard",
+    "('serval', 'leopard')": "leopard"
+  },
+  "298": {
+    "('scorpion', 'ant')": "scorpion",
+    "('ant', 'scorpion')": "scorpion",
+    "('tiger', 'jumping spider')": "tiger",
+    "('jumping spider', 'tiger')": "tiger",
+    "('snow leopoard', 'tiger')": "tiger",
+    "('tiger', 'snow leopoard')": "tiger",
+    "('jungle caracul', 'serval')": "serval",
+    "('serval', 'jungle caracul')": "serval",
+    "('african wildcat', 'scorpion')": "scorpion",
+    "('scorpion', 'african wildcat')": "scorpion",
+    "('scorpion', 'leopard')": "scorpion",
+    "('leopard', 'scorpion')": "scorpion",
+    "('trap jawed ant', 'scorpion')": "scorpion",
+    "('scorpion', 'trap jawed ant')": "scorpion"
+  },
+  "299": {
+    "('leopard', 'mongoose')": "leopard",
+    "('mongoose', 'leopard')": "leopard",
+    "('snow leopoard', 'scorpion')": "scorpion",
+    "('scorpion', 'snow leopoard')": "scorpion",
+    "('tick', 'scorpion')": "tick",
+    "('scorpion', 'tick')": "tick"
+  }
+}

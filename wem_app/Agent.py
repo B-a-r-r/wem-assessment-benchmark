@@ -13,28 +13,22 @@ class Agent:
     Objects Attributes
     ----------
     id : int
-        The unique identifier of the agent.
-        
+        The unique identifier of the agent.  
     x : int
         The x-coordinate of the agent's position.
-        
     y : int
         The y-coordinate of the agent's position.
-        
     word : str
         The word that the agent carries.
         
     Static Attributes
     ----------
     dxy : list
-        A list of possible movements in the grid.
-        
+        A list of possible movements in the grid.   
     active_agents : list
         A list of all active agents in the simulation.
-        
     W : int
         The width of the grid in which the agents exist.
-    
     agents_pos : list
         A 2D list representing the positions of agents in the grid.
     """
@@ -51,11 +45,9 @@ class Agent:
         Parameters
         ----------
         w : str
-            The word that the agent carries.
-            
+            The word that the agent carries.  
         id : int
             The unique identifier of the agent.
-            
         W : int
             The width of the grid in which the agents exist.
             Since W is froze after being set, if it's not None this parameter will be ignored.
@@ -138,7 +130,6 @@ class Agent:
         n : int, optional
             The number of random walk to proceed.
             Default is 1.
-        
         verbose : bool, optional
             If True, print the updated position of the agent.
         """
@@ -193,9 +184,10 @@ class Agent:
         ----------
         judge : function
             The callable instance that judges the competition between two words.
-            
         verbose : bool, optional
             If True, print the competition details.
+        gen : int
+            The generation number of the competition.
             
         Returns
         -------
@@ -232,11 +224,11 @@ class Agent:
                 
         return res
         
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Agent {self.id} [{self.word}] at ({self.x}, {self.y})"
     
     @staticmethod
-    def clear():
+    def _clear():
         """
         Remove all agents data.
         """

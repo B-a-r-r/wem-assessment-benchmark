@@ -5,6 +5,7 @@ from os import path
 import re
 from json import dump
 from io import TextIOWrapper
+from WemActor import WemActor
 
 #
 # author:       Reiji SUZUKI et al.
@@ -12,7 +13,7 @@ from io import TextIOWrapper
 #
 
 
-class Judge:
+class Judge(WemActor):
     """
     This class is a judging system powered by a LLM model.
     It is used to compare words according to a given criteria.
@@ -21,50 +22,40 @@ class Judge:
     ----------
     _model : LanguageModelHandler
         The llm model to be used for judging.
-        
     judgments_history : dict
         A dictionary to store the results of the matches.
-        
     criteria : str
         The judging criteria.
-        
     config : dict
         A dictionary to store some config parameters.
         See config.json for more details on the format.
-        
     log_event : callable
         A callable function to log events.
-    
     _jugements_history_logs : TextIOWrapper | None
         A file to log the judgments history.
     """
     
     def __init__(self,
         config: dict,
-        log_event: callable =None,
+        enable_logs: bool =True,
     ):
         """
         Initializes a Judge object.
 
         Parameters
         ----------
-        criteria : str
-            The judging criteria.
-            
         config: dict
             A dictionary containing the configuration parameters.
-            
         log_event : callable, optional
             A callable function to log events (default is None).
         """
-        self._log_event: callable = log_event if log_event is not None else lambda x: None
-        print("--- WARNING - No log function set for the Judge. ---") if log_event is None else None
-        
+        print("--- WARNING - No log function set for the Judge. ---") if not enable_logs else None
         self.judgments_history: dict[int, dict[tuple[str, str], str]] = {}
         self._jugements_history_logs: TextIOWrapper | None = None
         
         self.config: dict = config
         self.verify_config()
+        super().__init__(logs_path=path.join(path.abspath(self.config["workspace"]["exp_dir"]), "logs.txt") if enable_logs else None)
         
         self.criteria: str = self.config["simulation"]["CRITERIA"]
         
@@ -144,7 +135,7 @@ class Judge:
                 self.config["simulation"]["B_ALLOWED_DELTA"] = 0
             
         except Exception as e:
-            self._log_event(f"\nFailed to log config: {e}. Please check the config file.", source="Judge", indent="\t", type="FATAL")
+            print(f"FATAL - from Judge - Failed to load config: {e}. Please check the config file.")
             raise e
     
     def judge(self, word1: str, word2: str, gen: int) -> str:
@@ -157,6 +148,7 @@ class Judge:
             The first word to compare.
         word2 : str
             The second word to compare.
+            
         Returns
         ---------
         str
@@ -173,12 +165,7 @@ class Judge:
             self.config["prompts"]["judge"]
         ).replace("#criteria#", self.criteria).replace("#word1#", word1).replace("#word2#", word2)
     
-        chosen_one = self.request_intervention(prompt, 1, distinct=True)[0]
-        #Warning: the model may return a word that is not one of the two words, for instance word1 but at plural form
-        # while not ((chosen_one.__contains__(word1)) or (chosen_one.__contains__(word2))):
-        #     print(f"Response: {chosen_one}")
-        #     self._log_event(event=f"Judgment failed, trying again...", source="Judge", indent="\t", type="WARNING")
-        #     chosen_one = self.request_intervention(prompt, 1, distinct=True)[0]
+        chosen_one = self._request_intervention(prompt, 1, distinct=True)[0]
         
         if ((chosen_one.__contains__(word1)) or (chosen_one.__contains__(word2))):
             chosen_one = word1 if chosen_one.__contains__(word1) else word2
@@ -216,7 +203,7 @@ class Judge:
         while len(words) < n - self.config["simulation"]["A_ALLOWED_DELTA"]:
             self._log_event(f"Creating {n} words...", "Judge", "\t")
             
-            words= [a for a in self.request_intervention(prompt, n, distinct=True) if (
+            words= [a for a in self._request_intervention(prompt, n, distinct=True) if (
                 #minimie the risk to introduce phrases or sentences
                 len(a)<=self.config["simulation"]["WORD_MAX_LENGHT"] 
                 and len(a)>=self.config["simulation"]["WORD_MIN_LENGHT"]
@@ -239,7 +226,6 @@ class Judge:
         ----------
         word : str
             The word to mutate.
-            
         verbose : bool, optional
             If True, print the mutated word (default is False).
             
@@ -257,7 +243,7 @@ class Judge:
         
         words= []
         while len(words) < n - self.config["simulation"]["B_ALLOWED_DELTA"]:
-            words= [a for a in self.request_intervention(prompt, n) if (
+            words= [a for a in self._request_intervention(prompt, n) if (
                 #minimie the risk to introduce phrases or sentences
                 len(a)<=self.config["simulation"]["WORD_MAX_LENGHT"] 
                 and len(a)>=self.config["simulation"]["WORD_MIN_LENGHT"]
@@ -271,7 +257,7 @@ class Judge:
         if verbose : print(f"{word} -> {chosen_word}, {words}")
         return (chosen_word, words)
     
-    def request_intervention(self,
+    def _request_intervention(self,
         prompt: str,
         n: int,
         distinct: bool =False,
@@ -284,13 +270,10 @@ class Judge:
         ----------
         prompt : str
             The prompt to send to the model.
-            
         n : int
             The number of words to generate.
-            
         distinct : bool, optional
             If True, the formatted response will be cleared of duplicates (default is False).
-            
         verbose : bool, optional
             If True, print the raw and formatted response (default is False).
             
@@ -323,10 +306,8 @@ class Judge:
         ----------
         response : str
             The raw response from the model.
-            
         n : int
             The number of words expected.
-            
         distinct : bool
             If True, the formatted response will be cleared of duplicates.
             
@@ -399,14 +380,14 @@ class Judge:
                 
         return res 
     
-    def clear(self):
+    def _clear(self):
         """
         Destructor for the Judge class.
         """
         if self._jugements_history_logs is not None:
             self._jugements_history_logs.close()
             self._jugements_history_logs = None
-        self._model.clear()
+        self._model._clear()
         del self._model
         del self.judgments_history
         del self.config
@@ -420,8 +401,8 @@ class Judge:
         
         Parameters
         ----------
-        log_label : str, optional
-            The label to add to the file name (default is "").
+        t : int
+            The current generation number.
         """
         if self._jugements_history_logs is None:
             self._jugements_history_logs = open(f"{path.abspath(self.config['workspace']['exp_dir'])}/judgments_history_{t}.json", "w", encoding="utf-8")
@@ -437,5 +418,5 @@ class Judge:
                
         self._log_event(f"Judgments history logs updated.", "Judge")
         
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Judge({self.criteria}) using {self._model.model_name}."

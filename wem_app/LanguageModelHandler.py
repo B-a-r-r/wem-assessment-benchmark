@@ -22,27 +22,26 @@ class LanguageModelHandler:
     ----------
     model_name : str
         The name of the model to load from HuggingFace.
-        
     _auth_token : str
         The HuggingFace authentication token.
-    
     _model : AutoModel
-        The model resolved from model_name.
-        
+        The model resolved from model_name. 
     _tokenizer : AutoTokenizer
         The tokenizer resolved from model_name.
-    
     _device : torch.device
         The hardware that should handle the computation (CPU or GPU, default is GPU).
-    
     _logits_processor : LogitsProcessorList
         A list of parameters that will be used to process the logits (partly determining/adapting the output).
-        
     _log_event : callable
         A callable function to log events.
-        
     _quantization_config : BitsAndBytesConfig
         The quantization configuration for the model (if any).
+    offload_dir : str
+        The directory where the model will be offloaded (if local offload is enabled).
+    skip_tokenizer : bool
+        If True, the tokenizer will not be loaded. Default is False.
+    accelerator : Accelerator
+        An Accelerator instance to handle the model and its configuration.
     """
     
     def __init__(self, 
@@ -59,15 +58,14 @@ class LanguageModelHandler:
         ----------
         model_name : str
             The name of the model to load from HuggingFace.
-            
         auth_token : str, optional
             The HuggingFace authentication token. If not provided, the environment variable will try to be used.
-            
         offload_dir : str, optional
             The directory where the model will be offloaded. Default is "./.llm-offloads".
-            
         log_event : callable, optional
             A callable function to log events. If not provided, a no-op function will be used.
+        skip_tokenizer : bool, optional
+            If True, the tokenizer will not be loaded. Default is False.
         """        
         self._log_event: callable = log_event if log_event is not None else lambda **kwargs: None
         print("--- WARNING - No log function set for the LanguageModelHandler. ---") if log_event is None else None
@@ -129,7 +127,7 @@ class LanguageModelHandler:
 
         if not self.skip_tokenizer:
             self._log_event(event=f"Resolving model auto tokenizer from pretrained...", source="LanguageModelHandler")
-            self._tokenizer = AutoTokenizer.from_pretrained(
+            self._tokenizer: AutoTokenizer = AutoTokenizer.from_pretrained(
                 pretrained_model_name_or_path=model_name,
                 force_download=True,
                 trust_remote_code=True,
@@ -169,15 +167,12 @@ class LanguageModelHandler:
         ----------
         use_gpu : bool, optional
             If True, the model will be loaded on the GPU (if available).
-            
         temperature : float, optional
             Allows to give more or less importance to the low-probability tokens.
             This can encourage originality in the output, and therefore creativity.
-
         quantization : int, optional
             The quantization level to use for the model (4 or 8 bits).
             Allows to minimize the model size and speed up the inference time.
-            
         local_offload : bool, optional
             If True, the model will be offloaded to the local machine's disk.
             This parameter will be ignored if the expected hardware is not available.
@@ -244,17 +239,13 @@ class LanguageModelHandler:
         ----------
         prompt : str
             The input text to generate a response from.
-            
         rep_penalty : float, optionals
             Each repetition of the same token is more or less penalized.
             This could encourage the model to diversify the terms in the output.
-            
         min_new_tokens : int, optional
             This parameter may help to avoid empty responses and force the model to not just repeat the prompt.
-            
         max_new_tokens : int, optional
             This parameter may help to avoid too long responses and force the model stay moer or less on the topic.
-            
         batch_size : int, optional
             The number of samples to generate in parallel.
             
@@ -298,7 +289,7 @@ class LanguageModelHandler:
 
         return response
     
-    def clear(self) -> None:
+    def _clear(self) -> None:
         """
         Destructor for the LanguageModelHandler class.
         WARNING: this is a final operation and will erase this instance and CUDA's cache from the memory.
