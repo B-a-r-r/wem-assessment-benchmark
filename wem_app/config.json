@@ -27,7 +27,11 @@
         "log_judgement_history": true,
         "log_trial_results": true,
         "log_competition_history": true,
-        "log_mutation_history": true
+        "log_mutation_history": true,
+        "label": "default",
+        "lang": "en",
+        "top_B": 10,
+        "sentence_transformer_model": "all-MiniLM-L6-v2"
     },
     "model" : {
         "name": "meta-llama/Llama-3.1-8B-Instruct",

@@ -1,6 +1,4 @@
-from pandas import read_csv
-from moviepy import VideoFileClip
-from os import path, remove
+from json import load
 
 #
 # This file contains utility functions.
@@ -9,32 +7,18 @@ from os import path, remove
 # github:   @B-a-r-r
 #
 
-def convert_gif_to_video(input_path: str, output_path: str, remove_input: bool =False) -> None:
+def load_config(config_path: str) -> dict:
     """
-    Convert a GIF file to a video file using moviepy.
+    Load the simulation configuration from a JSON file.
     
     Parameters
     ----------
-    input_path : str
-        The path to the input GIF file.
-    output_path : str
-        The path to the output video file.
-    remove_input : bool
-        If True, remove the input GIF file after conversion.
+    config_path : str
+        The absolute path to the configuration file.
     """
-    if not path.exists(input_path):
-        raise FileNotFoundError(f"Input file {input_path} does not exist.")
-    
-    if not input_path.endswith('.gif'):
-        raise ValueError("Input file must be a GIF.")
-    
-    clip = VideoFileClip(input_path)
-    clip.write_videofile(output_path, codec='libx264')
-    
-    if remove_input:
-        clip.close()
-        remove(input_path)
-            
+    with open(config_path, "r") as f:
+        return load(f)
+
 def get_gpu_local_config() -> dict | None:
     """
     Get the local GPU configuration.
@@ -93,52 +77,33 @@ def count_non_negative_one(lst: list) -> int:
             
     return count
 
-def encode_dict(d: dict) -> dict:
+def verify_config(config: dict):
     """
-    Encodes a dictionary with tuple keys to a dictionary with string keys.
-    
-    Parameters
-    ----------
-    d : dict
-        The dictionary to encode.
-    
-    Returns
-    -------
-    dict
-        The encoded dictionary with string keys.
+    Verifies that the configuration file has required parameters to launch an experiment.
     """
-    return {str(k): v for k, v in d.items()}
-
-def decode_dict(d: dict) -> dict:
-    """
-    Decodes a dictionary with string keys that represent tuples back to a dictionary with tuple keys.
-    
-    Parameters
-    ----------
-    d : dict
-        The dictionary to decode.
-    
-    Returns
-    -------
-    dict
-        The decoded dictionary with tuple keys.
-    """
-    return {tuple(eval(k)): v for k, v in d.items()}
-
-def process_file(file_path):
-    """
-    Process a file containing the output of a simulation into a dictionary indexed by generation.
-    
-    Parameters
-    ----------
-    file_path : str
-        The path to the CSV file to process.
-    
-    Returns
-    -------
-    dict
-        A dictionary whose keys are the generation numbers and values are lists of dictionaries,
-        describing the agents in the simulation, with keys 'id', 'x', 'y' and 'word'.
-    """
-    df = read_csv(file_path)
-    return df.groupby('gen').apply(lambda x: x[['id', 'x', 'y', 'word']].to_dict('records')).to_dict()
+    try:
+        assert config.get("simulation", None) is not None, \
+            "The config file must contain a 'simulation' section."
+        assert config.get("model", None) is not None, \
+            "The config file must contain a 'model' section."
+        assert config.get("prompts", None) is not None, \
+            "The config file must contain a 'prompts' section."
+        assert config.get("workspace", None) is not None, \
+            "The config file must contain a 'workspace' section."
+            
+        assert config["simulation"].get("SEED", None) is not None, \
+            "The 'simulation' section must contain a 'SEED' parameter."
+        assert config['workspace'].get("exp_dir", None) is not None, \
+            "The 'workspace' section must contain an 'exp_dir' parameter."
+        assert config['workspace'].get("label", None) is not None, \
+            "The 'workspace' section must contain a 'label' parameter."
+        assert config['workspace'].get("lang", None) is not None, \
+            "The 'workspace' section must contain a 'lang' parameter."
+        assert config['workspace'].get("top_B", None) is not None, \
+            "The 'workspace' section must contain a 'top_B' parameter."
+        assert config['workspace'].get("sentence_transformer_model", None) is not None, \
+            "The 'workspace' section must contain a 'sentence_transformer_model' parameter."    
+        
+    except Exception as e:
+        print(f"--- FATAL - Error in the config file ---")
+        raise e
