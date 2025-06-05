@@ -1,10 +1,13 @@
 from sys import argv
-from simulation import Simulation
-from makegraphs import *
+from Simulation import Simulation
+from ExpTrajectoryAnalyzer import ExpTrajectoryAnalyzer
+from ExpSpatialAnalyzer import ExpSpatialAnalyzer
+from ExpTopBAnalyzer import ExpTopBAnalyzer
+from ExpEmergenceAnalyzer import ExpEmergenceAnalyzer
 from os import path
 from utils import load_config, verify_config
 
-#allow to input the config path and the logs path from the command line
+#allow to input the config path from the command line
 if len(argv) > 1:
     config_path = argv[1]
     

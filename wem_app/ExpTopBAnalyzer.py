@@ -193,7 +193,6 @@ class ExpTopBAnalyzer(WemVisualsMaker):
             fig = plt.figure(figsize=fig_size) if subplot is None else subplot.figure
             subplot = fig.add_subplot(111, label='agents_pos_anim') if subplot is None else subplot
             generations = sorted(list(self.exp_data.all_data[file].keys()))
-            color = colors[idx]
             
             def update(frame):
                 subplot.clear()
@@ -205,7 +204,7 @@ class ExpTopBAnalyzer(WemVisualsMaker):
                 subplot.set_aspect('equal', adjustable='box')
                 
                 for i, agent in enumerate(agents):
-                    subplot.add_artist(plt.Circle((agent['x'], agent['y']), 0.3, fill=True, color=color, alpha=0.7))
+                    subplot.add_artist(plt.Circle((agent['x'], agent['y']), 0.3, fill=True, color=colors[i], alpha=0.7))
                     subplot.text(agent['x'], agent['y'], agent['word'], fontsize=font_size*0.5, ha='center', va='center')
                 
                 subplot.grid(True, color='gray', linestyle='--', linewidth=0.2)       

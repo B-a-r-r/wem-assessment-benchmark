@@ -48,12 +48,12 @@ class Judge(WemActor):
         log_event : callable, optional
             A callable function to log events (default is None).
         """
+        self.config: dict = config
+        self.verify_config()
+        
         print("--- WARNING - No log function set for the Judge. ---") if not enable_logs else None
         self.logs_path = path.join(path.abspath(self.config["workspace"]["exp_dir"]), "logs.txt") if enable_logs else None
         self._logs_file: TextIOWrapper = None
-        
-        self.config: dict = config
-        self.verify_config()
         
         self.judgments_history: dict[int, dict[tuple[str, str], str]] = {}
         self._jugements_history_logs: TextIOWrapper | None = None
@@ -81,9 +81,9 @@ class Judge(WemActor):
         underline: bool =False,
         type: str =None,
     ) -> None:
-        super()._log_event(
+        self._logs_file = super()._log_event(
             event=event, source=source, indent=indent, underline=underline, type=type, 
-            logs_path=self.config["workspace"]["exp_dir"], logs_file=self._logs_file
+            logs_path=self.logs_path, logs_file=self._logs_file
         )
     
     def verify_config(self):

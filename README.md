@@ -46,12 +46,16 @@ The config file is stuctured as follows:
         "B_ALLOWED_DELTA": 3        #Acceptable error margin between the expected size B and the actual one
     },
     "workspace": {
-        "verbose": true,                    #Whether to print the progress of the simulation in the terminal    
-        "exp_dir": "...",                   #The path to the (existing or not) directory in the project to store the experiment data
-        "log_judgement_history": true,      #Whether to log the judgement history of the competitions
-        "log_trial_results": true,          #Whether to log the results of each trial
-        "log_competition_history": true,    #Whether to log the history of the competitions
-        "log_mutation_history": true        #Whether to log the history of the mutations
+        "verbose": true,                        #Whether to print the progress of the simulation in the terminal    
+        "exp_dir": "...",                       #The path to the (existing or not) directory in the project to store the experiment data
+        "log_judgement_history": true,          #Whether to log the judgement history of the competitions
+        "log_trial_results": true,              #Whether to log the results of each trial
+        "log_competition_history": true,        #Whether to log the history of the competitions
+        "log_mutation_history": true            #Whether to log the history of the mutations
+        "lang": "en",                           #The language of the prompts
+        "label": "default",                     #The label of the experiment, used to identify it and name the files for instance
+        "top_B": 10,                            #The number of top words to consider for the visuals 
+        "sentence_transformer_model": "..."     #The name of the sentence transformer model to use to ompute UMAP data
     },
     "model" : {
         "name": "...",               #The name of the LLM model to use

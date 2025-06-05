@@ -72,6 +72,7 @@ class Simulation(WemActor):
         
         self.logs_path = path.join(path.abspath(self.simul_config["workspace"]["exp_dir"]), "logs.txt") if enable_logs else None
         self._logs_file: TextIOWrapper = None
+        self._log_event(event="Log file initialized.", underline= True)
         
         self.judge: Judge = None
         self.emerged_words: list = []
@@ -99,9 +100,9 @@ class Simulation(WemActor):
         underline: bool =False,
         type: str =None,
     ) -> None:
-        super()._log_event(
+        self._logs_file = super()._log_event(
             event=event, source=source, indent=indent, underline=underline, type=type, 
-            logs_path=self.simul_config["workspace"]["exp_dir"], logs_file=self._logs_file
+            logs_path=self.logs_path, logs_file=self._logs_file
         )
     
     def _step(self, s: int) -> None:
@@ -143,7 +144,7 @@ class Simulation(WemActor):
                 if not self.mutation_history[s].keys().__contains__(a.word):
                     self.mutation_history[s][a.word] = {}
                 if not self.mutation_history[s][a.word].keys().__contains__(mutation[0]):
-                    self.mutation_history[s][a.word]._update({mutation[0]: [mutation[1]]})
+                    self.mutation_history[s][a.word].update({mutation[0]: [mutation[1]]})
                 else:
                     self.mutation_history[s][a.word][mutation[0]].extend(mutation[1])
                 a.word = mutation[0]

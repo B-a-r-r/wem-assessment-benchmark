@@ -75,8 +75,7 @@ class WemExpData:
         Check is the current instance is empty or miss exp computed data.
         """
         return self.trials_gens_unique_words == {} or \
-                self.trials_gens_unique_words == {} or \
-                self.colors == []
+                self.trials_gens_unique_words == {}
     
     def get_trial_topB_words(self, trial: int) -> list[str]:
         """

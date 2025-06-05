@@ -24,7 +24,7 @@ class WemActor(ABC):
         type: str =None,
         logs_path: str =None,
         logs_file: TextIOWrapper =None
-    ) -> None:
+    ) -> TextIOWrapper:
         """
         Logs an event to the log file with some 
         additional information.
@@ -58,11 +58,11 @@ class WemActor(ABC):
             #if the file is not empty, overwrite the content
             if logs_file.readlines() != []:
                 logs_file.write("\n")
-            
-            self._log_event(event="Log file initialized.", underline= True)
         
         logs_file.writelines(f"{indent}{datetime.now().hour}:{datetime.now().minute}:{datetime.now().second}{f" - {type}" if type is not None else ""}{f" - from {source}" if source is not None else ""} - {event}\n{indent}{"------------\n" if underline else ""}")
         logs_file.flush()
+        
+        return logs_file
         
     @abstractmethod
     def _clear(self):
