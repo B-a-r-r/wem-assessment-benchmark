@@ -1,1 +1,651 @@
-15:54:38 - Simulation reached the end. Bravo!
+0:40:38 - from LanguageModelHandler - Resolving model auto tokenizer from pretrained...
+0:40:42 - from LanguageModelHandler - LanguageModelHandler for meta-llama/Llama-3.1-8B-Instruct initialized. Token0:40:52 - Seed set to 42.
+0:41:10 - Initial words list created: ['aardvark', 'quiet lemming', 'zebra', 'wolf', 'urial', 'mongoose', 'tarsier', 'vulture', 'lemur', 'giraffe', 'jaguar', 'ibex', 'hedgehog', 'ocelot', 'yak', 'rhinoceros', 'badger', 'xenopus frog', 'komodo dragon', 'stork', 'elephant', 'monkey', 'narwhal', 'addax', 'shrew', 'dk dik disk', 'sloth', 'cheetah', 'newt', 'fennec fox', 'dog', 'okapi', 'pangolin'].
+0:41:10 - Agents created and dispatched.
+0:41:10 - Frequency dict initialized.
+0:41:10 - Starting main loop for trial 0.
+	0:41:10 - Step 0 started.
+		0:41:10 - Starting random walks phase.
+	------------
+	0:41:10 - Starting competition phase.
+	------------
+	0:41:45 - Starting mutation phase.
+	------------
+0:41:56 - Step 0 completed.
+0:41:56 - from Simulation - Results file created.
+0:41:56 - from Simulation - Results logs updated.
+0:41:56 - from Simulation - Mutation history file created.
+0:41:56 - from Simulation - Mutation history logs updated.
+0:41:56 - from Simulation - Competition history file created.
+0:41:56 - from Simulation - Competition history logs updated.
+0:41:56 - Current population (80): ['rhinoceros', 'monkey', 'cheetah', 'vulture', 'mongoose', 'fennec fox', 'rhinoceros', 'narwhal', 'cheetah', 'pangolin', 'newt', 'badger', 'vulture', 'monkey', 'pangolin', 'dog', 'tarsier', 	0:42:24 - from Judge - Mutation list: ['ferret', 'meerkat', 'dik dikk', 'badger', 'hedgehog', 'termite', 'mole rat', 'fox', 'sandpuppy']
+		0:42:24 - WARNING - from Judge - Not enough words created, trying again...
+		0:42:29 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'gaur', 'bison', 'warthog', 'sussex cattle', 'sheep antelope', 'muskox', 'caribou']
+		0:42:34 - from Judge - Mutation list: ['beluga whale', 'gray seal', 'dugong', 'manatee', 'gibbons monkey', 'hairy nosed otter', 'sperm whales', 'pilot fish']
+		0:42:34 - WARNING - from Judge - Not enough words created, trying again...
+		0:42:39 - from Judge - Mutation list: ['ferret', 'meerkat', 'badger', 'hedgehog', 'termite', 'mole', 'raccoon', 'pangolin', 'fox', 'skunk']
+		0:42:44 - from Judge - Mutation list: ['ferret', 'serval', 'meerkat', 'binturong', 'civet', 'fossa', 'golden cat', 'eyed wolf', 'lynx', 'tiger cat']
+		0:42:50 - from Judge - Mutation list: ['ferret', 'meerkat', 'suricate', '0:42:50 - Step 1 completed.
+0:42:50 - from Simulation - Results logs updated.
+0:42:50 - from Simulation - Mutation history logs updated	0:43:11 - from Judge - Mutation list: ['springbok', 'sitatunga', 'nyala', 'mountain nyalo', 'gazelle', 'tahr', 'imbabura antelope', "cuvier's gazelles", 'pronghorn', 'waterbucks']
+	0:43:11 - from Judge - Judgments history logs updated.
+	0:43:25 - from Judge - Mutation list: ['ferret', 'serval', 'meerkat', 'termite mound ant', 'dog faced waterbark', 'baboon', 'pangolin', 'lesser bushbaby', 'civet cat']
+		0:43:25 - WARNING - from Judge - Not enough words created, trying again...
+		0:43:30 - from Judge - Mutation list: ['ferret', 'meerkat', 'suricate', 'african wild dog', 'pangolin', 'eurasian badger', 'fossa']
+		0:43:30 - WARNING - from Judge - Not enough words created, trying again...
+	0:43:30 - from Judge - Judgments history logs updated.
+	0:43:42 - from Judge - Mutation list: ['ferret', 'sand cat', 'meerkat', 'binturong', 'eurasian polecat', 'african civet', 'tayra', 'jungle weasel', 'ring tailed mongoose']
+		0:43:42 - WARNING - from Judge - Not enough words created, trying again...
+		0:43:47 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'puma', 'cougar', 'mountain lion', 'jaguar', 'banded palm civit', 'tiger cat']
+		0:43:47 - WARNING - from Judge - Not enough words created, trying again...
+		0:43:52 - from Judge - Mutation list: ['tapir', 'okapi', 'dugong', 'sloth', 'lemur', 'wombat', 'groundhog', 'mole', 'raccoon', 'oryx']
+		0:43:57 - from Judge - Mutation list: ['ferret', 'fennec fox', 'meerkat', 'badger', 'termite mound rat', 'savannah sparrow', 'lesser panda', 'civet cat', 'ground squirrel', 'pangolin']
+		0:44:2 - from Judge - Mutation list: ['ferret', 'skunk', 'lesser hedgehog', 'badger', 'honey badgers', 'raccoon dog', 'tayra', 'civet cat', 'fossa', 'domestic ferrets']
+	0:44:2 - from Judge - Judgments history logs updated.
+	0:44:14 - from Judge - Mutation list: ['armadillo', 'wolverine', 'skunk', 'ferret', 'mongoose', 'raccoon', 'coyote', 'fennec fox', 'lagomorph', 'hedgehog']
+		0:44:19 - from Judge - Mutation list: ['african wildcat', 'asian golden cat', 'eurasian lynx', 'iberian ibex', "pallas's cats", 'nuban serval', 'bengel tiger', 'javan lemur', 'ocelot']
+		0:44:19 - WARNING - from Judge - Not enough words created, trying again...
+	0:44:19 - from Judge - Judgments history logs updated.
+	0:44:28 - from Judge - Mutation list: ['badger', 'ferret', 'mongoose', 'pangolin', 'skunk', 'hedgehog', 'aardvark', 'stoat', 'weasel', 'fennec fox']
+		0:44:33 - from Judge - Mutation list: ['tapir', 'okapi', 'elasmotherium', 'hyrax', "grevy's zebra", 'banteng', 'wildebeest', 'sable antelope', 'pronghorn', 'muskox']
+		0:44:38 - from Judge - Mutation list: ['meerkat', 'badger', 'termite mound frog', 'asian palm civet', 'african wild dog', 'serval', 'pangolin', 'groundhog', 'wolverine', 'ring tailed lemur']
+		0:44:43 - from Judge - Mutation list: ['ferret', 'meerkat', 'suricate', 'fox', 'badger', 'polecat']
+		0:44:43 - WARNING - from Judge - Not enough words created, trying again...
+		0:44:48 - from Judge - Mutation list: ['meerkat', 'chinchilla', "tengmalm's owl", 'civet cat', 'fossa', 'mole rat', 'dik dikk bat', 'eurasian otter', 'badger', 'pangolin']
+		0:44:53 - from Judge - Mutation list: ['ferret', 'meerkat', 'golden cat', 'binturong', 'loris', 'civet', 'vervet monkey', 'eurasian badger', 'baboon']
+		0:44:53 - WARNING - from Judge - Not enough words created, trying again...
+	0:44:53 - from Judge - Judgments history logs updated.
+	0:45:0 - from Judge - Mutation list: ['ferret', 'meerkat', 'pangolin', 'hedgehog', 'termite', 'mole', 'vervet monkey', 'lemur', 'badger', 'solifugid spider']
+		0:45:5 - from Judge - Mutation list: ['ferret', 'serval', 'meerkat', 'binturong', 'civet', 'tayra', 'martens', 'fossa', 'lynx', 'golden cat']
+		0:45:10 - from Judge - Mutation list: ['tapir', 'hippopotamus', 'bison', 'gaur', 'hartebeest', 'topi', 'dik dikkor', 'springbok', 'elk', 'muskox']
+		0:45:16 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'babirusa', 'hippopotamid', 'proboscidean', 'warthog', 'pigmy hippo', 'capybara', 'greater kudu']
+	0:45:16 - from Judge - Judgments history logs updated.
+	0:45:25 - from Judge - Mutation list: ['ferret', 'meerkat', 'mole rat', 'dormouse', 'hedgehog', 'pangolin', 'ground squirrel', 'tassel eared marmot', 'wallaby']
+		0:45:25 - WARNING - from Judge - Not enough words created, trying again...
+		0:45:30 - from Judge - Mutation list: ['tapir', 'eland', 'bison', 'gaur', 'warthog', 'hippopotamus', 'camel', 'suina', 'aurochs', 'muskoxen']
+		0:45:35 - from Judge - Mutation list: ['opossum', 'bushbaby', 'kinkajou', 'sloth bear', 'mongoose', 'pangolin', 'tarsier', 'wombat', 'badger', 'loris']
+		0:45:40 - from Judge - Mutation list: ['ferret', 'lynx', 'genet', 'binturong', 'civet', 'fossa', 'pangolin', 'tasmanian devil', 'wolverine']
+		0:45:40 - WARNING - from Judge - Not enough words created, trying again...
+	0:45:40 - from Judge - Judgments history logs updated.
+	0:45:49 - from Judge - Mutation list: ['ferret', 'meerkat', 'bushbaby', 'hedgehog', 'fossa', 'eurasian badger', 'african civet']
+		0:45:49 - WARNING - from Judge - Not enough words created, trying again...
+		0:45:54 - from Judge - Mutation list: ['meerkat', 'fennec fox', 'savannah monitor', 'lesser panda', 'baboon', 'tawny frogmouth', 'ocelot', 'dog like hyena', 'civet cat']
+		0:45:54 - WARNING - from Judge - Not enough words created, trying again...
+	0:45:54 - from Judge - Judgments history logs updated.
+	0:46:1 - from Judge - Mutation list: ['ferret', 'serval', 'meerkat', 'badger', 'lesser panda', 'wolverine', 'civet cat', 'greater bandicoot', 'mongoose lemur']
+		0:46:1 - WARNING - from Judge - Not enough words created, trying again...
+		0:46:7 - from Judge - Mutation list: ['tapir', 'okapi', 'babirusa', 'hippopotamus', 'nile crocodile', 'gharial', 'siamang', 'dugong', 'muskox', 'warthog']
+		0:46:12 - from Judge - Mutation list: ['ferret', 'meerkat', 'lesser panda', 'olingo', 'civet cat', 'binturong', 'serval', 'dwarf crocodile']
+		0:46:12 - WARNING - from Judge - Not enough words created, trying again...
+	0:46:12 - from Judge - Judgments history logs updated.
+	0:46:21 - from Judge - Mutation list: ['ferret', 'meerkat', 'suricate', 'mole rat', 'ground squirrel', 'fox terrier', 'hedgehog', 'pangolin', 'termite mound ant', 'civet cat']
+		0:46:26 - from Judge - Mutation list: ['tapir', 'okapi', 'gaur', 'banteng', 'wildebeest', 'satyr tragopan', 'hippopotamus', 'pigmy hippo', 'takin']
+		0:46:26 - WARNING - from Judge - Not enough words created, trying again...
+		0:46:31 - from Judge - Mutation list: ['ferret', 'meerkat', 'badger', 'civet', 'large spotted genet', 'african wild dog', 'honey badgar', 'mongoose lemur', 'fossa']
+		0:46:31 - WARNING - from Judge - Not enough words created, trying again...
+		0:46:37 - from Judge - Mutation list: ['snow leopard', 'serval cat', 'european wildcat', 'otter civet', 'cheetah', 'bengal tiger', 'siberian lynxes', 'eurasias']
+		0:46:37 - WARNING - from Judge - Not enough words created, trying again...
+		0:46:43 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'sloth bear', 'moose', 'deer', 'elk', 'bison', 'warthog', 'hartebeest']
+	0:46:43 - from Judge - Judgments history logs updated.
+	0:46:53 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'warthog', 'baikal seal', 'narwhal', "grevy's zebra", 'muskox', 'capybara', 'coati']
+		0:46:59 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'giant panda', 'babirusa', 'hyrax', 'sloth bear', 'malayan sunbear', 'asian black bears', 'wolverine']
+		0:47:4 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'banteng', 'warthog', 'sus scrofa', 'domestic yak', 'gaur', 'bactrian camel']
+		0:47:4 - WARNING - from Judge - Not enough words created, trying again...
+	0:47:4 - from Judge - Judgments history logs updated.
+	0:47:14 - from Judge - Mutation list: ['tapir', 'orangutan', 'hippopotamus', 'manatee', 'dugong', 'crocodile', 'aardvark', 'warthog', 'babirusa', 'sloth bear']
+		0:47:19 - from Judge - Mutation list: ['snow leopard', 'caracal', 'servals', 'wildcat', 'serval cat', "pallas's cats", 'european wildcats', 'asian golden cats']
+		0:47:19 - WARNING - from Judge - Not enough words created, trying again...
+		0:47:24 - from Judge - Mutation list: ['tapir', 'okapi', 'gazelle', 'springbok', 'eland', 'bison', 'warthog', 'hippopotamus', 'capibara', 'muskox']
+		0:47:30 - from Judge - Mutation list: ['axolotl', 'lamprey', 'protopterus', 'conger eel', 'salamander', 'mudskipper', 'eelp out', 'tailed frog', 'bullfrog', 'goldfish']
+	0:47:30 - from Judge - Judgments history logs updated.
+	0:47:39 - from Judge - Mutation list: ['snow leopard', 'canadian lynnx', 'serval', "pallas's cat", 'african wildcat', 'cheetah', 'siberan tiger', 'otterhound', 'jaguarundi']
+		0:47:39 - WARNING - from Judge - Not enough words created, trying again...
+		0:47:45 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'binturong', 'serval', 'eastern quoll', "pallas's cat", 'northern raccoon dog', 'javan ferret badger', 'civet', 'lion tailed macaque']
+		0:47:50 - from Judge - Mutation list: ['tapir', 'takin', 'hippopotamus', 'bison', 'muskox', 'hartebeest', 'elk', 'gaur', 'water buffalo', 'camelid']
+	0:47:50 - from Judge - Judgments history logs updated.
+	0:47:59 - from Judge - Mutation list: ['bobcat', 'serval', 'cheetah', 'puma', 'cougar', 'mountain lion', 'jaguar', 'eastern cougar', 'iriomote wildcats']
+		0:47:59 - WARNING - from Judge - Not enough words created, trying again...
+		0:48:4 - from Judge - Mutation list: ['arctic fox', 'red panda', 'snow leopard', 'serval', 'puma', 'cheetah', 'jaguarundi', 'ocelot', 'laughing hyena', 'bengal cat']
+	0:48:4 - from Judge - Judgments history logs updated.
+	0:48:11 - from Judge - Mutation list: ['ferret', 'skunk', 'stoat', 'polecat', 'otter', 'wolverine', 'mongoose', 'raccoon', 'tasmanian devil', 'fennec fox']
+		0:48:16 - from Judge - Mutation list: ['weasel', 'ermine', 'mongoose', 'skunk', 'stoat', 'fennec fox', 'polecat', 'raccoon', 'coyote', 'jackal']
+		0:48:21 - from Judge - Mutation list: ['amur leopard', 'siber']
+		0:48:21 - WARNING - from Judge - Not enough words created, trying again...
+		0:48:27 - from Judge - Mutation list: ['amur leopard', "pallas's cat", 'siberian lynx', 'jungle cat', 'caspbian tiger', 'persain lion', 'bengal fox', 'otterhound']
+		0:48:27 - WARNING - from Judge - Not enough words created, trying again...
+		0:48:32 - from Judge - Mutation list: ['tapir', 'rusa deer', 'banteng', 'nyala', 'gaur', 'sable antelope', 'chital', 'kudu', 'elk', 'muskox']
+	0:48:32 - from Judge - Judgments history logs updated.
+	0:48:41 - from Judge - Mutation list: ['snow leopard', 'european wildcat', 'caracal', 'bengals tiger', 'serval', 'iriomote cat', 'japanese bobtail', 'siberian lynxes', "pallas's cats", 'northern raccoon dog']
+		0:48:46 - from Judge - Mutation list: ['african wildcat', 'caracal', 'european pole cat', 'serval', 'sand cat', 'iberian lynxfelix', 'fox like servals', "pallas's cats", 'ocelot']
+		0:48:46 - WARNING - from Judge - Not enough words created, trying again...
+		0:48:52 - from Judge - Mutation list: ['monitor lizard', 'meerkat', 'civet cat', 'fox', 'serval', 'binturong', 'lynx', 'pangolin', 'golden jackal', 'dhole']
+		0:48:57 - from Judge - Mutation list: ['bobcat', 'canadian lynxes', 'eurasian otter', 'serval', 'siberan tiger', "pallas's cat", 'african wild dog', 'cheetah', 'jaguarundi']
+		0:48:57 - WARNING - from Judge - Not enough words created, trying again...
+		0:49:2 - from Judge - Mutation list: ['ferret', 'skunk', 'otter', 'raccoon', 'mongoose', 'pangolin', 'armadillo', 'wolverine', 'hedgehog', 'civet']
+	0:49:2 - from Judge - Judgments history logs updated.
+	0:49:11 - from Judge - Mutation list: ['arctic fox', 'honey badager', 'european polecat', 'ringtail cat', 'pangolin', 'fennec fox', 'dhole', 'tibetan wild dog', 'eurasian otter']
+		0:49:11 - WARNING - from Judge - Not enough words created, trying again...
+		0:49:16 - from Judge - Mutation list: ['bobcat', 'canadian lynxes', 'siberian tigers', 'panthers', 'bengal tiger', 'cheetahs', 'jaguarundi', 'mountain lions']
+		0:49:16 - WARNING - from Judge - Not enough words created, trying again...
+	0:49:16 - from Judge - Judgments history logs updated.
+	0:49:24 - from Judge - Mutation list: ['snow leopard', 'clouded leopards', 'european wildcat', 'eurasian lynxes', 'siberan tigers', 'ocelot', 'cheetahs', 'jaguarundi', 'iberia lynxs']
+		0:49:24 - WARNING - from Judge - Not enough words created, trying again...
+		0:49:30 - from Judge - Mutation list: ['armadillo', 'ferret', 'wolverine', 'skunk', 'hedgehog', 'mongoose', 'bandicoot', 'quoll', 'dhole', 'raccoon dog']
+		0:49:35 - from Judge - Mutation list: ['armadillo', 'wolverine', 'otter', 'mongoose', 'hedgehog', 'pangolin', "tengmalm's owl", 'fennec fox', 'ringtail', 'skunk']
+		0:49:40 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval cat', 'margay']
+		0:49:40 - WARNING - from Judge - Not enough words created, trying again...
+		0:49:45 - from Judge - Mutation list: ['snow leopard', 'caracal', 'serval', 'ocelot', "pallas's cat", 'jaguarundi', 'iriomote wildcat', 'cheetah', 'lesser spotted genet']
+		0:49:45 - WARNING - from Judge - Not enough words created, trying again...
+	0:49:45 - from Judge - Judgments history logs updated.
+	0:49:54 - from Judge - Mutation list: ['bobcat', 'serval', 'caracol cat', 'bornean bay cat', 'servaline genet', 'civet', 'tiger', 'felixfelis wechseli']
+		0:49:54 - WARNING - from Judge - Not enough words created, trying again...
+		0:49:59 - from Judge - Mutation list: ['ferret', 'meerkat', 'badger', 'hedgehog', 'fox', 'serval', 'pangolin', 'mole rat', 'civet cat']
+		0:49:59 - WARNING - from Judge - Not enough words created, trying again...
+		0:50:5 - from Judge - Mutation list: ['snow leopard', 'caracal', 'servals', 'serval cat', 'eastern lynxes', 'iriomote cats', 'african wildcats', "pallas's cottontails", 'japanese serows', 'red pandas']
+	0:50:5 - from Judge - Judgments history logs updated.
+	0:50:15 - from Judge - Mutation list: ['arctic fox', 'fennec fox', 'siberian tiger', 'cheetah', 'jaguarundi', 'ocelot', "pallas's"]
+		0:50:15 - WARNING - from Judge - Not enough words created, trying again...
+		0:50:20 - from Judge - Mutation list: ['snow leopard', 'european wildcat', 'caracal', 'bob cat', 'serval', "pallas's cats", 'catshark', 'mongoose leopards', 'tiger bush rats']
+		0:50:20 - WARNING - from Judge - Not enough words created, trying again...
+	0:50:20 - from Judge - Judgments history logs updated.
+	0:50:29 - from Judge - Mutation list: ['groundhog', 'striped weasel', 'wolverine', 'skunk', 'panda', 'badouc otter', 'clawless mole', 'mongoose', 'raccoon dog', 'tayra']
+		0:50:35 - from Judge - Mutation list: ['arctic fox', 'red wolf', 'ethiopian wolves', 'dhole', 'wild dog', 'siberian tiger', 'sub saharan cheetah', 'foxhound', 'mongolian gazelle']
+		0:50:35 - WARNING - from Judge - Not enough words created, trying again...
+		0:50:40 - from Judge - Mutation list: ['weasel', 'ferret', 'mongoose', 'raccoon', 'coyote', 'wolf', 'dhole', 'skunk', 'stoat', 'polecat']
+		0:50:46 - from Judge - Mutation list: ['ferret', 'skunk', 'meerkat', 'african civet', 'binturong', 'civet cat', 'hedgehog']
+		0:50:46 - WARNING - from Judge - Not enough words created, trying again...
+		0:50:51 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval cat', 'mongoose', 'serval', 'wildcat', 'tiger', 'civet', 'fossa', 'jaguarundi']
+		0:50:57 - from Judge - Mutation list: ['badger', 'ferret', 'weasel', 'skunk', 'panda', 'mongoose', 'meerkat', 'stoic cat', 'aardwolf', 'dhole']
+	0:50:57 - from Judge - Judgments history logs updated.
+	0:51:7 - from Judge - Mutation list: ['ferret', 'otter', 'raccoon', 'mongoose', 'pangolin', 'hedgehog', 'wolverine', 'skunk', 'stoat', 'fennec fox']
+		0:51:12 - from Judge - Mutation list: ['european mole', 'eurasian otter', "pallas's cat", 'greater mouse lemur', 'tawny owl', 'fox kit', 'mongolian gerbil']
+		0:51:12 - WARNING - from Judge - Not enough words created, trying again...
+		0:51:17 - from Judge - Mutation list: ['arctic fox', 'siberian tiger', 'asian black bear', 'panda', 'mountain lion', 'jaguarundi', 'bengal cat', 'northern lynx', 'eurasia brown bears']
+		0:51:17 - WARNING - from Judge - Not enough words created, trying again...
+		0:51:22 - from Judge - Mutation list: ['caracal', 'serval', 'leopard', 'ocelot', 'panther', 'laughing hyena', 'african wildcat', 'iriomote cat', 'jaguarundi', 'cheetah']
+	0:51:22 - from Judge - Judgments history logs updated.
+	0:51:32 - from Judge - Mutation list: ['mountain lion', 'cheetah', 'dhole', 'wolf', 'siberian tiger', 'lynx', 'jaguar', 'eurasia lynnx', 'panther chaus', 'cougar']
+		0:51:37 - from Judge - Mutation list: ['ferret', 'savannah cat', 'meerkat', 'badger', 'fossa', 'eurasian polecat', 'mongoose lemur', 'hedgehog', 'dik dikk']
+		0:51:37 - WARNING - from Judge - Not enough words created, trying again...
+		0:51:43 - from Judge - Mutation list: ['spotted leopard', 'striped weasel', 'fennec fox', 'savannah monitor', 'dhole', 'coyote', 'baboon', 'jackal', 'rufous mongoose', 'black backed jackals']
+	0:51:43 - from Judge - Judgments history logs updated.
+	0:51:51 - from Judge - Mutation list: ['ferret', 'weasel', 'mongoose', 'skunk', 'stink badgers', 'wolverine', 'panda bear', 'raccoon', 'marmot', 'bushbaby']
+		0:51:56 - from Judge - Mutation list: ['ferret', 'meerkat', 'badger', 'termite mound digger', 'african civet', 'fox squirrel', 'groundhog', 'ringtail', 'mongoose like loris']
+		0:51:56 - WARNING - from Judge - Not enough words created, trying again...
+		0:52:2 - from Judge - Mutation list: ['jaguar', 'puma', 'leopard', 'serval', 'chita', 'tiger', 'lioness', 'ocelot', 'mountain lion', 'cheetah']
+		0:52:7 - from Judge - Mutation list: ['gray wolf', 'red fox', 'siberian jackal', 'dhole', 'ringtail cat', 'foxhound', 'coydog', 'african wild dog']
+		0:52:7 - WARNING - from Judge - Not enough words created, trying again...
+		0:52:12 - from Judge - Mutation list: ['mountain lion', 'siberian tiger', 'asian leopard cat', 'eurasia lynx', 'northern caracal', 'jaguarundi', 'bengali fox', 'russian wildcat', 'caspain puma', "pallas's cats"]
+		0:52:17 - from Judge - Mutation list: ['wolverine', 'arctic fox', 'panda bear', 'siberian tiger', 'mandarin rat snake', 'tasmanain devil', 'northern pine marten', 'japanese weasel', 'eurasia lynx', 'russian desmans']
+		0:52:22 - from Judge - Mutation list: ['badger', 'armadillo', 'tasmanian devil', 'dhole', 'ringtail cat', 'fossa', 'civet', 'serval', 'golden jackal']
+		0:52:22 - WARNING - from Judge - Not enough words created, trying again...
+	0:52:22 - from Judge - Judgments history logs updated.
+	0:52:33 - from Judge - Mutation list: ['badger', 'groundhog', 'armadillo', 'mongoose', 'tasmanian devil', 'panda bear', 'warthog', 'raccoon dog', 'hedgepig']
+		0:52:33 - WARNING - from Judge - Not enough words created, trying again...
+		0:52:39 - from Judge - Mutation list: ['badger', 'ferret', 'mongoose', 'raccoon', 'coyote', 'dhole', 'luxembourg weasel', 'tayra', 'jackal', 'banded palm civet']
+		0:52:44 - from Judge - Mutation list: ['caracal', 'serval', 'leopard', 'cheetah', 'ocelot', 'panther', 'laughing hyena', 'jaguarundi', 'mountain lion', 'wildcat']
+		0:52:50 - from Judge - Mutation list: ['wolverine', 'asian badger']
+		0:52:50 - WARNING - from Judge - Not enough words created, trying again...
+		0:52:55 - from Judge - Mutation list: ['mongoose', 'meerkat', 'fossa', 'serval', 'civet', 'tayra', 'jackal', 'horned lizard', 'african wild dog', 'martens sable']
+		0:53:0 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval', 'wildcat', 'bengals tiger', 'serval cat', 'cougar', 'mountain lion', 'lion', 'tiger']
+		0:53:4 - from Judge - Mutation list: ['badger', 'otter', 'raccoon', 'mongoose', 'coyote', 'fennec fox', 'dhole', 'jackal', 'bush dog', 'tasmanian devil']
+		0:53:9 - from Judge - Mutation list: ['european badgers', 'honey badgars', 'woodchucks', 'groundhogs', 'marmots', 'pocket gophers', 'foxes', 'badlands beavers', 'tayra']
+		0:53:9 - WARNING - from Judge - Not enough words created, trying again...
+		0:53:15 - from Judge - Mutation list: ['wolverine', 'armadillo', 'tasmanian devil', 'mongoose', 'skunk', 'pangolin', 'raccoon', 'bandicoot', 'opossum', 'ferret']
+	0:53:15 - from Judge - Judgments history logs updated.
+	0:53:29 - from Judge - Mutation list: ['wolverine', 'asian black bear', 'dhole', 'cheetah', 'jaguarundi', 'puma', 'ocelot', 'serval', 'tayra', 'martens sable']
+		0:53:34 - from Judge - Mutation list: ['wolverine', 'arctic fox', 'fox', 'badger', 'eurasian otter', 'raccoon', 'dhole', 'tasman devil', 'mongoose', 'lynx']
+	0:53:34 - from Judge - Judgments history logs updated.
+	0:53:46 - from Judge - Mutation list: ['wapiti', 'mongoose', 'lynx', 'serval', 'coyote', 'jackal', 'badger', 'honey bad ger', 'ringtail', 'pangolin']
+		0:53:51 - from Judge - Mutation list: ['mountain lion', 'lynx', 'dhole', 'fossa', 'jaguarundi', 'serval', 'ringtail', 'coyote', 'wolf hybrid', 'northern quoll']
+		0:53:57 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'sable antelope', 'mountain goat', 'siberian tiger', 'bengal cat', 'eastern quoll', 'tibetan wild ass', 'javan rusa', 'deer mouse']
+		0:54:2 - from Judge - Mutation list: ['mountain lion', 'siberian tiger', 'asian leopard cat', 'eurasia lynx', 'cheetah', 'jaguarundi', "pallas's cats", 'northern raccoon dog', 'tibetan fox', 'russian wildcat']
+	0:54:2 - from Judge - Judgments history logs updated.
+	0:54:15 - from Judge - Mutation list: ['european pine marten', 'least shrew', 'eurasian otter', 'northern polecat', 'siberut tiger', 'bengal fox', 'mongolian gerbil', 'russian desman']
+		0:54:15 - WARNING - from Judge - Not enough words created, trying again...
+		0:54:20 - from Judge - Mutation list: ['striped skunk', 'fisher cat', 'siberian chipmunks', 'badgertailed opossum', 'dhole']
+		0:54:20 - WARNING - from Judge - Not enough words created, trying again...
+		0:54:26 - from Judge - Mutation list: ['armadillo', 'anteater', 'aardvark', 'warthog', 'fennec fox', 'raccoon', 'skunk', 'hedgehog', 'pangolin', 'mole shrew']
+		0:54:31 - from Judge - Mutation list: ['jaguar', 'puma', 'leopard', 'serval', 'cheetah', 'eagle owl', 'lion', 'tiger', 'bengal cat', 'asian leopards dog']
+		0:54:37 - from Judge - Mutation list: ['armadillo', 'otter', 'solifugae', 'wolverine', 'mongoose', 'hedgehog', 'pangolin', 'fennec fox', 'dormouse', 'baboon']
+		0:54:42 - from Judge - Mutation list: ['badger', 'ferret', 'mongoose', 'pangolin', 'skunk', 'stoat', 'weasel', 'raccoon', 'hedgehog', 'dormouse']
+		0:54:48 - from Judge - Mutation list: ['mountain lion', 'cheetah', 'serval', 'eurasian lynx', 'jaguarundi', 'tasman devil', 'pangolin', 'wolf']
+		0:54:48 - WARNING - from Judge - Not enough words created, trying again...
+	0:54:48 - from Judge - Judgments history logs updated.
+	0:55:4 - from Judge - Mutation list: ['arctic fox', 'skunk', 'panda bear', 'tasmanian devil', 'raccoon dog', 'jackal', 'hare lipped bat', 'wolf', 'mongoose']
+		0:55:4 - WARNING - from Judge - Not enough words created, trying again...
+		0:55:10 - from Judge - Mutation list: ['european polecat', 'american mink', 'least weasel', 'ferret', 'siberian chipmunks', 'eurasia groundhog', 'mongolian gerbil', 'russian desman', 'burmese banded civet']
+		0:55:10 - WARNING - from Judge - Not enough words created, trying again...
+		0:55:16 - from Judge - Mutation list: ['wolverine', 'asian black bear', 'dhole', 'siberian tiger', 'panda', 'wolf', 'mountain lion', 'cheetah', 'jaguarundi', 'tasman devil']
+	0:55:16 - from Judge - Judgments history logs updated.
+	0:55:30 - from Judge - Mutation list: ['badger', 'erminee', 'skunk', 'panda', 'bearcat', 'civet', 'fossa', 'weasel', 'dhole', 'mongoose']
+		0:55:36 - from Judge - Mutation list: ['mountain lion', 'lynx', 'dhole', 'ringtail', 'serval', 'civet cat', 'banded palm civet', 'mongoose', 'tayra', 'jaguarundi']
+		0:55:41 - from Judge - Mutation list: ['mountain lion', 'siberian tiger', 'leopard', 'jaguar', 'panthera leo', 'cheetah', 'dhole', 'eurasia lynx', 'russian wildcat', 'northern bob cat']
+		0:55:46 - from Judge - Mutation list: ['asian golden cat', 'african wild dog', 'ethiopian wolf', 'congo peafowl', 'malayan tiger', 'javan lemur', 'bornean orangutan', "pallas's leaf monkey"]
+		0:55:46 - WARNING - from Judge - Not enough words created, trying again...
+		0:55:52 - from Judge - Mutation list: ['european otter', 'eurasian beaver', 'arctic fox', 'russian desman', 'himalayan marmot', 'siberia hamster', 'tibetan sandpiper', 'greater mouse lemur', 'mongolian gerbil']
+		0:55:52 - WARNING - from Judge - Not enough words created, trying again...
+		0:55:57 - from Judge - Mutation list: ['badger', 'erminee', 'weasel', 'stoat', 'polecat', 'fisher', 'martens', 'skunk', 'raccoon', 'civet cat']
+		0:56:2 - from Judge - Mutation list: ['mountain lion', 'cheetah', 'aardwolf', 'serval', 'puma', 'ocelot', 'jaguarundi', 'tasmanian devil', 'lynx', 'dhole']
+	0:56:2 - from Judge - Judgments history logs updated.
+	0:56:14 - from Judge - Mutation list: ['mountain lion', 'siberian tiger', 'asian black bear', 'eurasia lynx', 'japanese weasel', 'cheetah', 'dhole', 'bengal fox', 'russian wildcat', 'northern river otter']
+		0:56:19 - from Judge - Mutation list: ['mountain lion', 'lynx', 'panda bear', 'skunk', 'raccoon', 'coyote', 'red fox', 'jackal', 'dhole', 'asian black bears']
+		0:56:25 - from Judge - Mutation list: ['giant panda', 'red panda', 'snow leopard', 'mandarin rat snake', 'tibetan antelope', 'greater bamboo bat', 'himalayan tahrs', "pallas's cat", 'bengal tiger']
+		0:56:25 - WARNING - from Judge - Not enough words created, trying again...
+		0:56:30 - from Judge - Mutation list: ['arctic fox', 'siberian lynx', 'red panda', 'caucasus leopard', 'sub saharan cheetah', 'northern caracal', 'west']
+		0:56:30 - WARNING - from Judge - Not enough words created, trying again...
+	0:56:30 - from Judge - Judgments history logs updated.
+	0:56:47 - from Judge - Mutation list: ['meerkat', 'tasmanian devil', 'skunk', 'pangolin', 'aardvark', 'civet cat', 'fossa', 'lemur katta']
+		0:56:47 - WARNING - from Judge - Not enough words created, trying again...
+		0:56:51 - from Judge - Mutation list: ['leopard', 'serval', 'capuchin monkey', 'jaguarundi', 'caracal', 'ocelot', 'puma', 'lynx', 'golden cat', 'dingo']
+		0:56:56 - from Judge - Mutation list: ['badger', 'erminee', 'skunk', 'stoat', 'weasel', 'mongoose', 'jackal', 'dhole', 'fennec fox', 'pangolin']
+		0:57:1 - from Judge - Mutation list: ['mountain lion', 'lynx', 'mongoose', 'pallas cat']
+		0:57:1 - WARNING - from Judge - Not enough words created, trying again...
+		0:57:7 - from Judge - Mutation list: ['arctic fox', 'vixen', 'red wolf', 'dhole', 'tasmanian devil', 'ferret', 'jackal', 'coyote', 'siberan tiger cat', 'wyandotte bearcat']
+		0:57:12 - from Judge - Mutation list: ['aardwolf', 'dhole', 'dog', 'wolf', 'coyote', 'red wolf', 'eurasian otter', 'brown hyena', 'siberan tiger cat']
+		0:57:12 - WARNING - from Judge - Not enough words created, trying again...
+	0:57:12 - from Judge - Judgments history logs updated.
+	0:57:26 - from Judge - Mutation list: ['anteater', 'pangolin', 'aardvark', 'solifugid', 'african hedgehog', 'eastern mole rat', 'burrowing owl', 'platypus']
+		0:57:26 - WARNING - from Judge - Not enough words created, trying again...
+		0:57:31 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'jaguar', 'puma', 'cougar', 'mongoose', 'bobcat', 'asian golden cat']
+		0:57:31 - WARNING - from Judge - Not enough words created, trying again...
+		0:57:36 - from Judge - Mutation list: ['badger', 'armadillo', 'tasmanian devil', 'dhole', 'civet cat', 'skunk', 'opossum', 'fox', 'wombat', 'raccoon dog']
+	0:57:36 - from Judge - Judgments history logs updated.
+	0:57:49 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'puma', 'jaguar', 'dugong', 'maned wolf', 'cougar', 'mongoose']
+		0:57:49 - WARNING - from Judge - Not enough words created, trying again...
+		0:57:54 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'puma', 'cougar', 'mountain lion', 'jaguar', 'eastern cougar', 'wildcat', 'asian golden cat']
+		0:57:59 - from Judge - Mutation list: ['badger', 'armadillo', 'ferret', 'skunk', 'taxidermied rat', 'civet cat', 'mongoose', 'opossum', 'raccoon', 'dhole asian red dog']
+		0:58:5 - from Judge - Mutation list: ['giant panda', 'red kangaroo', 'okapi', 'lion tailed macaque', 'gibbon', 'sloth bear', 'malayan sunbear', 'bornean orangutan', 'javan langur']
+		0:58:5 - WARNING - from Judge - Not enough words created, trying again...
+	0:58:5 - from Judge - Judgments history logs updated.
+	0:58:19 - from Judge - Mutation list: ['giant panda', 'red panda', 'gibbon', 'sloth bear', 'malayan sunbear', 'loris', 'tarsier', 'aye ayes', 'eastern gorilla']
+		0:58:19 - WARNING - from Judge - Not enough words created, trying again...
+		0:58:24 - from Judge - Mutation list: ['giant panda', 'gibbon', 'red kangaroo', 'bengal tiger', 'takin', 'snow leopard', 'lion monkey', "pallas's cat", 'javan rhino', 'himalayan tahr']
+		0:58:29 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'puma', 'cougar', 'mongoose', 'jaguar', 'ostrich', 'emperor tamarin', 'lion']
+	0:58:29 - from Judge - Judgments history logs updated.
+	0:58:40 - from Judge - Mutation list: ['giant panda']
+		0:58:40 - WARNING - from Judge - Not enough words created, trying again...
+		0:58:45 - from Judge - Mutation list: ['giant panda', 'gibbon', 'aye aye', 'lemur', 'sloth', 'red kangaroo', 'bonobo', 'tarsier', 'ocelot', 'pangolin']
+		0:58:50 - from Judge - Mutation list: ['giant panda', 'red panda', 'snow leopard', 'bengal tiger', 'african lion', 'mountain gorilla', 'japanese macaque', 'rhesus macaques', 'tibetan antelope']
+		0:58:50 - WARNING - from Judge - Not enough words created, trying again...
+	0:58:50 - from Judge - Judgments history logs updated.
+	0:59:1 - from Judge - Mutation list: ['arctic fox', 'african wild dog', 'red wolf', 'coyote', 'siberian tiger', 'sub saharan cheetah', "pallas's cat", 'russian brown bear', 'bengal leopard', 'fox terrier']
+		0:59:6 - from Judge - Mutation list: ['snow leopard', 'european wildcat', 'asian golden cat', "pallas's cats", 'iriomote cat', 'siberian tiger', 'east']
+		0:59:6 - WARNING - from Judge - Not enough words created, trying again...
+		0:59:12 - from Judge - Mutation list: ['mongoose', 'meerkat', 'tasmanian devil', 'badger', 'honey badgar', 'fossa', 'eurasia lynx', 'siberain weasel', 'mink', 'otter']
+		0:59:17 - from Judge - Mutation list: ['giant panda', "pallas's cat", 'javan lemur', 'snow leopard', 'mountain gorilla', 'red kangaroo', 'bengal tiger', 'tarsier']
+		0:59:17 - WARNING - from Judge - Not enough words created, trying again...
+	0:59:17 - from Judge - Judgments history logs updated.
+	0:59:31 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'fossa', 'mongoose', 'serval', 'puma', 'coati', 'ringtail cat', 'jaguarundi', 'bush dog']
+		0:59:36 - from Judge - Mutation list: ['leopard', 'serval', 'lynx', 'jaguar', 'puma', 'coyote', 'wolf', 'dhole', 'russian wildcat', 'asian golden cat']
+		0:59:41 - from Judge - Mutation list: ['snow leopard', 'clouded leopards', 'servals', 'cheetahs', 'eastern wildcat', 'serval cat', 'jaguarundi', "pallas's cats", 'ocelot', 'eurasian lynxes']
+	0:59:41 - from Judge - Judgments history logs updated.
+	0:59:53 - from Judge - Mutation list: ['giant panda', 'red panda', 'sloth bear', 'capuchin monkey', 'gibbon ape', 'siamang goby', 'babirusa pig', 'pygmy hippopotamus', 'tamaraw deer', 'loris lemur']
+		0:59:58 - from Judge - Mutation list: ['snow leopard', 'clouded leopards', 'bengal tiger cousins']
+		0:59:58 - WARNING - from Judge - Not enough words created, trying again...
+		1:0:3 - from Judge - Mutation list: ['arctic fox', 'vicuña', 'cheetah', 'meerkat', "pallas's cat", 'serval', 'laughing hyena', 'fox kit', 'otter', 'jaguarundi']
+		1:0:9 - from Judge - Mutation list: ['leopard', 'lynx', 'serval', 'wildcat', 'asian golden cat', 'european wild lynnx', 'african serval', 'jaguarundi', "pallas's cats", 'mountain lion']
+		1:0:14 - from Judge - Mutation list: ['giant panda', 'red panda', 'sun bear', 'giant anteater', 'sloth bear', 'javan leopard cat', 'russian desman', 'northern palm civet', 'tibeten fox']
+		1:0:14 - WARNING - from Judge - Not enough words created, trying again...
+	1:0:14 - from Judge - Judgments history logs updated.
+	1:0:23 - from Judge - Mutation list: ['snow leopard', "pallas's cats", 'iriomote wildcats', 'ocelots']
+		1:0:23 - WARNING - from Judge - Not enough words created, trying again...
+		1:0:29 - from Judge - Mutation list: ['siberian tiger', 'snow leopard', 'european wildcat', "pallas's cat", 'cheetah', 'serval', 'ocelot', 'jaguarundi', 'bengal fox']
+		1:0:29 - WARNING - from Judge - Not enough words created, trying again...
+		1:0:34 - from Judge - Mutation list: ['badger', 'ferret', 'raccoon', 'mongoose', 'lutung', 'tasmanian devil', 'wolverine', 'skunk', 'pangolin', 'bearcat']
+		1:0:40 - from Judge - Mutation list: ['giant panda', 'gibbon', 'orangutan', 'bonobo', 'tarsier', 'loris', 'sloth bear', 'russian desman', 'mongoose lemur', 'civet cat']
+		1:0:45 - from Judge - Mutation list: ['badger', 'raccoon', 'mongoose', 'ferret', 'weasel', 'wolverine', 'skunk', 'hedgehog', 'pangolin']
+		1:0:45 - WARNING - from Judge - Not enough words created, trying again...
+		1:0:51 - from Judge - Mutation list: ['arctic fox', 'red panda']
+		1:0:51 - WARNING - from Judge - Not enough words created, trying again...
+		1:0:56 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'european wildcat', 'wolverine', 'siberian tiger', 'serval', 'cheetah', 'bengal fox', 'red panda', 'african golden cat']
+	1:0:56 - from Judge - Judgments history logs updated.
+	1:1:6 - from Judge - Mutation list: ['bobcat', 'canadian lynxes', 'siberian tigers', "pallas's cats", 'african wildcats', 'northern tiger cat', 'japanese servals', 'ocelots']
+		1:1:6 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:11 - from Judge - Mutation list: ['snow leopard', 'clouded leopards', "eurasian lynxes'", 'cheetah like servals', 'siberia tigers', 'serval like car']
+		1:1:11 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:17 - from Judge - Mutation list: ['snow leopard', 'clouded leopards', 'eurasian lynxes', 'siberians tigers', 'cougar', 'mountain lions', 'jaguarundi', 'bengal foxes', 'sunda pangolins', 'asias golden cats']
+		1:1:22 - from Judge - Mutation list: ['african golden cat', 'asian lion', 'iranian cheetah', 'caspain tiger', 'eurasia lynx', 'javan lemur', 'malagasy civit', 'lesser panda', 'bengalese fox']
+		1:1:22 - WARNING - from Judge - Not enough words created, trying again...
+	1:1:22 - from Judge - Judgments history logs updated.
+	1:1:31 - from Judge - Mutation list: ['arctic fox', 'red wolf', 'ethiopian wolves', 'european wildcat', 'bengal tigrina', 'lesser panda', "pallas's cats", 'japanese serow', 'caspain lynxes']
+		1:1:31 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:36 - from Judge - Mutation list: ['badger', 'ferret', 'weasel', 'mongoose', 'skunk', 'hedgehog', 'pangolin', 'armadillo', 'fossa', 'aardwolf']
+		1:1:41 - from Judge - Mutation list: []
+		1:1:41 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:47 - from Judge - Mutation list: []
+		1:1:47 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:52 - from Judge - Mutation list: ['sumatran tiger', 'red sh']
+		1:1:52 - WARNING - from Judge - Not enough words created, trying again...
+		1:1:58 - from Judge - Mutation list: []
+		1:1:58 - WARNING - from Judge - Not enough words created, trying again...
+		1:2:3 - from Judge - Mutation list: ['bornean gibbon', 'baboon', 'chimpanzee', 'gorilla', 'siamang', 'lesser apes', 'pig tailed macaque', 'crested mangabeys', 'diana monkey', 'mandrill']
+	1:2:3 - from Judge - Judgments history logs updated.
+	1:2:15 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval', 'serval cat', 'bengals tiger', "pallas's cats", 'eastern wildcat', 'asian golden cat', 'northern lynnx']
+		1:2:15 - WARNING - from Judge - Not enough words created, trying again...
+		1:2:19 - from Judge - Mutation list: ['aardwolf', 'asian black bear', 'dhole', 'eurasian badger', 'jaguarundi', 'lynx', 'otter', 'siberan weasel', 'tayra']
+		1:2:19 - WARNING - from Judge - Not enough words created, trying again...
+		1:2:24 - from Judge - Mutation list: ['arctic fox', 'vulpes zerda', 'red panda', 'ailurus fulgens', 'siberian tiger', 'mountain lion']
+		1:2:24 - WARNING - from Judge - Not enough words created, trying again...
+		1:2:29 - from Judge - Mutation list: ['caracal', 'cheetah', 'serval', 'eastern bobcat', 'asian leopard cat', 'african wildcat', 'black footed ferret', 'russian lynxes', 'northern tiger cat', 'bengals']
+	1:2:29 - from Judge - Judgments history logs updated.
+	1:2:37 - from Judge - Mutation list: ['ferret', 'weasel', 'otter', 'mongoose', 'raccoon', 'coati', 'pangolin', 'badger', 'skunk', 'stink badgers']
+		1:2:42 - from Judge - Mutation list: ['mandarin rat snake', 'asian black bear', 'mountain lion', 'siberian tiger', 'panther chameleon', 'giant otter', 'northern lynx', 'jaguarundi']
+		1:2:42 - WARNING - from Judge - Not enough words created, trying again...
+		1:2:48 - from Judge - Mutation list: ['arctic fox', 'aardwolf', 'dhole', 'dwarf crocodile', 'civet cat', 'bengal tiger', 'foxhound', 'lycaon pictus', 'serval', 'puma concolor']
+	1:2:48 - from Judge - Judgments history logs updated.
+	1:2:57 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'siberian tiger', 'cougar', 'wildcat', 'puma', 'coati', 'mongoose', 'serval', 'bengal cat']
+		1:3:3 - from Judge - Mutation list: ['badger', 'erminee', 'weasel', 'panda bear', 'mongoose', 'raccoon dog', 'civet cat', 'bushy tailed olingo', 'skunk', 'horned grebe']
+		1:3:9 - from Judge - Mutation list: ['ferret', 'skunk', 'otter', 'mongoose', 'raccoon', 'coati', 'civet cat', 'badger', 'honey badgerr', 'fennec fox']
+		1:3:14 - from Judge - Mutation list: ['wolverine', 'asian black bear', 'panda', 'sloth', 'lynx', 'ocelot', 'civet cat', 'badger', 'fox', 'tayra']
+	1:3:14 - from Judge - Judgments history logs updated.
+	1:3:21 - from Judge - Mutation list: ['mountain lion', 'aardwolf', 'eurasian wolf', 'coyote', 'jackal', 'racco']
+		1:3:21 - WARNING - from Judge - Not enough words created, trying again...
+		1:3:26 - from Judge - Mutation list: ['mountain lion', 'cheetah', 'dhole asian wild dog', 'ethiopian wolf', 'siberian tiger', "pallas's cat", 'northern lynx', 'russian desman', 'mongolian gazelle']
+		1:3:26 - WARNING - from Judge - Not enough words created, trying again...
+		1:3:31 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval', 'wildcat', 'serval cat', 'fossa', 'jaguarundi', 'eastern wild dog', 'ringtail']
+		1:3:31 - WARNING - from Judge - Not enough words created, trying again...
+		1:3:37 - from Judge - Mutation list: ['mongoose', 'raccoon', 'ferret', 'mink', 'skunk', 'pangolin', 'hedgehog', 'badger', 'stoat', 'weasel']
+		1:3:42 - from Judge - Mutation list: ['caracal', 'leopard', 'serval', 'georgia wapiti', 'mountain lion', 'jaguarundi', 'cougar', 'liger', 'chita cat', 'european wildcat']
+		1:3:47 - from Judge - Mutation list: ['mongoose', 'weasel', 'badger', 'ferret', 'hedgehog', 'skunk', 'termite', 'echidna', 'lynx', 'pangolin']
+	1:3:47 - from Judge - Judgments history logs updated.
+	1:3:57 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'binturong', 'large spotted genet', 'mongoose', 'serval', "pallas's cat", 'eastern quoll', 'tiger', 'wildcat']
+		1:4:2 - from Judge - Mutation list: ['mink', 'beaver', 'lynx', 'ferret', 'skunk', 'raccoon', 'civet', 'wolverine', 'panda', 'badger']
+		1:4:8 - from Judge - Mutation list: ['wapiti', 'elk', 'moose', 'lynx', 'puma', 'coyote', 'red wolf', 'jackal', 'bush dog', 'dhole']
+		1:4:13 - from Judge - Mutation list: ['serval', 'serval cat', 'caracol lynxeus', 'rusty spotted genet', 'civet', 'large indian civit', 'banded palm civets', 'fossa']
+		1:4:13 - WARNING - from Judge - Not enough words created, trying again...
+		1:4:18 - from Judge - Mutation list: ['mountain lion', 'lynx', 'cheetah', 'jaguar', 'puma', 'african wild dog', 'dhole', 'ring tailed cat', 'serval', 'eurasian otter']
+		1:4:24 - from Judge - Mutation list: ['mountain lion', 'red wolf', 'jaguarundi', 'coyote', 'fox', 'siberian tiger', 'grey fox', 'raccoon dog', 'tasman devil']
+		1:4:24 - WARNING - from Judge - Not enough words created, trying again...
+		1:4:29 - from Judge - Mutation list: ['bobcat', 'serval', 'servaline genet', 'asian leopard cat', 'west african civit', 'civet raccoon dog']
+		1:4:29 - WARNING - from Judge - Not enough words created, trying again...
+		1:4:34 - from Judge - Mutation list: ['snow leopard', 'clouded lemur', 'serval cat', 'servaline tiger', 'bengals', 'tiger owl', 'jaguarundi', 'fossa', 'mountain lion', 'cougar lynxes']
+		1:4:39 - from Judge - Mutation list: ['badger', 'ferret', 'skunk', 'panda', 'mongoose', 'stoat', 'weasel', 'raccoon', 'coyote', 'jackal']
+	1:4:39 - from Judge - Judgments history logs updated.
+	1:4:52 - from Judge - Mutation list: ['badger', 'armadillo', 'civet', 'fossa', 'mongoose', 'tayra', 'jackal', 'skunk', 'olingo', 'kinkajou']
+		1:4:58 - from Judge - Mutation list: ['badger', 'ferret', 'tayra', 'weasel', 'mongoose', 'skunk', 'hedgehog', 'pangolin', 'armadillo', 'aardvark']
+		1:5:3 - from Judge - Mutation list: ['badger', 'ferret', 'weasel', 'mongoose', 'skunk', 'panda bear', 'raccoon', 'coyote', 'fennec fox']
+		1:5:3 - WARNING - from Judge - Not enough words created, trying again...
+	1:5:3 - from Judge - Judgments history logs updated.
+----
+0:56:2 - Step 31 completed.
+0:56:2 - from Simulation - Results logs updated.
+0:56:2 - from Simulation - Mutation history logs updated.
+0:56:2 - from Simulation - Competition history logs updated.
+0:56:3 - Current population (80): ['cheetah', 'badger', 'panda', 'wolverine', 'cougar', 'wolverine', 'wolverine', 'wolverine', 'badger', 'wolverine', 'wolverine', 'wolverine', 'erminee', 'red fox', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'cheetah', 'wolverine', 'mongoose', 'wolverine', 'panda bear', 'cheetah', 'wolverine', 'cheetah', 'least shrew', 'wolverine', 'northern bob cat', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'cheetah', "pallas's leaf monkey", 'wolverine', 'wolverine', 'badger', 'european otter', 'wolverine', 'javan rusa', 'wolverine', 'wolverine', 'wolverine', 'fennec fox', 'wolverine', 'wolverine', 'wolverine', 'badger', 'wolverine', 'wolverine', 'badger', 'civet cat', 'wolverine', 'badger', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'ocelot', 'wolverine', 'wolverine', 'badger', 'wolverine', 'wolverine', 'armadillo', 'wolverine', 'armadillo', 'wolverine', 'badger', 'wolverine', 'wolverine', 'badger', 'wolverine', 'panda', 'wolverine', 'wolverine', 'wolverine'].
+0:56:3 - Current number of words: 18.
+0:56:3 - Current emergence rate: 0.
+------------
+	0:56:3 - Step 32 started.
+		0:56:3 - Starting random walks phase.
+	------------
+	0:56:3 - Starting competition phase.
+	------------
+	0:56:9 - Starting mutation phase.
+	------------
+0:56:30 - Step 32 completed.
+0:56:30 - from Simulation - Results logs updated.
+0:56:30 - from Simulation - Mutation history logs updated.
+0:56:30 - from Simulation - Competition history logs updated.
+0:56:31 - Current population (80): ['armadillo', 'least shrew', 'wolverine', 'wolverine', 'badger', 'wolverine', 'wolverine', 'panda', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'wolverine', 'badger', 'eurasia lynx', 'armadillo', 'wolverine', 'javan rusa', 'cheetah', 'ocelot', 'armadillo', 'wolverine', 'wolverine', 'wolverine', 'panda', 'civet cat', 'cheetah', 'wolverine', 'badger', 'cheetah', 'wolverine', 'cheetah', 'wolverine', 'mongoose', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', "pallas's leaf monkey", 'wolverine', 'wolverine', 'greater bamboo bat', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'wolverine', 'european otter', 'erminee', 'cheetah', 'wolverine', 'cheetah', 'sub saharan cheetah', 'wolverine', 'wolverine', 'panda bear', 'wolverine', 'mongoose', 'wolverine', 'cougar', 'cougar', 'cheetah', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'panda', 'wolverine'].
+0:56:31 - Current number of words: 19.
+0:56:31 - Current emergence rate: 0.
+------------
+	0:56:31 - Step 33 started.
+		0:56:31 - Starting random walks phase.
+	------------
+	0:56:31 - Starting competition phase.
+	------------
+	0:56:42 - Starting mutation phase.
+	------------
+0:57:12 - Step 33 completed.
+0:57:12 - from Simulation - Results logs updated.
+0:57:12 - from Simulation - Mutation history logs updated.
+0:57:12 - from Simulation - Competition history logs updated.
+0:57:13 - Current population (80): ['erminee', 'cheetah', 'badger', 'armadillo', 'wolverine', 'wolverine', 'sub saharan cheetah', 'cheetah', 'panda', 'cheetah', 'wolverine', 'panda', 'cheetah', 'wolverine', 'cheetah', 'greater bamboo bat', 'wolverine', 'wolverine', 'mongoose', 'badger', 'cheetah', "pallas's leaf monkey", 'panda', 'aardvark', 'armadillo', 'least shrew', 'armadillo', 'european otter', 'wolverine', 'wolverine', 'caracal', 'armadillo', 'pangolin', 'panda', 'arctic fox', 'wolverine', 'wolverine', 'badger', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'wolverine', 'panda', 'panda bear', 'mongoose', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'wolverine', 'cougar', 'wolverine', 'wolverine', 'red wolf', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'mongoose', 'cheetah', 'cheetah', 'badger', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'armadillo', 'wolverine', 'wolverine', 'wolverine', 'cheetah'].
+0:57:13 - Current number of words: 20.
+0:57:13 - Current emergence rate: 0.
+------------
+	0:57:13 - Step 34 started.
+		0:57:13 - Starting random walks phase.
+	------------
+	0:57:13 - Starting competition phase.
+	------------
+	0:57:21 - Starting mutation phase.
+	------------
+0:57:36 - Step 34 completed.
+0:57:36 - from Simulation - Results logs updated.
+0:57:36 - from Simulation - Mutation history logs updated.
+0:57:36 - from Simulation - Competition history logs updated.
+0:57:37 - Current population (80): ['wolverine', 'wolverine', 'arctic fox', 'wolverine', 'cheetah', 'erminee', 'wolverine', 'red wolf', 'cheetah', 'pangolin', 'mongoose', 'sub saharan cheetah', 'least shrew', 'cheetah', 'caracal', 'armadillo', 'cheetah', 'cheetah', 'serval', 'panda', 'wolverine', 'cheetah', 'wolverine', 'panda', 'cheetah', 'wolverine', 'panda', 'panda', 'lynx', 'wolverine', 'badger', 'cheetah', 'cheetah', 'wolverine', 'cheetah', 'cheetah', 'wolverine', 'wolverine', 'wolverine', 'badger', 'wolverine', 'wolverine', 'armadillo', 'panda', 'cheetah', 'cheetah', 'lynx', 'wolverine', 'panda', 'armadillo', 'badger', 'wolverine', 'wolverine', 'cheetah', 'wolverine', 'armadillo', 'panda', 'cheetah', 'wolverine', 'cheetah', 'cheetah', 'cheetah', 'wolverine', 'armadillo', 'wolverine', 'panda', 'panda', 'cheetah', 'wolverine', 'mongoose', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'cheetah', 'armadillo', 'cheetah'].
+0:57:37 - Current number of words: 15.
+0:57:37 - Current emergence rate: 0.
+------------
+	0:57:37 - Step 35 started.
+		0:57:37 - Starting random walks phase.
+	------------
+	0:57:37 - Starting competition phase.
+	------------
+	0:57:44 - Starting mutation phase.
+	------------
+0:58:5 - Step 35 completed.
+0:58:5 - from Simulation - Results logs updated.
+0:58:5 - from Simulation - Mutation history logs updated.
+0:58:5 - from Simulation - Competition history logs updated.
+0:58:5 - Current population (80): ['lynx', 'cheetah', 'wolverine', 'panda', 'wolverine', 'armadillo', 'wolverine', 'panda', 'armadillo', 'cheetah', 'lynx', 'cheetah', 'red wolf', 'cheetah', 'wolverine', 'panda', 'wolverine', 'cheetah', 'panda', 'cheetah', 'badger', 'panda', 'wolverine', 'cheetah', 'panda', 'wolverine', 'sub saharan cheetah', 'maned wolf', 'cheetah', 'cheetah', 'armadillo', 'panda', 'cheetah', 'serval', 'cheetah', 'wolverine', 'cheetah', 'armadillo', 'panda', 'wolverine', 'wolverine', 'panda', 'panda', 'wolverine', 'cheetah', 'puma', 'cheetah', 'wolverine', 'wolverine', 'panda', 'erminee', 'cheetah', 'least shrew', 'panda', 'wolverine', 'badger', 'pangolin', 'cheetah', 'badger', 'cheetah', 'cheetah', 'arctic fox', 'wolverine', 'panda', 'cheetah', 'wolverine', 'wolverine', 'cheetah', 'wolverine', 'wolverine', 'armadillo', 'cheetah', 'mongoose', 'wolverine', 'cheetah', 'wolverine', 'cheetah', 'lynx', 'wolverine', 'lion tailed macaque'].
+0:58:5 - Current number of words: 17.
+0:58:5 - Current emergence rate: 0.
+------------
+	0:58:5 - Step 36 started.
+		0:58:5 - Starting random walks phase.
+	------------
+	0:58:5 - Starting competition phase.
+	------------
+	0:58:13 - Starting mutation phase.
+	------------
+0:58:29 - Step 36 completed.
+0:58:29 - from Simulation - Results logs updated.
+0:58:29 - from Simulation - Mutation history logs updated.
+0:58:29 - from Simulation - Competition history logs updated.
+0:58:29 - Current population (80): ['wolverine', 'sub saharan cheetah', 'cheetah', 'lynx', 'panda', 'armadillo', 'wolverine', 'cheetah', 'cheetah', 'eastern gorilla', 'panda', 'wolverine', 'cheetah', 'panda', 'panda', 'cheetah', 'wolverine', 'wolverine', 'panda', 'badger', 'panda', 'cheetah', 'panda', 'wolverine', 'panda', 'panda', 'cheetah', 'lynx', 'cheetah', 'wolverine', 'wolverine', 'pangolin', 'cheetah', 'arctic fox', 'cheetah', 'wolverine', 'panda', 'cheetah', 'wolverine', 'cheetah', 'cheetah', 'armadillo', 'cheetah', 'mongoose', 'lion tailed macaque', 'cheetah', 'panda', 'wolverine', 'panda', 'cheetah', 'cheetah', 'lion monkey', 'cheetah', 'serval', 'mongoose', 'wolverine', 'lynx', 'cheetah', 'wolverine', 'lynx', 'red wolf', 'lynx', 'wolverine', 'wolverine', 'cheetah', 'cheetah', 'lynx', 'wolverine', 'cheetah', 'lynx', 'panda', 'armadillo', 'cheetah', 'cheetah', 'armadillo', 'cheetah', 'wolverine', 'lynx', 'cheetah', 'badger'].
+0:58:29 - Current number of words: 15.
+0:58:29 - Current emergence rate: 0.
+------------
+	0:58:29 - Step 37 started.
+		0:58:29 - Starting random walks phase.
+	------------
+	0:58:29 - Starting competition phase.
+	------------
+	0:58:35 - Starting mutation phase.
+	------------
+0:58:50 - Step 37 completed.
+0:58:50 - from Simulation - Results logs updated.
+0:58:50 - from Simulation - Mutation history logs updated.
+0:58:50 - from Simulation - Competition history logs updated.
+0:58:51 - Current population (80): ['panda', 'red kangaroo', 'panda', 'red wolf', 'wolverine', 'lynx', 'panda', 'panda', 'panda', 'cheetah', 'panda', 'wolverine', 'panda', 'pangolin', 'cheetah', 'wolverine', 'wolverine', 'cheetah', 'panda', 'cheetah', 'lynx', 'cheetah', 'armadillo', 'panda', 'cheetah', 'cheetah', 'wolverine', 'lynx', 'wolverine', 'lynx', 'serval', 'panda', 'wolverine', 'cheetah', 'panda', 'armadillo', 'cheetah', 'lynx', 'armadillo', 'wolverine', 'cheetah', 'panda', 'wolverine', 'cheetah', 'cheetah', 'panda', 'panda', 'snow leopard', 'lynx', 'cheetah', 'lynx', 'wolverine', 'panda', 'cheetah', 'lynx', 'wolverine', 'cheetah', 'cheetah', 'lynx', 'cheetah', 'armadillo', 'lynx', 'panda', 'cheetah', 'cheetah', 'cheetah', 'mongoose', 'panda', 'cheetah', 'wolverine', 'badger', 'sub saharan cheetah', 'eastern gorilla', 'cheetah', 'cheetah', 'lynx', 'cheetah', 'cheetah', 'cheetah', 'wolverine'].
+0:58:51 - Current number of words: 14.
+0:58:51 - Current emergence rate: 0.
+------------
+	0:58:51 - Step 38 started.
+		0:58:51 - Starting random walks phase.
+	------------
+	0:58:51 - Starting competition phase.
+	------------
+	0:58:56 - Starting mutation phase.
+	------------
+0:59:17 - Step 38 completed.
+0:59:17 - from Simulation - Results logs updated.
+0:59:17 - from Simulation - Mutation history logs updated.
+0:59:17 - from Simulation - Competition history logs updated.
+0:59:18 - Current population (80): ['cheetah', 'panda', 'cheetah', 'panda', 'cheetah', 'cheetah', 'wolverine', 'panda', 'lynx', 'wolverine', 'panda', 'armadillo', 'cheetah', 'cheetah', 'cheetah', 'lynx', 'lynx', 'panda', 'cheetah', 'panda', 'arctic fox', 'cheetah', 'cheetah', 'lynx', 'cheetah', 'lynx', 'cheetah', 'badger', 'wolverine', 'lynx', 'panda', 'lynx', 'panda', 'lynx', 'siberian tiger', 'panda', 'cheetah', 'lynx', 'panda', 'panda', 'wolverine', 'panda', 'wolverine', 'lynx', 'snow leopard', 'panda', 'lynx', 'cheetah', 'lynx', 'panda', 'cheetah', 'panda', 'otter', 'wolverine', 'panda', 'wolverine', 'panda', 'cheetah', 'lynx', 'lynx', 'panda', 'panda', 'panda', 'sub saharan cheetah', 'lynx', 'cheetah', 'cheetah', 'lynx', 'wolverine', 'cheetah', 'panda', 'cheetah', 'cheetah', 'cheetah', 'tarsier', 'lynx', 'cheetah', 'wolverine', 'cheetah', 'panda'].
+0:59:18 - Current number of words: 12.
+0:59:18 - Current emergence rate: 0.
+------------
+	0:59:18 - Step 39 started.
+		0:59:18 - Starting random walks phase.
+	------------
+	0:59:18 - Starting competition phase.
+	------------
+	0:59:25 - Starting mutation phase.
+	------------
+0:59:41 - Step 39 completed.
+0:59:41 - from Simulation - Results logs updated.
+0:59:41 - from Simulation - Mutation history logs updated.
+0:59:41 - from Simulation - Competition history logs updated.
+0:59:42 - Current population (80): ['coati', 'lynx', 'cheetah', 'otter', 'cheetah', 'cheetah', 'lynx', 'cheetah', 'panda', 'panda', 'panda', 'lynx', 'panda', 'cheetah', 'wolverine', 'lynx', 'lynx', 'lynx', 'panda', 'panda', 'lynx', 'cheetah', 'panda', 'panda', 'lynx', 'lynx', 'otter', 'cheetah', 'lynx', 'dhole', 'lynx', 'wolverine', 'panda', 'lynx', 'cheetah', 'panda', 'panda', 'lynx', 'lynx', 'lynx', 'panda', 'panda', 'lynx', 'wolverine', 'wolverine', 'lynx', 'lynx', 'panda', 'lynx', 'lynx', 'cheetah', 'panda', 'cheetah', 'cheetah', 'panda', 'lynx', 'lynx', 'cheetah', 'wolverine', 'cheetah', 'cheetah', 'cheetah', 'lynx', 'armadillo', 'wolverine', 'lynx', 'panda', 'cheetah', 'cheetah', 'panda', 'snow leopard', 'cheetah', 'wolverine', 'panda', 'panda', 'siberian tiger', 'lynx', 'lynx', 'panda', 'jaguarundi'].
+0:59:42 - Current number of words: 11.
+0:59:42 - Current emergence rate: 0.
+------------
+	0:59:42 - Step 40 started.
+		0:59:42 - Starting random walks phase.
+	------------
+	0:59:42 - Starting competition phase.
+	------------
+	0:59:47 - Starting mutation phase.
+	------------
+1:0:14 - Step 40 completed.
+1:0:14 - from Simulation - Results logs updated.
+1:0:14 - from Simulation - Mutation history logs updated.
+1:0:14 - from Simulation - Competition history logs updated.
+1:0:15 - Current population (80): ['red panda', 'lynx', 'lynx', 'panda', 'cheetah', 'lynx', 'cheetah', 'panda', 'lynx', 'wolverine', 'lynx', 'panda', 'lynx', 'lynx', 'panda', 'vicuña', 'lynx', 'cheetah', 'dhole', 'lynx', 'panda', 'lynx', 'panda', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'cheetah', 'cheetah', 'panda', 'lynx', 'lynx', 'panda', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'cheetah', 'lynx', 'northern palm civet', 'wolverine', 'lynx', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'cheetah', 'cheetah', 'wolverine', 'lynx', 'lynx', 'panda', 'otter', 'panda', 'wolverine', 'panda', 'lynx', 'cheetah', 'lynx', 'panda', 'panda', 'panda', 'panda', 'otter', 'cheetah', 'lynx', 'lynx', 'dhole', 'panda', 'lynx', 'lynx', 'wolverine', 'lynx', 'panda'].
+1:0:15 - Current number of words: 9.
+1:0:15 - Current emergence rate: 0.
+------------
+	1:0:15 - Step 41 started.
+		1:0:15 - Starting random walks phase.
+	------------
+	1:0:15 - Starting competition phase.
+	------------
+	1:0:18 - Starting mutation phase.
+	------------
+1:0:56 - Step 41 completed.
+1:0:56 - from Simulation - Results logs updated.
+1:0:56 - from Simulation - Mutation history logs updated.
+1:0:56 - from Simulation - Competition history logs updated.
+1:0:57 - Current population (80): ['wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'cheetah', 'lynx', 'lynx', 'lynx', 'panda', 'lynx', 'panda', 'wolverine', 'lynx', 'lynx', 'panda', 'lynx', 'cheetah', 'lynx', 'lynx', 'lynx', 'lynx', 'cheetah', 'wolverine', 'lynx', 'lynx', 'european wildcat', 'lynx', 'panda', 'lynx', 'lynx', 'panda', 'lynx', 'cheetah', 'panda', 'lynx', 'panda', 'lynx', 'cheetah', 'cheetah', 'lynx', 'lynx', 'lynx', 'panda', 'dhole', 'lynx', 'panda', 'lynx', 'wolverine', 'lynx', 'lynx', 'badger', 'wolverine', 'lynx', 'otter', 'lynx', 'lynx', 'panda', 'wolverine', 'cheetah', 'lynx', 'otter', 'lynx', 'orangutan', 'lynx', 'lynx', 'lynx', 'wolverine', 'panda', 'cheetah', 'lynx', 'wolverine', 'mongoose', 'lynx', 'lynx', 'lynx', 'otter', 'wolverine', 'lynx', 'vicuña'].
+1:0:57 - Current number of words: 11.
+1:0:57 - Current emergence rate: 0.
+------------
+	1:0:57 - Step 42 started.
+		1:0:57 - Starting random walks phase.
+	------------
+	1:0:57 - Starting competition phase.
+	------------
+	1:1:0 - Starting mutation phase.
+	------------
+1:1:22 - Step 42 completed.
+1:1:22 - from Simulation - Results logs updated.
+1:1:22 - from Simulation - Mutation history logs updated.
+1:1:22 - from Simulation - Competition history logs updated.
+1:1:22 - Current population (80): ['lynx', 'lynx', 'panda', 'wolverine', 'otter', 'canadian lynxes', 'cheetah', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'lynx', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'panda', 'lynx', 'cheetah', 'orangutan', 'panda', 'panda', 'clouded leopards', 'otter', 'panda', 'panda', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'panda', 'mongoose', 'wolverine', 'lynx', 'wolverine', 'javan lemur', 'panda', 'lynx', 'lynx', 'cheetah', 'otter', 'lynx', 'panda', 'lynx', 'otter', 'wolverine', 'orangutan', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'lynx', 'mongoose'].
+1:1:22 - Current number of words: 10.
+1:1:22 - Current emergence rate: 0.
+------------
+	1:1:22 - Step 43 started.
+		1:1:22 - Starting random walks phase.
+	------------
+	1:1:23 - Starting competition phase.
+	------------
+	1:1:25 - Starting mutation phase.
+	------------
+1:2:3 - Step 43 completed.
+1:2:3 - from Simulation - Results logs updated.
+1:2:3 - from Simulation - Mutation history logs updated.
+1:2:3 - from Simulation - Competition history logs updated.
+1:2:4 - Current population (80): ['lesser panda', 'lynx', 'wolverine', 'otter', 'wolverine', 'panda', 'panda', 'otter', 'wolverine', 'lynx', 'panda', 'lynx', 'wolverine', 'lynx', 'wolverine', 'pangolin', 'wolverine', 'lynx', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'panda', 'wolverine', 'lynx', 'mongoose', 'lynx', 'siamang', 'lynx', 'panda', 'lynx', 'cheetah', 'lynx', 'lynx', 'wolverine', 'cheetah', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'otter', 'panda', 'orangutan', 'javan lemur', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx'].
+1:2:4 - Current number of words: 11.
+1:2:4 - Current emergence rate: 0.
+------------
+	1:2:4 - Step 44 started.
+		1:2:4 - Starting random walks phase.
+	------------
+	1:2:4 - Starting competition phase.
+	------------
+	1:2:9 - Starting mutation phase.
+	------------
+1:2:29 - Step 44 completed.
+1:2:29 - from Simulation - Results logs updated.
+1:2:29 - from Simulation - Mutation history logs updated.
+1:2:29 - from Simulation - Competition history logs updated.
+1:2:30 - Current population (80): ['wolverine', 'lynx', 'lynx', 'orangutan', 'lynx', 'lynx', 'northern lynnx', 'wolverine', 'panda', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'cheetah', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'dhole', 'wolverine', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'wolverine', 'lynx', 'otter', 'wolverine', 'lynx', 'otter', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'caracal', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'otter', 'wolverine', 'wolverine', 'otter', 'lynx', 'lynx', 'lynx', 'mongoose', 'lynx', 'lynx'].
+1:2:30 - Current number of words: 10.
+1:2:30 - Current emergence rate: 0.
+------------
+	1:2:30 - Step 45 started.
+		1:2:30 - Starting random walks phase.
+	------------
+	1:2:30 - Starting competition phase.
+	------------
+	1:2:32 - Starting mutation phase.
+	------------
+1:2:48 - Step 45 completed.
+1:2:48 - from Simulation - Results logs updated.
+1:2:48 - from Simulation - Mutation history logs updated.
+1:2:48 - from Simulation - Competition history logs updated.
+1:2:49 - Current population (80): ['lynx', 'lynx', 'otter', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'lynx', 'otter', 'lynx', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'otter', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'wolverine', 'lynx', 'coati', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'panda', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'giant otter', 'wolverine', 'lynx', 'otter', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'wolverine', 'puma concolor', 'lynx', 'lynx', 'lynx', 'panda', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'wolverine', 'wolverine'].
+1:2:49 - Current number of words: 7.
+1:2:49 - Current emergence rate: 0.
+------------
+	1:2:49 - Step 46 started.
+		1:2:49 - Starting random walks phase.
+	------------
+	1:2:49 - Starting competition phase.
+	------------
+	1:2:51 - Starting mutation phase.
+	------------
+1:3:14 - Step 46 completed.
+1:3:14 - from Simulation - Results logs updated.
+1:3:14 - from Simulation - Mutation history logs updated.
+1:3:14 - from Simulation - Competition history logs updated.
+1:3:15 - Current population (80): ['wildcat', 'lynx', 'lynx', 'panda', 'wolverine', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'mongoose', 'lynx', 'wolverine', 'wolverine', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'giant otter', 'lynx', 'raccoon', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'wolverine', 'otter', 'otter', 'panda', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'lynx', 'panda', 'lynx', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'wolverine', 'otter', 'otter', 'otter', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'otter', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx'].
+1:3:15 - Current number of words: 8.
+1:3:15 - Current emergence rate: 0.
+------------
+	1:3:15 - Step 47 started.
+		1:3:15 - Starting random walks phase.
+	------------
+	1:3:15 - Starting competition phase.
+	------------
+	1:3:16 - Starting mutation phase.
+	------------
+1:3:47 - Step 47 completed.
+1:3:47 - from Simulation - Results logs updated.
+1:3:47 - from Simulation - Mutation history logs updated.
+1:3:48 - from Simulation - Competition history logs updated.
+1:3:48 - Current population (80): ['lynx', 'lynx', 'northern lynx', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'mongoose', 'wolverine', 'giant otter', 'lynx', 'wolverine', 'lynx', 'clouded lemur', 'lynx', 'otter', 'lynx', 'lynx', 'wolverine', 'lynx', 'lynx', 'wildcat', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'mink', 'wolverine', 'wolverine', 'lynx', 'raccoon', 'wolverine', 'wolverine', 'lynx', 'lynx', 'lynx', 'lynx', 'otter', 'wolverine', 'wolverine', 'lynx', 'leopard', 'lynx', 'mongoose', 'wolverine', 'otter', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'lynx', 'lynx', 'otter', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'lynx', 'wolverine', 'wolverine', 'lynx', 'otter', 'panda', 'wolverine', 'wolverine', 'wolverine'].
+1:3:48 - Current number of words: 12.
+1:3:48 - Current emergence rate: 0.
+------------
+	1:3:48 - Step 48 started.
+		1:3:48 - Starting random walks phase.
+	------------
+	1:3:48 - Starting competition phase.
+	------------
+	1:3:52 - Starting mutation phase.
+	------------
+1:4:39 - Step 48 completed.
+1:4:39 - from Simulation - Results logs updated.
+1:4:39 - from Simulation - Mutation history logs updated.
+1:4:39 - from Simulation - Competition history logs updated.
+1:4:40 - Current population (80): ['binturong', 'lynx', 'wolverine', 'lynx', 'badger', 'wolverine', 'wolverine', 'moose', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'civet', 'wolverine', 'panda', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'giant otter', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'leopard', 'wolverine', 'wolverine', 'otter', 'wildcat', 'wolverine', 'lynx', 'wolverine', 'lynx', 'coyote', 'lynx', 'jaguarundi', 'mongoose', 'mongoose', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'leopard', 'wolverine', 'lynx', 'lynx', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'lynx', 'wolverine', 'jackal', 'wolverine', 'lynx', 'lynx', 'lynx', 'wolverine', 'lynx', 'clouded lemur', 'wolverine', 'wolverine'].
+1:4:40 - Current number of words: 16.
+1:4:40 - Current emergence rate: 0.
+------------
+	1:4:40 - Step 49 started.
+		1:4:40 - Starting random walks phase.
+	------------
+	1:4:40 - Starting competition phase.
+	------------
+	1:4:47 - Starting mutation phase.
+	------------
+1:5:3 - Step 49 completed.
+1:5:3 - from Simulation - Results logs updated.
+1:5:3 - from Simulation - Mutation history logs updated.
+1:5:3 - from Simulation - Competition history logs updated.
+1:5:4 - Current population (80): ['lynx', 'wolverine', 'wolverine', 'wolverine', 'coyote', 'wolverine', 'lynx', 'lynx', 'wolverine', 'kinkajou', 'lynx', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'lynx', 'leopard', 'otter', 'jackal', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'jaguarundi', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'lynx', 'leopard', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'ferret', 'lynx', 'wolverine', 'lynx', 'coyote', 'civet', 'lynx', 'wolverine', 'wolverine', 'panda', 'mongoose', 'wolverine', 'leopard', 'lynx', 'jackal', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'wolverine', 'panda', 'wolverine', 'wolverine', 'lynx', 'wolverine', 'wolverine', 'wolverine', 'mongoose', 'wolverine', 'wolverine', 'coyote', 'wildcat', 'wolverine', 'wolverine', 'wolverine', 'coyote', 'wolverine'].
+1:5:4 - Current number of words: 13.
+1:5:4 - Current emergence rate: 0.
+------------
+1:5:4 - Average step duration: 1 seconds.
+1:5:4 - Trial 0 data cleaned.
+1:5:4 - Simulation reached the end. Bravo!

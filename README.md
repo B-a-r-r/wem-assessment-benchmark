@@ -2,7 +2,7 @@
 This project is **a specialized application made for the artificial life simulation model Evolutionary Ecology of Words**, in the context of its assesment as *an open-endedness driven benchmark for LLMs*.
 The simulation parameters are full costummizable, even more abstract ones such as prompt engineering. At the end multiple visuals are generated with the output data, allowing to analyze the results under different perspectives.
 
-Evolutionary Ecology of Words is a simulation model developed by Dr. Reiji SUZUKI and Dr. Takaya ARITA, both from the ALIFE-CORE laboratory at Nagoya University.
+Evolutionary Ecology of Words is an artificial life experiment model developed by Pr. Reiji SUZUKI and Pr. Takaya ARITA, both from the ALIFE-CORE laboratory at Nagoya University.
 
 
 ## Project configuration
@@ -76,16 +76,17 @@ The config file is stuctured as follows:
 <br>
 
 2. Run the app by executing the scripts **from the root directory**:
-    - `wem.sh [config_path] [enable_logs]` for Linux
-    - `wem.bat [config_path] [enable_logs]` for Windows
+    - `wem.sh <config_path> <enable_logs> <enable_real_time_views>` for Linux
+    - `wem.bat <config_path> <enable_logs> <enable_real_time_views>` for Windows
 
-- where `config_path` is the absolute path to your configuration file. *If you don't provide a path, the default one will be used*.
-- where `enable_logs` is a boolean value that enables or disables the logging file of the running simulation. If you don't provide a value, set to *True by default*.
+- where `config_path` (optional) is the absolute path to your configuration file. *If you don't provide a path, the default one will be used*.
+- where `enable_logs` (optional) is a boolean value that enables or disables the logging file of the running simulation. If you don't provide a value, set to *True by default*.
+- where `enable_real_time_views` (optional) is a boolean value that enables or disables the real-time updated graphs of the simulation. If you don't provide a value, set to *False by default*.
 
 <ins>NB</ins>: if any trouble with the scripts, you can run the app directly with Python:
-```bash
+```
 
-python wem_app/wem_main.py [config_path] [enable_logs]
+python wem_app/wem_main.py <config_path> <enable_logs> <enable_real_time_views>
 ```
 <br>
 
@@ -93,9 +94,17 @@ While the simulation is runnning, the `verbose` parameter in the config file all
 
 All the data from the simulation is stored in the experiment directory specified in the config file.
 
+#### Generate visuals
+At the end of the experiment, once the data files are logged, you can generate visuals. To do so, you can run `visuals_maker.py` as follow:
+```
+python wem_app/visuals_maker.py <config_path> [--ui]
+```
+- where `config_path` (mandatory) is the absolute path to your configuration file. *If you don't provide a path, the default one will be used*.
+- where `--ui` (optional) is the option to enable the *user interface* for the visuals generation, allowing to select the files and parameters interactively.
+
 ## About the data
-**Four types of data** resulting from the simlation are logged (<ins>NB</ins>: *x* is the number of the trial):
-- `results_x.csv` contains the listing of all the agents at each generation, and their properties.
+**Four types of data** resulting from the experiment are logged (<ins>NB</ins>: *x* is the number of the trial):
+- `results_x.csv` contains the listing of all agents at each generation, and their properties.
     **<ins>Header</ins>: gen, id, x, y, word**
 <br>
 
@@ -103,11 +112,11 @@ All the data from the simulation is stored in the experiment directory specified
     ```json
     {
         "gen": {
-            "(id1, id2)": "winner_id | null"
+            "(competitor1_id, competitor2_id2)": "winner_id | null"
         }
     }
     ```
-    <ins>NB</ins>: if the reslt of a competition is `null`, it means the LLM could not provide proper decision.
+    <ins>NB</ins>: if the result of a competition is `null`, it means the LLM could not provide proper decision.
 <br>
 
 - `judgement_history_x.json` contains the case law for all the competitions combinaisons that happened, with the following structure:
@@ -140,10 +149,50 @@ All the data from the simulation is stored in the experiment directory specified
     <ins>NB</ins>: **a source word with multiple mutations** indicates that **several agents carried it and mutated**. If **a mutated word has multiple lists of possibilities** (among which it was chosen) it indicates that **the related source word mutated into this word multiple times**, with a certain range of possibilities each time.
 
 ## About the visuals
-At the end of the simulation, these default visuals are generated:
-- **TopB words** animations collection for each trial (`topB_animations_trialX.mp4`)
-- **The UMAP trajectory graph** of the overall simulation (`trajectory_with_top.pdf`)
-<br>
+The application includes several `analyzer` classes which are used to generate different types of visuals.
+Each type of visuals is saved in a dedicated folder, created in the experiement directory:
+- `topB-analysis`
+- `emergence-analysis`
+- `trajectory-analysis`
+- `spatial-analysis`
 
-Howerver, you can customize the generation of visuals very easily by modifying the parameters in the `visuals_maker.py` file. For example, you can create a trajectory graph for each trial separately, or you can create an animation of the trajectory graph by calling the related method.
-The visuals are stored in the experiment directory specified in the config file.
+#### Top B analysis
+This analysis generates visuals based on the top B words at each generation, allowing to track their evolution over time.
+
+- **TopB Words Histogram**: shows the distribution of the top B words at each generation.
+![top_B_histogram](./assets/topB_hist.png)
+
+- **TopB Words Frequency**: shows the frequency evolution of each word in the final top B.
+![top_B_frequency](./assets/topB_freq_plot.png)
+
+- **Agent Position**: shows the position of each agent in the simulated space at each generation.
+![agent_pos_plot](./assets/agent_pos_plot.png)
+
+#### Emergence analysis
+This analysis generates visuals based on the emergence of new words along the simulation.
+
+- **Emergence Score Evo**: the emergence score is the ratio of the number of emergences and the number of mutations at each generation. This metric allows to track one aspect of the effectiveness of the trajectory, as a high scores are correlated to the discover of new semantic fields and low scores to the return to a previously explored one. The behavior of the average of this score is also relevant: a stagnation is showed by a quickly decreasing curve, while a stable score is showed by a flat curve.
+![emergence_score_evo](./assets/emergence_score_evo_plot.png)
+
+#### Trajectory analysis
+This analysis generates visuals based on the semantic trajectory, draw by the plot of the average semantic vector of the simulation every x steps. The average semantic vector of the simulation is optained by averaging the umap semantic representation of each words in the simulation at each generation.
+
+- **Trajectory Plot**: shows the trajectory of the average semantic vector of the simulation.
+![trajectory_plot](./assets/trajectory_plot.png)
+
+- **Animated Trajectory Plot**: for a specific trial, the animation of the trajectory along the generations.
+
+##### Spatial analysis
+This analysis generates visuals based on the spatial properties of the umap representation. It allows to measure metrics such as exploration, exploitation, and redondancy of the average semantic vectors in the semantic space.
+
+- **Areas Contours**: shows the areas containing the average semantic vectors, following certain percentiles.
+![areas_contours](./assets/areas_plot.png)
+
+- **Exploration Coverage**: show the convex hull of the plotted average semantic vectors, allowing to visualize the exploration of the semantic space.
+![exploration_coverage](./assets/exploration_coverage_plot.png)
+
+- **Density Plot**: shows the density of the average semantic vectors in the semantic space, allowing to visualize the exploitation of the semantic space.
+![density_plot](./assets/density_plot.png)
+
+- **Metrics Textblock**: shows the metrics computed from the spatial analysis, such as the exploration, exploitation, and redondancy scores.
+![metrics_textblock](./assets/spatial_metrics_textblock.png)

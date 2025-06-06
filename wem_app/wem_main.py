@@ -1,25 +1,26 @@
 from sys import argv
-from Simulation import Simulation
-from ExpTrajectoryAnalyzer import ExpTrajectoryAnalyzer
-from ExpSpatialAnalyzer import ExpSpatialAnalyzer
-from ExpTopBAnalyzer import ExpTopBAnalyzer
-from ExpEmergenceAnalyzer import ExpEmergenceAnalyzer
+from simulation import Simulation
 from os import path
 from utils import load_config, verify_config
 
-#allow to input the config path from the command line
+#Usage: wem_main.py <config_path> [enable_logs] [enable_real_time_views]
+
 if len(argv) > 1:
     config_path = argv[1]
     
+    enable_logs = True
+    enable_real_time_views = True
+    
     if len(argv) > 2:
         enable_logs = bool(argv[2])
-        
-    else:
-        enable_logs = True
+
+        if len(argv) > 3:
+            enable_real_time_views = bool(argv[3])
 
 else:
     config_path = path.join(path.dirname(__file__), "config.json")
     enable_logs = True
+    enable_real_time_views = True
 
 config_path = path.abspath(config_path)
 print(f"Config path: {config_path}")
@@ -31,46 +32,5 @@ verify_config(config=config)
 simulation = Simulation(
     config=config,
     enable_logs=enable_logs,
+    enable_real_time_views=enable_real_time_views
 )
-
-trajectory_analyzer = ExpTrajectoryAnalyzer(
-    folder_path=path.abspath(config["workspace"]["exp_dir"]),
-    label=config["workspace"]["label"],
-    lang=config["workspace"]["lang"],
-    seed=config["simulation"]["SEED"],
-    top_B=config["workspace"]["top_B"],
-    sentence_transformer_model=config["workspace"]["sentence_transformer_model"],
-)
-umap_data = trajectory_analyzer.export_exp_data()
-
-spatial_analyzer = ExpSpatialAnalyzer(exp_data=umap_data)
-
-topB_analyzer = ExpTopBAnalyzer(
-    folder_path=path.abspath(config["workspace"]["exp_dir"]),
-    label=config["workspace"]["label"],
-    lang=config["workspace"]["lang"],
-    seed=config["simulation"]["SEED"],
-    top_B=config["workspace"]["top_B"]
-)
-
-emergence_analyzer = ExpEmergenceAnalyzer(
-    folder_path=path.abspath(config["workspace"]["exp_dir"]),
-    label=config["workspace"]["label"],
-    lang=config["workspace"]["lang"],
-    seed=config["simulation"]["SEED"],
-    top_B=config["workspace"]["top_B"]
-)
-
-plot1 = trajectory_analyzer.create_trajectory_graph()
-anims_list1 = trajectory_analyzer.create_trajectory_animation(only_trials=[0])
-
-plot2 = spatial_analyzer.create_areas_plot()
-plot3 = spatial_analyzer.create_density_plot()
-plot4 = spatial_analyzer.create_exploration_coverage_plot()
-plot5 = spatial_analyzer.create_metrics_textblock()
-
-anims_list2 = topB_analyzer.create_agents_pos_anim(only_trials=[0])
-anims_list3 = topB_analyzer.create_top_freq_anim(only_trials=[0])
-anims_list4 = topB_analyzer.create_top_hist_anim(only_trials=[0])
-
-anims_list5 = emergence_analyzer.create_score_evo_anim(only_trials=[0])
